@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "npx quartz build",
+    "test": "npx quartz test",
+    "serve": "node /tmp/quartz/quartz/bootstrap-cli.mjs build --serve --directory /app/bombay-business-club/content --output /app/bombay-business-club/public"
+  },
+  "dependencies": {
+    "@jackyzha0/quartz": "github:jackyzha0/quartz"
+  }
+}
