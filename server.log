@@ -1,0 +1,6 @@
+
+> serve
+> node /tmp/quartz/quartz/bootstrap-cli.mjs build --serve --directory /app/bombay-business-club/content --output /app/bombay-business-club/public
+
+
+ Quartz vundefined
