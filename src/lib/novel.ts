@@ -526,13 +526,174 @@ export const chapters: Chapter[] = [
       <p>He an ordinary man was about to meet the blue blooded princess in a few months.</p>
     `,
   },
-  ...Array.from({ length: 5 }, (_, i) => ({
-    id: i + 4,
-    title: `Chapter ${i + 4}: The Invitation`,
-    slug: `chapter-${i + 4}`,
+  {
+    id: 4,
+    title: 'Chapter 4: The Fashion Book Launch',
+    slug: 'chapter-4',
+    content: `
+      <h2>The Tweet</h2>
+      <p>Dilip Shrivastava sat in his Andheri apartment at 11 PM, scrolling through Twitter on his laptop, a habit that had become routine since he’d shut down the factory six months ago.</p>
+      <p>Mumbai Pulse—his hyperlocal news website—was supposed to be his reinvention. Cover local events, build an audience, monetize through advertising. Simple. Except nothing about starting over at forty was simple.</p>
+      <p>His timeline refreshed, and there it was: a retweet from Aditi Sengupta.</p>
+      <p><em>Aditi Sengupta @AditiHistory</em><br>
+      <em>RT @ManavHiranandani: Fashion book launch tomorrow at Hiranandani Business Park, Powai! Shefali Vasudeva discussing her new book “Threads of Identity: Indian Fashion & Cultural Memory.” Open to all. 5 PM. Come through!</em></p>
+      <p>Dilip stared at the tweet longer than necessary.</p>
+      <p>Aditi Sengupta. Corporate historian. Bengali. Married. And completely, devastatingly attractive in a way that made him feel like a teenager again despite being a divorced father of two.</p>
+      <p>They’d met for coffee once—three weeks ago, ostensibly to discuss his website’s coverage of Mumbai’s industrial decline. She’d talked about archival research and labor histories while he’d tried not to stare at the way afternoon light caught in her hair. Nothing had happened. Nothing would happen. She was married, and he’d sworn off married women after the disaster with Nisha two years ago.</p>
+      <p>But still.</p>
+      <p>A book launch in Powai. Open to all. And Aditi would probably be there, wouldn’t she? She’d retweeted it. That meant something, right?</p>
+      <p>Dilip looked down at his laptop, then at the clock. Tomorrow was Thursday. He had nothing scheduled except uploading some neighborhood crime updates to Mumbai Pulse.</p>
+      <p><em>Work-cum-pleasure</em>, he told himself. <em>Content for the site. Networking. Legitimate reasons.</em></p>
+      <p>He bookmarked the tweet and tried to sleep.</p>
+      <p>-----</p>
+      <h2>The Event</h2>
+      <p>Hiranandani Business Park in Powai was a different Mumbai entirely.</p>
+      <p>Dilip arrived at 4:45 PM, wearing jeans and his favorite blue t-shirt—the one with an embossed Buddha image in a circular frame across the chest. He’d bought it years ago at some hippie market in Goa, back when he still thought wearing spiritual imagery made him seem deep and meditative. Now, standing in the gleaming lobby, surrounded by glass and steel and people in clothes that probably cost more than his monthly rent, he wondered if he looked like a middle-aged man trying too hard.</p>
+      <p>The journey itself had been an expedition. Powai felt like another country—this carefully planned, corporate enclave on Mumbai’s northeastern edge. For someone from Andheri, it required commitment. But for the South Bombay crowd? Dilip had overheard two women in the lobby laughing about it: “Manav made us come all the way to Powai! This is basically a picnic. I told my driver to pack snacks for the journey.”</p>
+      <p>They’d said it with that particular SoBo mix of complaint and privilege—the kind that made a thirty-minute drive sound like a safari expedition.</p>
+      <p>The auditorium was already half-full. Dilip scanned for Aditi—her familiar silhouette, her long hair, her presence. Nothing.</p>
+      <p>He found a seat near the back and settled in, feeling the familiar weight of being out of place. Around him, the crowd was impeccably dressed—women in elegant kurtas and statement jewelry, men in tailored shirts, everyone speaking in that particular South Bombay English that came with international schooling and summer holidays in London.</p>
+      <p>Dilip pulled out his phone and pretended to check emails.</p>
+      <p>The event began promptly at 5 PM.</p>
+      <p>Shefali Vasudeva—the author—was a striking woman in her fifties, wearing a silk sari and speaking with the kind of effortless authority that came from decades in fashion journalism. She talked about Indian textiles, about how clothing carried memory, about the politics of draping and stitching and adornment.</p>
+      <p>Dilip understood maybe sixty percent of it.</p>
+      <p>She mentioned <em>Balenciaga</em> and <em>Comme des Garçons</em> and <em>deconstructed silhouettes</em> and <em>sartorial resistance</em>, words that slid past him like water over glass. He took notes anyway—vague thoughts about covering the event for Mumbai Pulse, though he had no idea how to translate haute couture discourse into something his Andheri readers would care about.</p>
+      <p>Aditi never appeared.</p>
+      <p>By 6:15 PM, when Shefali finished and the moderator—Manav Hiranandani himself, resplendent in pink trousers and a lavender shirt—thanked everyone for coming, Dilip had accepted the obvious: Aditi wasn’t coming. She’d retweeted the event but hadn’t actually attended.</p>
+      <p><em>Story of my life</em>, Dilip thought. <em>Always showing up for women who don’t show up for me.</em></p>
+      <p>But there were snacks after, and Dilip was hungry, and he was already here, so he followed the crowd out of the auditorium into the adjacent atrium where caterers had laid out an impressive spread of Indian snacks—samosas, dhokla, pani puri stations, masala chai in tiny clay cups.</p>
+      <p>The real socializing was happening here.</p>
+      <p>-----</p>
+      <h2>The After-Party</h2>
+      <p>Dilip stood awkwardly near the pani puri station, holding a small plate of dhokla he wasn’t eating, watching people network with the ease of those who’d been doing this their entire lives.</p>
+      <p>Clusters formed and reformed. Laughter echoed off glass walls. Business cards were exchanged. Manav Hiranandani floated through the crowd like a pink-clad diplomat, hugging people, introducing strangers, making everything feel effortless.</p>
+      <p>Dilip felt profoundly alone.</p>
+      <p>He was about to leave—make some excuse to himself about early morning deadlines—when he saw her.</p>
+      <p>She was standing maybe fifteen feet away, near the samosa table, holding a small plate and talking to no one.</p>
+      <p>Or rather, she’d been talking to someone—a middle-aged woman in a Kanjeevaram sari—but that woman had drifted away, and now the girl stood alone, looking slightly lost in the way that beautiful women sometimes do at parties, surrounded by people but untethered.</p>
+      <p>Dilip’s breath caught.</p>
+      <p>She was young—<em>too young</em>, his mind supplied immediately. Early twenties, maybe? Definitely not thirty. She had that polished, expensive look that screamed South Bombay—the kind of girl who’d grown up in Malabar Hill or Cuffe Parade, attended international schools, spent summers in Europe.</p>
+      <p>Her dress was simple but clearly expensive—a sleeveless black shift with a circular mandala pattern embroidered in silver thread across the chest. It reminded him, absurdly, of his Buddha t-shirt. Except where his was cheap cotton tourist kitsch, hers was couture—silk, probably, or some fabric he didn’t know the name for.</p>
+      <p>She wore a delicate silver necklace that caught the light when she moved. Her hair was pulled back in a simple ponytail. Her skin seemed to glow—not makeup exactly, but something deeper, something inherent.</p>
+      <p>And her legs.</p>
+      <p>She was wearing a short skirt—knee-length, modest by Western standards but striking here—and her legs were bare and gleaming under the atrium’s lights, slender and perfect in a way that made Dilip forget momentarily that he was forty years old and definitely, definitely too old to be staring at a girl who looked barely legal.</p>
+      <p>He couldn’t look away.</p>
+      <p>There was something about her—beyond the obvious beauty, beyond the expensive clothes and the South Bombay polish. Something vulnerable. She looked lost, almost, standing there alone with her plate of food, her eyes scanning the crowd without quite engaging.</p>
+      <p><em>She looks lonely</em>, Dilip thought. <em>In a room full of people, she looks completely alone.</em></p>
+      <p>And that resonated with something deep in his chest—the recognition of another person who didn’t quite fit, who was performing presence while feeling absent.</p>
+      <p>He wanted to talk to her.</p>
+      <p><em>Don’t be an idiot</em>, his rational mind supplied. <em>She’s twenty years younger than you. She’s clearly from a completely different world. You’re wearing a Buddha t-shirt to a fashion book launch. What are you going to say?</em></p>
+      <p>But he kept staring.</p>
+      <p>And then—impossibly—she seemed to notice him staring.</p>
+      <p>Not directly. She didn’t make eye contact. But something in her posture shifted, a subtle awareness, as if she’d registered his presence on some instinctual level. Her head tilted slightly, not toward him but not away either.</p>
+      <p>It was the strangest thing. Dilip felt <em>seen</em>—not by her eyes, which remained carefully averted, but by something else. Some sixth sense she possessed.</p>
+      <p><em>You’re imagining things</em>, he told himself. <em>She doesn’t know you exist.</em></p>
+      <p>But he couldn’t shake the feeling that she did. That somehow, impossibly, she was aware of him watching her, even though she gave no outward sign.</p>
+      <p>The moment stretched.</p>
+      <p>And then—</p>
+      <p>“Dilip! Yaar, what are you doing here?”</p>
+      <p>Dilip spun around.</p>
+      <p>Rohit Malhotra from his Andheri neighborhood stood there, grinning, holding a plate piled with samosas. Behind him were Priya and Sachin—the couple from the building next to his—also smiling with surprised recognition.</p>
+      <p>“I didn’t know you were into fashion!” Priya said, laughing. “This seems so unlike you.”</p>
+      <p>“Research,” Dilip managed. “For the website. Mumbai Pulse. You know—covering local events.”</p>
+      <p>“Right, right,” Rohit said. “How’s that going? You making money yet?”</p>
+      <p>They surrounded him—friendly, chatty, oblivious to the fact that they were completely destroying his chance to approach the beautiful stranger near the samosa table.</p>
+      <p>Dilip tried to maintain eye contact with his neighbors while surreptitiously glancing past them toward where the girl had been standing.</p>
+      <p>She was still there. Still alone. Still holding her plate.</p>
+      <p>And now, impossibly, she was looking in his direction.</p>
+      <p>Not at him directly—but at the group around him. Assessing. Curious.</p>
+      <p>Her expression was unreadable. Polite interest, maybe. Or mild curiosity about why this middle-aged man in a Buddha t-shirt had drawn such enthusiastic attention from his neighbors.</p>
+      <p>Dilip felt something flutter in his chest—hope, maybe, or just the pathetic desire to seem interesting to someone completely out of his league.</p>
+      <p>“So Powai, huh?” Sachin was saying. “Long way from Andheri for you.”</p>
+      <p>“Not that far,” Dilip replied automatically, still watching the girl from the corner of his eye. “Twenty minutes if traffic’s good.”</p>
+      <p>Priya launched into some story about attending another event here last month—something corporate, boring—and Dilip nodded along while his attention stayed fixed on the stranger.</p>
+      <p>She had moved slightly, closer to Manav Hiranandani now. They seemed to know each other—Manav touched her arm briefly, said something that made her smile, then drifted away to greet other guests.</p>
+      <p><em>She knows Manav</em>, Dilip noted. <em>That’s useful information. Maybe.</em></p>
+      <p>But his neighbors showed no signs of releasing him. They talked about the neighborhood, about local politics, about some water shortage issue that Dilip should really cover on his website. Rohit was particularly enthusiastic, standing close, blocking Dilip’s view of the rest of the room.</p>
+      <p>Within minutes, a small crowd had formed around Dilip—neighbors from Andheri who recognized him, who liked him, who wanted to catch up and talk about local issues and complain about BMC corruption.</p>
+      <p>In Andheri, Dilip was someone. Known. Respected. The guy who ran that local news site, the guy who’d inherited a factory from his father, the guy people went to when they needed something publicized.</p>
+      <p>But here, surrounded by his admirers, he felt trapped.</p>
+      <p>He kept trying to look past them, to catch another glimpse of the girl in the black dress, but the crowd was thick now, bodies shifting, blocking his view.</p>
+      <p>By the time his neighbors finally released him—twenty minutes later, after exchanging phone numbers and promising to grab chai sometime—the girl was gone.</p>
+      <p>Dilip scanned the atrium desperately. Near the exit, he caught a flash of black fabric, a silver necklace catching light. But by the time he pushed through the crowd, she’d vanished into the Mumbai evening.</p>
+      <p>He stood alone in the now-thinning party, holding his melted dhokla, feeling like he’d missed something important.</p>
+      <p><em>Who was she?</em></p>
+      <p>-----</p>
+      <h2>The Investigation</h2>
+      <p>Dilip couldn’t sleep.</p>
+      <p>He lay in his bed in the Andheri apartment—small, cluttered, decorated with furniture he’d bought during his first marriage and never bothered to replace—staring at his phone.</p>
+      <p>At 1 AM, he gave up and opened Twitter.</p>
+      <p>Manav Hiranandani had to post something. People like Manav always posted after events—pictures, thank-yous, tags. It was how that world worked.</p>
+      <p>Dilip scrolled through Manav’s timeline obsessively.</p>
+      <p>Nothing at midnight.</p>
+      <p>Nothing at 12:30.</p>
+      <p>At 1:15 AM, finally:</p>
+      <p><em>Manav Hiranandani @ManavHiranandani</em><br>
+      <em>Fabulous evening discussing fashion & memory with @ShefaliVasudeva! So grateful to everyone who came through—especially those who made the trek to Powai! Special shoutout to @AnyaChandra for the fascinating conversation about textile symbolism. More events coming soon! 📚✨</em></p>
+      <p>Attached: A photo of Manav with several people, including—</p>
+      <p>Her.</p>
+      <p>Dilip’s heart stopped.</p>
+      <p>She was standing slightly apart from the main group, elegant and reserved, her expression polite but distant. The silver necklace gleamed in the flash. The black dress looked even more expensive in the photograph.</p>
+      <p>And she was tagged: @AnyaChandra</p>
+      <p>Dilip clicked the name with shaking fingers.</p>
+      <p>The profile loaded: <em>Anya Chandra. Filmmaker. Mumbai.</em></p>
+      <p>The bio was minimal. The account was private—only 300 followers. The profile picture wasn’t her face at all—it was a striking piece of street art: a graffiti rendering of a Koli fisherwoman, her head balanced under a large wicker basket overflowing with fish, painted in vibrant blues and silvers against a weathered wall. It was beautiful, haunting, completely unexpected.</p>
+      <p><em>A filmmaker who uses street art of fisherwoman as her profile picture</em>, Dilip thought. <em>Not some glamorous headshot or festival red carpet. Something real.</em></p>
+      <p>But the name—</p>
+      <p>Chandra.</p>
+      <p>Dilip stared at the screen.</p>
+      <p><em>Chandra. Anya Chandra.</em></p>
+      <p>He opened a new tab and Googled: <em>“Vikash Chandra daughter”</em></p>
+      <p>The results loaded slowly.</p>
+      <p>There wasn’t much—the Chandras were famously private, avoided media attention, kept their family life completely sealed from public scrutiny. But there were fragments: society page mentions, a few carefully controlled photographs from charity events, business magazine profiles that mentioned Vikash Chandra had two daughters.</p>
+      <p>One article from Mumbai Mirror, buried in a 2009 archive, mentioned: <em>“Vikash Chandra’s daughter Anya recently graduated from NYU’s Tisch School of the Arts and is reportedly working on film projects.”</em></p>
+      <p>Another, from a 2011 trade magazine: <em>“Emerging filmmaker Anya Chandra, daughter of businessman Vikash Chandra, is developing documentary work exploring Mumbai’s urban communities.”</em></p>
+      <p>There were no details about releases, no festival mentions, nothing concrete about her actual work. Just vague references to “projects” and “development.” As if her career existed in some perpetual state of potential rather than achievement.</p>
+      <p>Dilip sat back against his pillow, mind racing.</p>
+      <p>Vikash Chandra’s daughter.</p>
+      <p>The Vikash Chandra—one of Mumbai’s most powerful, most secretive, most untouchable businessmen. The man whose name came up in whispered conversations about who really ran the city. The man politicians feared, journalists didn’t investigate, and rivals didn’t cross.</p>
+      <p>That Chandra.</p>
+      <p>And his daughter looked like <em>that</em>? Young, vulnerable, lost at a book launch party?</p>
+      <p>Dilip had imagined—if he’d ever thought about Vikash Chandra’s family at all—that his children would be intimidating. Hardened. Sophisticated in that cold, unreachable way that came with that level of wealth and power.</p>
+      <p>Not this girl with her lonely eyes and her delicate silver necklace, standing alone near a samosa table looking like she needed someone to talk to.</p>
+      <p>The cognitive dissonance was staggering.</p>
+      <p><em>She’s thirty</em>, Dilip realized suddenly, doing the math. If she’d graduated from NYU in 2009, she must have been around 22 then. Which made her about 30 now. Not nineteen or twenty-one like he’d assumed. Thirty.</p>
+      <p>Still ten years younger than him. Still completely, impossibly out of his league.</p>
+      <p>But thirty. An adult. A woman, not a girl.</p>
+      <p>Dilip scrolled back to Manav’s photo, zooming in on her face.</p>
+      <p>There was something in her expression—even in this candid shot—that struck him as profoundly sad. Not obviously unhappy. Just… weary. Like someone performing contentment while feeling something else entirely underneath.</p>
+      <p>He thought about how she’d stood alone at the party. How she’d seemed aware of him without looking at him. That strange, impossible sense of being <em>seen</em> by someone who wasn’t looking.</p>
+      <p>He clicked back to her profile, staring at that graffiti image—the Koli fisherwoman with her basket of fish. There was something defiant about choosing that image. Something that said: <em>I’m not what you expect. I’m not the typical South Bombay princess.</em></p>
+      <p><em>You’re being ridiculous</em>, he told himself. <em>She’s Vikash Chandra’s daughter. She lives in a different universe. You’re a divorced forty-year-old running a failing local news website from an Andheri apartment. What are you even thinking?</em></p>
+      <p>But he couldn’t stop staring at her photograph.</p>
+      <p>At 2 AM, exhausted and slightly delirious, Dilip whispered to his empty bedroom: “Anya Chandra. What are you doing in my head?”</p>
+      <p>The apartment offered no answer.</p>
+      <p>Outside, Mumbai hummed its endless nighttime symphony—traffic, trains, construction, the infinite city breathing in the darkness.</p>
+      <p>And somewhere in Bandra, in a high-rise apartment overlooking the sea, Anya Chandra lay awake as well, staring at her own ceiling, thinking about the man in the Buddha t-shirt who’d stared at her with such obvious, helpless longing.</p>
+      <p>She had felt him. Of course she had. Her empathic gifts made that impossible to miss—the sudden spike of attraction, the confusion, the desire mixed with self-doubt.</p>
+      <p>She’d cast no intentional spell. Just existed. And he’d been drawn to her like a moth to flame, exactly as her parents had planned.</p>
+      <p><em>Find an ordinary man</em>, her mother had said six months ago. <em>Someone safe. Someone controllable. Someone who’ll be grateful for the opportunity rather than entitled to your family’s wealth.</em></p>
+      <p>And tonight, at a book launch she’d only attended because Manav had insisted, she’d found him.</p>
+      <p>Or rather, he’d found her.</p>
+      <p>Dilip Shrivastava. Age 40. Divorced. Owner of some hyperlocal news website. Upper-middle-class but fading, respectable but not threatening, decent but controllable.</p>
+      <p>Her father’s investigators would vet him thoroughly. They probably already were.</p>
+      <p>But Anya already knew he’d pass. Because he was perfect for what they needed: ordinary enough to seem like her choice, but desperate enough to be managed.</p>
+      <p>She felt something twist in her chest—guilt, maybe, or just exhaustion at yet another manipulation, another performance, another relationship that would be arranged and monitored and ultimately controlled by forces neither of them could escape.</p>
+      <p><em>But maybe</em>, a small voice whispered in her head, <em>maybe he could be different. Maybe ordinary is what you need. Maybe someone who doesn’t know your world can’t be destroyed by it.</em></p>
+      <p>She almost laughed at the delusion.</p>
+      <p>Anya Chandra—thirty years old, heir to supernatural gifts she couldn’t refuse, daughter of parents who’d orchestrated every significant moment of her life—turned over in bed and tried to sleep.</p>
+      <p>And failed.</p>
+      <p>Because somewhere in Andheri, a man she’d never spoken to was dreaming about her skin, her legs, her sadness.</p>
+      <p>And the spell—unintentional but no less powerful—had already taken hold.</p>
+    `,
+  },
+  ...Array.from({ length: 4 }, (_, i) => ({
+    id: i + 5,
+    title: `Chapter ${i + 5}: The Invitation`,
+    slug: `chapter-${i + 5}`,
     content: `
       <p>This is the beginning of chapter ${
-        i + 4
+        i + 5
       }. The story unfolds as our characters navigate the intricate web of power and ambition in the heart of Bombay.</p>
       ${LOREM_IPSUM_PARAGRAPH}
       <p>As the sun set over the Arabian Sea, casting long shadows across the city, a decision was made that would change everything. The air was thick with anticipation, the scent of opportunity mingling with the ever-present aroma of sea salt and spices.</p>
