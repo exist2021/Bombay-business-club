@@ -1,20 +1,26 @@
 import Link from 'next/link';
-import { SupportButton } from '@/components/novel/SupportButton';
-import { SubscribeButton } from '@/components/novel/SubscribeButton';
-import { Logo } from '@/components/novel/Logo';
 
 export function Header() {
   return (
-    <header className="py-4 px-4 md:px-8 border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
-      <div className="container mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
-          <Logo className="h-10 w-10 text-primary group-hover:scale-110 transition-transform" />
-          <h1 className="text-2xl font-headline font-bold text-foreground">A novel by Manoj Nayak</h1>
-        </Link>
-        <div className="flex items-center gap-2">
-          <SubscribeButton />
-          <SupportButton />
-        </div>
+    <header className="py-4 px-4 md:px-8 sticky top-0 z-50 bg-background/80 backdrop-blur-sm">
+      <div className="container mx-auto flex items-center justify-center">
+        <nav className="flex items-center gap-6 md:gap-8 text-lg">
+          <Link href="/" className="text-primary/80 hover:text-primary transition-colors">
+            Home
+          </Link>
+          <Link href="/" className="text-2xl font-headline font-bold text-primary tracking-wider order-first md:order-none">
+            The Obsidian Scroll
+          </Link>
+          <Link href="#synopsis" className="text-primary/80 hover:text-primary transition-colors">
+            Synopsis
+          </Link>
+          <Link href="#author" className="text-primary/80 hover:text-primary transition-colors">
+            Author
+          </Link>
+          <Link href="#pre-order" className="text-primary/80 hover:text-primary transition-colors">
+            Pre-Order
+          </Link>
+        </nav>
       </div>
     </header>
   );

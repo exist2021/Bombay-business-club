@@ -5,8 +5,8 @@ import { Footer } from '@/components/layout/Footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'A novel by Manoj Nayak',
-  description: 'Read the novel "The Bombay Business Club" and support the author.',
+  title: 'The Obsidian Scroll',
+  description: 'Where Secrets Are Bound In Ink and Shadow.',
 };
 
 export default function RootLayout({
@@ -15,13 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="dark scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased min-h-screen flex flex-col">
+      <body className="font-body antialiased min-h-screen flex flex-col bg-background">
         <Header />
         <main className="flex-grow">
           {children}
