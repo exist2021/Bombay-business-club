@@ -2,7 +2,7 @@
 export const bookCover = {
   id: "book-cover",
   description: "Book cover for The Bombay Business Club",
-  imageUrl: "https://i.postimg.cc/DzTX6tCM/IMG-7494.jpg",
+  imageUrl: "https://i.postimg.cc/cJwbT5ST/IMG-7511.jpg",
   imageHint: "book photo"
 }
 
