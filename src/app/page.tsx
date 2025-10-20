@@ -20,7 +20,7 @@ export default function Home() {
             Bombay Business Club
           </h1>
           <p className="mt-4 max-w-2xl text-xl text-foreground/80 font-serif">
-            Behind Mumbai’s glittering elite lies a business built on buried secrets.
+            Behind Bombay’s glittering elite lies a business built on buried secrets.
           </p>
           <div className="mt-12 w-64 h-96 bg-card/50 border-2 border-primary/50 rounded-lg shadow-[0_0_20px_hsl(var(--primary)/0.3)] flex items-center justify-center">
              <span className="text-muted-foreground">Book Cover</span>
@@ -39,7 +39,7 @@ export default function Home() {
           </div>
           <h2 className="text-4xl font-headline text-primary mb-8">Synopsis</h2>
           <div className="space-y-6 text-lg text-foreground/90 font-serif leading-relaxed text-left">
-            <p>Born into one of Mumbai’s most elite families, Anya Chandra can bend thoughts and read the hidden corners of the human mind. At fifteen, her father—a second generation Bombay Elite — ordered her first betrayal. Two decades later, she is his most valuable secret, shaping fates from the shadows of South Bombay’s wealth and corruption. But power has left her hollow, and obedience has become a prison. As Anya begins to question the empire built on her gift, she must choose between blood and freedom—between the family that owns her and the self she’s never dared to claim.</p>
+            <p>Born into one of Bombay’s most elite families, Anya Chandra can bend thoughts and read the hidden corners of the human mind. At fifteen, her father—a second generation Bombay Elite — ordered her first betrayal. Two decades later, she is his most valuable secret, shaping fates from the shadows of South Bombay’s wealth and corruption. But power has left her hollow, and obedience has become a prison. As Anya begins to question the empire built on her gift, she must choose between blood and freedom—between the family that owns her and the self she’s never dared to claim.</p>
           </div>
         </section>
 

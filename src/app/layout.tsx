@@ -6,7 +6,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Bombay Business Club',
-  description: 'Behind Mumbai’s glittering elite lies a business built on buried secrets.',
+  description: 'Behind Bombay’s glittering elite lies a business built on buried secrets.',
 };
 
 export default function RootLayout({
