@@ -10,7 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Headphones } from 'lucide-react';
 
 
 export default function ChaptersPage() {
@@ -40,7 +40,21 @@ export default function ChaptersPage() {
               For access to upcoming chapters as they are released, you can download the entire work-in-progress book.
             </p>
           </div>
-          <Button size="lg" className="mt-8 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
+
+          <div className="mt-10 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-headline text-primary mb-4 flex items-center justify-center gap-3">
+              <Headphones className="w-6 h-6"/>
+              Audio Overview
+            </h2>
+            <div className="bg-card/50 border border-primary/30 rounded-lg p-4 shadow-[0_0_15px_hsl(var(--primary)/0.2)]">
+              <audio controls className="w-full">
+                <source src="https://drive.google.com/uc?export=download&id=1MgqD8wd1dNCpr9A96J6eoRUG_8sTieHU" type="audio/mp3" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          
+          <Button size="lg" className="mt-10 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
             <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">Download for free</Link>
           </Button>
         </header>
