@@ -25,6 +25,20 @@ export default function Home() {
           <p className="mt-4 max-w-2xl text-xl text-foreground/80 font-serif">
             Behind Bombay’s glittering elite lies a business built on buried secrets.
           </p>
+          
+          <div className="mt-12 w-full max-w-2xl aspect-video relative bg-card/50 border-2 border-primary/50 rounded-lg shadow-[0_0_20px_hsl(var(--primary)/0.3)] overflow-hidden">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/KC5GQbcj-5k"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className='absolute top-0 left-0 w-full h-full'
+            ></iframe>
+          </div>
+
           <div className="mt-12 w-64 h-96 relative bg-card/50 border-2 border-primary/50 rounded-lg shadow-[0_0_20px_hsl(var(--primary)/0.3)] flex items-center justify-center overflow-hidden">
              <Image 
                 src={bookCover.imageUrl}
