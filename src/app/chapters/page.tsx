@@ -34,7 +34,7 @@ export default function ChaptersPage() {
           </h1>
           <div className="mt-4 max-w-3xl mx-auto text-xl text-foreground/80 font-serif space-y-4">
             <p>
-              The first 8 chapters of Bombay Business Club are available here to read for free. The book is currently being written. 
+              The first 8 chapters of The Bombay Business Club are available here to read for free. The book is currently being written. 
             </p>
             <p>
               For access to upcoming chapters as they are released, you can download the entire work-in-progress book.

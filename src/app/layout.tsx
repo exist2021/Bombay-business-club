@@ -5,7 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Bombay Business Club',
+  title: 'The Bombay Business Club',
   description: 'Behind Bombay’s glittering elite lies a business built on buried secrets.',
 };
 
