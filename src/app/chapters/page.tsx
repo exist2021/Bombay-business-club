@@ -20,6 +20,8 @@ export default function ChaptersPage() {
     4: 'https://manojnayak.stck.me/chapter/1321684/Dilip-meets-Anya-at-The-Fashion-Book-Launch',
     5: 'https://manojnayak.stck.me/chapter/1324793/Chapter-5-The-Three-Meetings',
     6: 'https://manojnayak.stck.me/chapter/1328025/The-New-York-Exile',
+    7: 'https://manojnayak.stck.me/chapter/1332184/The-Betrayal-and-the-Accident',
+    8: 'https://manojnayak.stck.me/chapter/1336960/The-YouTubers-Rise-and-Fall',
   };
 
   return (
