@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { BookMarked } from 'lucide-react';
 import { SupportButton } from '@/components/novel/SupportButton';
+import { SubscribeButton } from '@/components/novel/SubscribeButton';
 
 export function Header() {
   return (
@@ -10,7 +11,10 @@ export function Header() {
           <BookMarked className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
           <h1 className="text-2xl font-headline font-bold text-foreground">Bombay Reader</h1>
         </Link>
-        <SupportButton />
+        <div className="flex items-center gap-2">
+          <SubscribeButton />
+          <SupportButton />
+        </div>
       </div>
     </header>
   );

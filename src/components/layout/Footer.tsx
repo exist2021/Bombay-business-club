@@ -6,11 +6,6 @@ export function Footer() {
       <div className="container mx-auto text-center text-muted-foreground text-sm">
         <p>&copy; {new Date().getFullYear()} The Bombay Business Club. All rights reserved.</p>
         <p className="mt-2">A novel by an aspiring author.</p>
-        <p className="mt-2">
-          <Link href="https://manojnayakcom.substack.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-            Subscribe for future updates
-          </Link>
-        </p>
       </div>
     </footer>
   );
