@@ -16,10 +16,15 @@ export function Header() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
+  const emailTo = 'manoj@manojnayak.com';
+  const emailSubject = 'feedback on your novel The Bombay Business Club';
+  const mailtoHref = `mailto:${emailTo}?subject=${encodeURIComponent(emailSubject)}`;
+
   const navLinks = [
     { href: '/', text: 'Home' },
     { href: '/#author', text: 'Author' },
     { href: '/chapters', text: 'Read Free Chapters' },
+    { href: mailtoHref, text: 'Contact' },
   ];
 
   return (
