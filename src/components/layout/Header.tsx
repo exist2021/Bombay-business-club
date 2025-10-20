@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 
 export function Header() {
@@ -41,18 +41,26 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background/95">
               <nav className="flex flex-col items-center justify-center h-full gap-8">
-                <Link href="/" className="text-2xl text-primary/80 hover:text-primary transition-colors">
-                  Home
-                </Link>
-                <Link href="/#author" className="text-2xl text-primary/80 hover:text-primary transition-colors">
-                  Author
-                </Link>
-                <Link href="/chapters" className="text-2xl text-primary/80 hover:text-primary transition-colors">
-                  Read Free Chapters
-                </Link>
-                <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-                  <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">Download for free</Link>
-                </Button>
+                <SheetClose asChild>
+                  <Link href="/" className="text-2xl text-primary/80 hover:text-primary transition-colors">
+                    Home
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link href="/#author" className="text-2xl text-primary/80 hover:text-primary transition-colors">
+                    Author
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link href="/chapters" className="text-2xl text-primary/80 hover:text-primary transition-colors">
+                    Read Free Chapters
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
+                    <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">Download for free</Link>
+                  </Button>
+                </SheetClose>
               </nav>
             </SheetContent>
           </Sheet>
