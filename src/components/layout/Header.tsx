@@ -9,8 +9,6 @@ import { Menu } from 'lucide-react';
 import { useState } from 'react';
 
 export function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   return (
     <header className="py-4 px-4 md:px-8 sticky top-0 z-50 bg-background">
       <div className="container mx-auto flex items-center justify-between">
@@ -38,27 +36,35 @@ export function Header() {
 
         {/* Mobile Navigation */}
         <div className="md:hidden">
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+          <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(true)}>
+              <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6 text-primary" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background/95">
               <nav className="flex flex-col items-center justify-center h-full gap-8">
-                  <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl text-primary/80 hover:text-primary transition-colors">
-                    Home
-                  </Link>
-                  <Link href="/#author" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl text-primary/80 hover:text-primary transition-colors">
-                    Author
-                  </Link>
-                  <Link href="/chapters" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl text-primary/80 hover:text-primary transition-colors">
-                    Read Free Chapters
-                  </Link>
-                  <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-                    <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank" onClick={() => setIsMobileMenuOpen(false)}>Download for free</Link>
-                  </Button>
+                  <SheetClose asChild>
+                    <Link href="/" className="text-2xl text-primary/80 hover:text-primary transition-colors">
+                      Home
+                    </Link>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <Link href="/#author" className="text-2xl text-primary/80 hover:text-primary transition-colors">
+                      Author
+                    </Link>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <Link href="/chapters" className="text-2xl text-primary/80 hover:text-primary transition-colors">
+                      Read Free Chapters
+                    </Link>
+                  </SheetClose>
+                  <SheetClose asChild>
+                    <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
+                      <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">Download for free</Link>
+                    </Button>
+                  </SheetClose>
               </nav>
             </SheetContent>
           </Sheet>
