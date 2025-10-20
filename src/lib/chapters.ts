@@ -6,7 +6,14 @@ export const bookCover = {
   imageHint: "book photo"
 }
 
-export const chapters = [
+export type Chapter = {
+  id: number;
+  title: string;
+  description: string;
+  paragraphs: string[];
+};
+
+export const chapters: Chapter[] = [
   {
     id: 1,
     title: "Chapter 1: The Birthday Wish",
@@ -1377,5 +1384,3 @@ export const chapters = [
     ]
   }
 ]
-
-    

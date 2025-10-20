@@ -1,12 +1,12 @@
 import { AnimatedDiv } from '@/components/ui/AnimatedDiv';
 import { Separator } from '@/components/ui/separator';
-import { chapters } from '@/lib/chapters';
+import { chapters, type Chapter } from '@/lib/chapters';
 import { notFound } from 'next/navigation';
 
 
 export default function ChapterPage({ params }: { params: { id: string } }) {
   const { id } = params;
-  const chapter = chapters.find(c => c.id === parseInt(id));
+  const chapter = chapters.find((c: Chapter) => c.id === parseInt(id));
 
   if (!chapter) {
     notFound();
@@ -34,9 +34,7 @@ export default function ChapterPage({ params }: { params: { id: string } }) {
 }
 
 export function generateStaticParams() {
-  return chapters.map(chapter => ({
+  return chapters.map((chapter: Chapter) => ({
     id: chapter.id.toString(),
   }));
 }
-
-    
