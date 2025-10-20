@@ -1,8 +1,8 @@
 export const bookCover = {
   id: "book-cover",
   description: "Book cover for Bombay Business Club",
-  imageUrl: "https://i.postimg.cc/qR0wL12T/DALL-E-2024-05-13-13-39-01-A-minimalist-and-evocative-book-cover-for-a-mystery-thriller-titled-The.png",
-  imageHint: "art deco"
+  imageUrl: "https://i.postimg.cc/DzTX6tCM/IMG-7494.jpg",
+  imageHint: "book photo"
 }
 
 export const chapters = [
