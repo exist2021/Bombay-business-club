@@ -300,12 +300,240 @@ export const chapters: Chapter[] = [
       <p>And the real war was only just beginning.</p>
     `,
   },
-  ...Array.from({ length: 6 }, (_, i) => ({
-    id: i + 3,
-    title: `Chapter ${i + 3}: The Invitation`,
-    slug: `chapter-${i + 3}`,
+  {
+    id: 3,
+    title: 'Chapter 3: The Years of Broken Things',
+    slug: 'chapter-3',
     content: `
-      <p>This is the beginning of chapter ${i + 3}. The story unfolds as our characters navigate the intricate web of power and ambition in the heart of Bombay.</p>
+      <h2>Three Years After Kiara’s Destruction</h2>
+      <p>Anya was eighteen now, three years since she’d systematically destroyed Kiara Sharma’s life and relationship with Aryan Khanna.</p>
+      <p>Three years of patient waiting.</p>
+      <p>Three years of occasionally running into Aryan at family gatherings, at Malabar Hill parties, at the Alibaug beach houses where Mumbai’s elite escaped on weekends, at the Lonavala farmhouses where families spent long holidays.</p>
+      <p>Three years of him slowly forgetting Kiara’s chaos and remembering the quiet Chandra girl who’d always been there.</p>
+      <p>At fifteen, she’d been invisible—the girl who destroyed his girlfriend from the shadows.</p>
+      <p>At eighteen, she was becoming visible—poised, elegant, about to start at NYU, interesting in ways she hadn’t been at fifteen.</p>
+      <p>And Aryan, now twenty-one, finally saw her.</p>
+      <p>It started slowly. Conversations at parties lasting longer. Him seeking her out during a weekend at his family’s Alibaug property—walking along their private beach while their parents had sundowners, him talking excitedly about his father’s new venture, an airline company that would compete with the established carriers. Late-night texts about nothing important. Then his hand finding hers one evening at the Khanna farmhouse in Khandala, the Western Ghats stretching into mist around them.</p>
+      <p>“You’re different than I remembered,” he said. “More present. More… there.”</p>
+      <p><em>More there than Kiara</em>, she thought.</p>
+      <p>When he asked her to come early to his father’s next party at their Juhu beach house—“just us, before everyone arrives”—she went home floating.</p>
+      <p>After three years of waiting, this was finally happening.</p>
+      <p>Her mother was waiting in her room.</p>
+      <p>-----</p>
+      <p>“Sit, beta. We need to talk about Aryan Khanna.”</p>
+      <p>Maya was gentle, concerned. “He’s a lovely boy. Good family. But you need to understand—the Khannas and Chandras coexist by respecting boundaries. Suresh is launching this airline. Your father has interests in logistics, fuel supply chains. They’ll do business together. That’s how it works—cooperation, mutual benefit, careful distance.”</p>
+      <p>“What does that have to do with—”</p>
+      <p>“Marriage mixes everything. Creates complications.” Maya smoothed Anya’s hair back from her face, the gesture tender. “You know things, beta. Family things. Business things. Things you do with your gifts for your father—reading people in negotiations, sensing intentions, gathering information. You know how our world actually works.”</p>
+      <p>Anya said nothing.</p>
+      <p>“Imagine you marry Aryan. Five years later, there’s an argument. You’re angry, he’s angry, things get said. Or imagine ten years later, there’s a divorce—these things happen in the best families. And then what? Suresh Khanna knows everything about how we operate? About what you can do? About your father’s real business?”</p>
+      <p>“I would never—”</p>
+      <p>“You wouldn’t mean to. But love makes us careless. Your father and I have seen it happen.” Maya stood, walked to the window. “NYU accepted you. Film school. Tisch program. This is what you’ve wanted since you were twelve years old, beta. Your father arranged everything—full scholarship, best faculty, connections in the industry.”</p>
+      <p>“I didn’t apply to—”</p>
+      <p>“Your father knows what you need before you do. He pays attention, Anya. He sees how you watch films, how you analyze them, how you talk about cinematography and editing.” She turned back, smiling. “This is good for you. Real education, away from distractions. Away from boys who seem perfect but are actually complicated. When you come back in four years, you’ll see everything clearly. You’ll thank us.”</p>
+      <p>“And Aryan?”</p>
+      <p>“Will move on. These things are intense at your age, but they pass. He’ll find some nice girl from an appropriate family. You’ll find someone when the time is right—someone who fits properly.” Maya walked to the door, paused. “You leave in six weeks. Start thinking about what you want to pack. Your father’s assistant will handle the visa paperwork.”</p>
+      <p>She left, closing the door softly behind her.</p>
+      <p>Anya sat on her bed and felt the future solidifying like concrete around her feet.</p>
+      <p>-----</p>
+      <p>She tried to catch her father the next evening. Found him in the marble foyer, already dressed for the evening—charcoal Tom Ford suit, checking his Patek Philippe.</p>
+      <p>“Papa, I need to talk about—”</p>
+      <p>“Not now. Bombay Business Club meeting in twenty minutes.” He adjusted his cufflinks without looking at her. “Your flight to New York is booked. Tuesday, 11 PM Air India. Your mother has the details.”</p>
+      <p>“But I haven’t even decided if—”</p>
+      <p>“The decision is made.” He picked up his briefcase, car keys. “This is good for you.”</p>
+      <p>He walked past her to where his driver waited with the Mercedes, engine already running.</p>
+      <p>Ten seconds. That was the entire conversation.</p>
+      <p>Anya stood in the foyer, marble cool under her feet, and understood: This was already finished. Her attendance at NYU wasn’t a suggestion or an opportunity. It was a fact. Aryan wasn’t a possibility. He was already in the past.</p>
+      <p>Her father had decided.</p>
+      <p>That meant it was done.</p>
+      <p>-----</p>
+      <p>The next two weeks moved like a dream underwater—everything muffled, distorted, inevitable.</p>
+      <p>Aryan’s texts came at strange hours. <em>Sorry, in meeting with Dad. Call you later?</em> He didn’t.</p>
+      <p>When she tried calling, his phone went to voicemail. He’d text back hours later: <em>Crazy day. Aviation ministry stuff. Tomorrow?</em></p>
+      <p>Tomorrow never came.</p>
+      <p>The Juhu party got postponed. “Family obligations,” Aryan’s message said. “My dad needs me at investor presentations. Rain check?”</p>
+      <p>She saw him once more, at a Malabar Hill function. He was apologetic, distracted, surrounded by his father’s business associates.</p>
+      <p>“Things are insane right now,” he said, barely making eye contact. “The airline launch is consuming everything. And you’ll be in New York soon anyway, right?”</p>
+      <p>“In three weeks.”</p>
+      <p>“That’s great. NYU is incredible. You’ll love it there.” He glanced over his shoulder where his father was gesturing him over. “I should—my dad needs me. But we’ll catch up before you leave, yeah?”</p>
+      <p>They didn’t.</p>
+      <p>No dramatic fight. No tearful goodbye. Just distance widening until there was nothing left to hold onto.</p>
+      <p>At breakfast the morning of her flight, her father was reading the Economic Times over coffee.</p>
+      <p>“New York will be good for you,” he said without looking up. “Focus on the work.”</p>
+      <p>That was all. Four words.</p>
+      <p>Anya flew to New York that night, leaving behind Aryan Khanna and the three-year revenge that had meant everything and achieved nothing.</p>
+      <p>-----</p>
+      <h2>NYU - Age 19</h2>
+      <p>Tisch School of the Arts should have been freedom.</p>
+      <p>Anya threw herself into filmmaking—learning Panavision cameras, editing on Avid, understanding the grammar of cinema. She was good at it. Her student films were dark, psychologically complex, featuring women trapped in beautiful cages. Her professors praised her “distinctive voice” and “mature perspective.”</p>
+      <p>They didn’t know she was just filming her own life.</p>
+      <p>She made friends carefully. Other film students, artists, the kind of creative people her father would have despised. She went to parties in Brooklyn warehouses, drank cheap wine, tried marijuana once and hated how it made her clairvoyant gifts spike uncontrollably, made her feel everyone’s emotions in the room simultaneously until she had to lock herself in a bathroom to breathe.</p>
+      <p>She learned that other people’s families operated on different rules. That “family obligation” wasn’t universal. That some daughters chose their own careers, their own partners, their own lives without consulting fathers who operated like emperors.</p>
+      <p>It should have been revelatory.</p>
+      <p>But her father’s presence was everywhere.</p>
+      <p>Not physically—he stayed in Mumbai, running his empire. But his people were in New York. She’d run into “family friends” at restaurants in Manhattan. Her mother’s cousin’s husband “happened to be visiting” and took her to dinner. A Harvard classmate of her father’s who now ran a hedge fund invited her to a networking event and asked too many questions about what she was doing, who she was seeing, how she was spending her time.</p>
+      <p>She felt watched. Always.</p>
+      <p>Still, she tried.</p>
+      <p>-----</p>
+      <h2>Cannes - Age 19</h2>
+      <p>Six months into her first year, Anya attended the Cannes Film Festival with Zara Ahmed—a stunning Bangalore model-turned-actress who was aggressively networking her way toward Bollywood stardom. Within five years, Zara would star opposite Shah Rukh Khan and become one of India’s biggest actresses. But at Cannes, she was still hungry, still climbing, still treating every interaction like an audition.</p>
+      <p>“Stay close,” Zara told her on the Croisette, both of them in borrowed designer gowns. “Film festivals are where careers get made. You need to meet everyone.”</p>
+      <p>That’s how Anya met Jean-Luc Rousseau.</p>
+      <p>He was standing outside the Palais des Festivals smoking a Gauloise, wearing a vintage Godard t-shirt under a rumpled blazer, looking utterly bored by the spectacle around him.</p>
+      <p>“You’re not watching the film?” Anya asked in French.</p>
+      <p>He glanced at her, surprised. “You speak French.”</p>
+      <p>“School. And I spent a summer in Paris when I was fourteen.”</p>
+      <p>“The film inside is garbage. Pretentious garbage. Beautiful cinematography covering up the fact that the director has nothing to say.” He offered her the cigarette. She shook her head. “You’re a student?”</p>
+      <p>“NYU. Tisch. You?”</p>
+      <p>“Filmmaker. Documentaries. Real stories, not this—” he gestured at the festival behind them, “—this circus of wealthy people pretending to care about art.”</p>
+      <p>She should have walked away. Should have recognized the danger immediately—the passionate idealism, the contempt for wealth and power, the exact kind of person her father would destroy without hesitation.</p>
+      <p>Instead, she smiled. “Tell me about your documentaries.”</p>
+      <p>They spent three days together at Cannes. Watching films, arguing about Truffaut and Bresson, walking along the beach at 3 AM while Jean-Luc chain-smoked and talked about using cinema to expose injustice, to give voice to the voiceless, to challenge the systems that kept people powerless.</p>
+      <p>Everything about him was exactly what her father would hate.</p>
+      <p>Which was probably why she fell so hard.</p>
+      <p>-----</p>
+      <p>They kept in touch after Cannes. Long emails about films they were watching, ideas they were developing. Then he visited New York. Then she visited Paris during spring break. Then it stopped being visits and started being a relationship.</p>
+      <p>Jean-Luc’s apartment in the East Village was tiny—a fifth-floor walkup with a bathtub in the kitchen and films stacked everywhere. He edited his documentaries on a secondhand Mac, survived on espresso and cigarettes, believed completely that art could change the world.</p>
+      <p>“You’re different from what I expected,” he told her one afternoon, both of them tangled in his narrow bed, rain drumming against the single window. “When you said your family was from Mumbai, I imagined… I don’t know. Conservative. Traditional. But you’re here. You’re free.”</p>
+      <p>She didn’t correct him. Didn’t mention her father, or what the Chandra name meant, or the supernatural gifts she carried like weapons she couldn’t put down.</p>
+      <p>For three months, she was just Anya. Just a girl in love with a boy who saw her as a person rather than a tool.</p>
+      <p>It was the happiest she’d been since childhood.</p>
+      <p>-----</p>
+      <p>The call came at 7 PM New York time—4:30 AM in Mumbai.</p>
+      <p>Her mother never called at 4:30 AM.</p>
+      <p>“Beta, I’m sorry to wake you. It’s Priya. She’s having a difficult time. Can you come home for a week? She needs you.”</p>
+      <p>Anya sat up in Jean-Luc’s bed, his arm still around her waist. “What happened? Is she okay?”</p>
+      <p>“She’s fine, just—you know your sister. She’s emotional, she needs family support right now. Can you come? Please? Just for a week.”</p>
+      <p>“Maa, I have midterms—”</p>
+      <p>“Beta, please. She asked for you specifically. She won’t talk to me or your father, just keeps saying she needs her sister.” Maya’s voice cracked slightly—a masterful touch. “I’m worried about her. I wouldn’t ask if it wasn’t important.”</p>
+      <p>Anya looked at Jean-Luc, still sleeping, his hand loosely holding hers. “Okay. I’ll book a flight.”</p>
+      <p>“Your father’s assistant will handle it. Check your email. The ticket is already there—Thursday afternoon flight. Thank you, beta. Priya will be so relieved.”</p>
+      <p>-----</p>
+      <p>When Anya landed at Mumbai airport, her mother picked her up personally—unusual enough to trigger warning bells immediately.</p>
+      <p>“How’s Priya?”</p>
+      <p>“Priya?” Maya looked confused for a second, then: “Oh, she’s much better. I think she just needed to know you were coming. You know how she gets—dramatic.”</p>
+      <p>At home, Priya was in her studio painting, looking completely fine.</p>
+      <p>“You called Maa saying you needed me?”</p>
+      <p>Priya set down her brush. “What? No. I mean, I’m happy you’re here, but I didn’t—” She paused. “Maa said you had a break from school?”</p>
+      <p>“She said you were having a crisis.”</p>
+      <p>Understanding flickered across Priya’s face. “I’m not having a crisis. I’m painting. I’m fine.” She lowered her voice. “Why are you really here?”</p>
+      <p>But Anya already knew.</p>
+      <p>-----</p>
+      <p>The week stretched.</p>
+      <p>“Stay a few more days, beta. Your father wants a family dinner—you know how rare that is with everyone’s schedules.”</p>
+      <p>Then: “Your cousin Neha is visiting from Delhi. She specifically asked to see you.”</p>
+      <p>Then: “Just through the weekend. What’s the harm? You can study from home.”</p>
+      <p>Every time Anya tried to book a return flight, her mother had a reason why she should wait one more day, just one more, it’s so nice having you home, beta, we miss you so much.</p>
+      <p>By the time she got back to New York ten days later, Jean-Luc’s apartment was empty.</p>
+      <p>His phone number was disconnected. His email bounced back.</p>
+      <p>The super in his building shrugged. “Immigration came. Said he had visa issues. He had to leave immediately—like, packed a suitcase and left that day. Didn’t even take most of his stuff.”</p>
+      <p>Anya stood in the empty apartment—films still stacked against the walls, his espresso maker still on the kitchen counter, his Godard poster still tacked above the bathtub—and felt something essential break inside her chest.</p>
+      <p>She called her mother.</p>
+      <p>“Jean-Luc is gone.”</p>
+      <p>“Gone? What do you mean?” Maya’s voice was perfectly surprised, perfectly concerned.</p>
+      <p>“His visa. Immigration found issues. He had to return to France.”</p>
+      <p>“Oh no! Beta, I’m so sorry. These visa things are so complicated.” A pause. “Though I have to say—and I don’t mean this cruelly—maybe it’s for the best? He was so different from our world. All that activism, all those protests and political writings. How would that even work long-term? You living in his tiny apartment, him criticizing everything about how we live?”</p>
+      <p>“You did this.”</p>
+      <p>“Beta, I didn’t do anything. Immigration does what it does. These French activists, they have complicated histories. Sometimes it catches up with them.” Her voice softened. “I know it hurts now. But you’ll see—this was going to end badly anyway. Better now than two years from now when you’re even more attached.”</p>
+      <p>Her father never mentioned Jean-Luc. Not once.</p>
+      <p>Just saw her at breakfast during Diwali break: “Focus on school. Finish strong.”</p>
+      <p>That was all.</p>
+      <p>-----</p>
+      <hr>
+      <h2>Mumbai - Age 22</h2>
+      <p>Coming home felt like stepping back into a cage she’d temporarily forgotten was locked.</p>
+      <p>The Malabar Hill mansion was exactly as she’d left it—beautiful, pristine, heavy with unspoken rules and invisible surveillance. But Anya had made one condition before returning: she would not live under her parents’ roof. She wanted her own space, however illusory the independence might be. Her father, after a brief negotiation, relented—on the condition that her new apartment be in a “respectable” neighborhood with “appropriate” security. So she moved into a high-floor apartment in Bandra, sleek and modern, with a view of the sea and enough distance from Malabar Hill to pretend, for a few hours a day, that she was free.</p>
+      <p>Her mother had redecorated her old bedroom in shades of cream and gold anyway, as if erasing the eighteen-year-old who’d left wasn’t enough—she had to overwrite the space entirely.</p>
+      <p>Her father threw a welcome home party, inviting producers and directors and Bollywood’s elite, positioning his daughter as the next great Indian filmmaker. In TV interviews he talked about Anya next project, he said he might produce Anya’s film.</p>
+      <p>Vikas was pragmatic however, he wanted Anya to learn the art. He didn’t give her the silver spoon, Anya first project was a low budget documentary.</p>
+      <p>Priya was there too when Anya retuned — Priya twenty-four now, taller and fairer than Anya, with an artist’s grace in her movements. She’d spent the years while Anya was in New York establishing herself as a painter, showing in small galleries in Mumbai and Goa, building a reputation for ethereal landscapes that felt like memories of places that had never existed. She had their mother’s beauty but with something softer, less controlled.</p>
+      <p>“You look exhausted,” Priya murmured, finding Anya on the terrace after the formal introductions were done. “New York didn’t agree with you?”</p>
+      <p>“New York was fine. Coming back is the problem.”</p>
+      <p>Priya studied her younger sister’s face. “What happened?”</p>
+      <p>“The usual. I tried to have something of my own. Papa destroyed it.” Anya’s voice was flat, carefully empty. “How about you? Still painting?”</p>
+      <p>“Yes. Actually…” Priya hesitated, then: “I’m planning to go back to New York. There’s a gallery interested in showing my work. And I’ve met someone.”</p>
+      <p>“Someone?”</p>
+      <p>“Marco. He’s Italian, works in finance. Normal guy. Nothing to do with our world.” Priya’s voice dropped. “Don’t tell Papa yet. I’m waiting for the right time.”</p>
+      <p>Anya looked at her sister—tall, beautiful, talented, planning her escape. “You’re getting out.”</p>
+      <p>“I’m trying to. I don’t have your gifts, Anya. I’m not useful to him the way you are. Which means I might actually have a chance.” The guilt in Priya’s voice was real. “I’m sorry. I know that’s not fair.”</p>
+      <p>“It’s not about fair. It’s about survival.” Anya touched her sister’s arm. “Get out. Marry your Italian. Build something good. Don’t feel guilty about it.”</p>
+      <p>“What about you?”</p>
+      <p>“I’m the one with grandmother’s gifts. I’m valuable. Which means I’m trapped.” She said it without self-pity, just cold assessment. “Go. Be free for both of us.”</p>
+      <p>The film project materialized within months—a thriller about a young woman who discovers her family business is built on secrets that could destroy them all. Painfully autobiographical, though no one seemed to notice. Her father provided the financing, used his connections to assemble a crew, made it clear that his daughter’s debut would be a success whether the market wanted it or not.</p>
+      <p>And Anya, because she was genuinely talented, because she’d learned her craft well, because she poured every ounce of her rage and grief into the work—began making something actually good.</p>
+      <p>But her father’s control extended to her personal life in ways that made New York’s surveillance seem subtle by comparison.</p>
+      <p>Every man she spoke to at industry parties was vetted, assessed, categorized as acceptable or problematic. Every date was monitored. Every late-night conversation was somehow known to her father by morning. She felt like she was eighteen again, except now the cage was bigger and more sophisticated and infinitely more inescapable.</p>
+      <p>She dated a stand-up comedian for three months—a sharp-witted man from Delhi who performed at comedy clubs across Mumbai and had a small but devoted following online. He made her laugh in a way she hadn’t since before Kiara’s downfall, and for a while, she let herself believe that humor might be an antidote to her family’s poison. Her father approved at first—comedians were harmless, disposable, unlikely to ask inconvenient questions.</p>
+      <p>But then the comedian started weaving subtle jabs into his sets: jokes about “old-money families who own the city,” punchlines about “men who smile while they ruin you,” bits that felt too close to home. After a particularly pointed show at a club in Lower Parel, her father summoned her.</p>
+      <p>“He thinks he’s brave,” Vikash said, stubbing out his cigarette. “But bravery without power is just noise. And noise can be silenced.”</p>
+      <p>The comedian’s gigs began drying up. Venues “forgot” to confirm bookings. His YouTube channel was hit with a wave of copyright strikes. Within two months, he was performing at open mics in Pune, then stopped posting altogether. Anya never heard from him again.</p>
+      <p>“</p>
+      <p>Then there was Rohan.</p>
+      <p>Rohan Deshmukh—assistant director on her film, twenty-eight, with slicked-back hair and designer stubble and expensive cologne that didn’t quite mask something desperate underneath. Good-looking in a calculated way, charming on the surface, but Anya’s clairvoyant gifts caught something else: ambition without ethics, narcissism wrapped in flattery, the particular hunger of someone from a semi-criminal background who saw the Chandras as a path to legitimacy and wealth.</p>
+      <p>Her father’s spies reported back that Rohan had connections to a small-time smuggling operation in Thane. Nothing major, but enough to show he wasn’t opposed to bending rules. That he came from a family that made their money through grey-market electronics and import-export schemes that didn’t quite withstand scrutiny.</p>
+      <p>Vikash was cautiously interested. “At least this one understands how the real world works. Not like your idealistic French boy or your revolutionary screenwriter.”</p>
+      <p>But Rohan had miscalculated the Chandra family’s sophistication.</p>
+      <p>He asked Anya to dinner at Indigo Deli in Bandra. Ordered expensive wine, told stories designed to make him seem exciting and dangerous, touched her arm too frequently with hands that felt clammy and possessive.</p>
+      <p>Through her empathic gift, Anya felt his intentions crystallizing—the plan forming in his mind with obvious, stupid clarity. He’d slip something into her drink. Nothing lethal, just enough to make her compliant, cloudy, unable to refuse when he took her somewhere private. He’d take photos, collect evidence, then approach Vikash Chandra with a simple proposition: marriage to his daughter, or the photos go public, destroying the family’s reputation.</p>
+      <p>Blackmail disguised as romance. Extortion wrapped in courtship.</p>
+      <p>It was so clumsy, so transparent, that Anya almost pitied him.</p>
+      <p>Almost.</p>
+      <p>She excused herself to the bathroom and texted her father a single word: Confirmed.</p>
+      <p>Vikash’s men were efficient.</p>
+      <p>Rohan never made it to the bathroom where he’d planned to add rohypnol to her wine glass. He was intercepted by two large men in expensive suits who walked him out through the kitchen with minimal fuss. The restaurant staff, well-compensated for their discretion, noticed nothing.</p>
+      <p>Anya finished her meal alone, paid the bill, and went home.</p>
+      <p>She never saw Rohan again. Her father’s men had been extremely clear: pack your bags, return to your village, and if you ever set foot in Mumbai again, you’ll leave on a stretcher. Rohan, sensibly, took the warning seriously.</p>
+      <p>When Anya asked her father what had happened, Vikash simply smiled. “He wasn’t good enough for you. And he had very poor judgment about who he could threaten.”</p>
+      <p>It should have felt like protection. Like a father looking out for his daughter.</p>
+      <p>Instead it felt like ownership. Like a man guarding his property from other predators while still insisting on his right to control how that property was used.</p>
+      <hr>
+      <h2>Kartik Mehra - Age 25</h2>
+      <p>Her father’s best friend was Aditya Joshi —god of Indian cricket, captain of the national team.</p>
+      <p>Vikash Chandra threw a party to celebrate India’s World Cup victory. Ice sculptures shaped like cricket bats. Champagne fountains. Every Bollywood star and political figure worth knowing.</p>
+      <p>She met Kartik Mehra at the party. He was destined to be the next God of cricket, she drooled. It was love at first sight except, Kartik was married with a small child.</p>
+      <p>Anya was impetuous, she started flirting while the party worked its way. They has exchanged numbers, the next day, they were meeting clandestinely in Oberoi’s where the cricket team were put up.</p>
+      <p>Anya sneaked in quickly, they made passionate love in the shower.</p>
+      <p>Anya followed Kartik everywhere much to the chagrin of Vikas Chandra, Maya was a bit tolerant, but she knew Kartik was married and she had to get Anya out of Kartik Mehra’s love.</p>
+      <p>But, Anya was getting tired of following him, Kartik would prefer to sometimes take his wife and daughter for tours and Anya would feel anger and revenge.</p>
+      <p>Anya tried to make Kartik jealous by going out with other cricketers, Kartik was fuming.</p>
+      <p>In the end, they were hysterically fighting, Kartik calling up guys Anya’s was dating and Anya calling up Kartik wife and ratting Aditya out.</p>
+      <p>Vikas Chandra had to speak to the god of Indian cricket and request that he help Aditya come to his senses.</p>
+      <p>Sunil Joshi did the job, Kartik Mehra, stopped texting and calling. Maya nurtured her daughter back to health.</p>
+      <p>-----</p>
+      <p>“</p>
+      <p>Maya said “Beta, you’re twenty-six. Beautiful, talented, successful. But you keep choosing wrong.” Maya’s voice was gentle, non-judgmental. “The cinematographer who asked too many questions. The screenwriter who thinks wealth is evil. The criminal who tried to blackmail us. And now your father’s married best friend.”</p>
+      <p>She said it factually, without cruelty.</p>
+      <p>“You’re looking for something you can’t have. Men from our world are too powerful—dangerous. Men outside our world are too curious or too idealistic—dangerous. Married men end badly—always.” She paused. “So what’s left?”</p>
+      <p>Anya said nothing.</p>
+      <p>“Priya is settling down. That Italian, Marco. He’s nobody—middle class, normal job, no connections, no power. But she seems happy. Maybe you should think about that.”</p>
+      <p>“You want me to marry down?”</p>
+      <p>“I want you to be practical.” Maya squeezed her hand. “Not now—you’re young still, you have time. But think about it. What kind of life do you actually want? And what are you willing to compromise to get it?”</p>
+      <p>-----</p>
+      <h2>Age 28-30: The Waiting</h2>
+      <p>Anya waited.</p>
+      <p>She turned twenty-nine. Then thirty.</p>
+      <p>Priya called from New York with news of her and Marco coming to India. Their mother made disapproving noises. Their father said very little—which meant he was calculating something but had decided Priya wasn’t worth fighting over. She was the normal daughter, the one without gifts, the one who could be allowed to escape because she wasn’t useful enough to keep.</p>
+      <p>“Are you okay?” Priya asked during one call. “You sound… different.”</p>
+      <p>“I’m fine.”</p>
+      <p>“You sound dead, Anya. Like you’re not even there anymore.”</p>
+      <p>“I’m here. I’m just accepting reality.”</p>
+      <p>“That’s not accepting reality, that’s giving up—”</p>
+      <p>“Same thing, in our family.” Anya kept her voice flat. “Enjoy Florence. I’ll come to the wedding.”</p>
+      <p>She meant it kindly, but Priya heard it for what it was: goodbye to the sister she’d known. Anya was still alive, still functional, still breathing. But something essential had been extinguished.</p>
+      <p>-----</p>
+      <h2>Somewhere Else in Mumbai</h2>
+      <p>Somewhere in Andheri, in a modest two-bedroom apartment with paint peeling from the ceiling and traffic noise constant through single-pane windows,</p>
+      <p>He was forty-three. His children were teenagers now, living with their mother, he has last seen them a decade back.</p>
+      <p>He an ordinary man was about to meet the blue blooded princess in a few months.</p>
+    `,
+  },
+  ...Array.from({ length: 5 }, (_, i) => ({
+    id: i + 4,
+    title: `Chapter ${i + 4}: The Invitation`,
+    slug: `chapter-${i + 4}`,
+    content: `
+      <p>This is the beginning of chapter ${
+        i + 4
+      }. The story unfolds as our characters navigate the intricate web of power and ambition in the heart of Bombay.</p>
       ${LOREM_IPSUM_PARAGRAPH}
       <p>As the sun set over the Arabian Sea, casting long shadows across the city, a decision was made that would change everything. The air was thick with anticipation, the scent of opportunity mingling with the ever-present aroma of sea salt and spices.</p>
       ${LOREM_IPSUM_PARAGRAPH.repeat(2)}
