@@ -34,7 +34,7 @@ export default function Home() {
               />
           </div>
           <Button size="lg" className="mt-12 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-            <Link href="/chapters">Acquire Your Copy</Link>
+            <Link href="/chapters">Download to read</Link>
           </Button>
         </header>
 
