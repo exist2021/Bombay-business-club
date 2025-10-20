@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: ChapterPageProps) {
     return { title: 'Chapter not found' };
   }
   return {
-    title: `${chapter.title} | Bombay Reader`,
+    title: `${chapter.title} | Anya Chandra`,
     description: `Read ${chapter.title} of The Bombay Business Club.`,
   };
 }
