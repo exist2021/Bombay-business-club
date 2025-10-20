@@ -1,13 +1,8 @@
 import { AnimatedDiv } from '@/components/ui/AnimatedDiv';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import { chapters } from '@/lib/chapters';
 import Link from 'next/link';
-
-const chapters = [
-  { id: 1, title: 'Chapter 1: The Gilded Cage', description: 'An introduction to the world of the Bombay Business Club.' },
-  { id: 2, title: 'Chapter 2: A Secret Unveiled', description: 'Anya discovers a secret that will change everything.' },
-  { id: 3, title: 'Chapter 3: The Price of Power', description: 'The true cost of influence is revealed.' },
-];
 
 export default function ChaptersPage() {
   return (
