@@ -23,7 +23,7 @@ export function Header() {
   ];
 
   return (
-    <header className="py-4 px-4 md:px-8 sticky top-0 z-50 bg-background/95">
+    <header className="py-4 px-4 md:px-8 sticky top-0 z-50 bg-background">
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <Logo className="w-16 h-16 text-primary group-hover:text-accent-foreground transition-colors" />
@@ -55,7 +55,7 @@ export function Header() {
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="md:hidden">
-          <div className="absolute left-0 w-full bg-background/95 mt-4 p-4">
+          <div className="absolute left-0 w-full bg-background mt-4 p-4">
             <nav className="flex flex-col items-center gap-6">
               {navLinks.map((link) => (
                 <Link
