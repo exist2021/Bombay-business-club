@@ -28,14 +28,14 @@ export default function Home() {
           
           <div className="mt-12 w-full max-w-2xl aspect-video relative bg-card/50 border-2 border-primary/50 rounded-lg shadow-[0_0_20px_hsl(var(--primary)/0.3)] overflow-hidden">
             <iframe
+              src="https://player.vimeo.com/video/1128958261"
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/KC5GQbcj-5k"
-              title="YouTube video player"
               frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
               className='absolute top-0 left-0 w-full h-full'
+              title="The Bombay Business Club - Book Trailer"
             ></iframe>
           </div>
           
