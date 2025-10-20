@@ -38,16 +38,7 @@ export default function Home() {
               className='absolute top-0 left-0 w-full h-full'
             ></iframe>
           </div>
-
-          <div className="mt-12 w-64 h-96 relative bg-card/50 border-2 border-primary/50 rounded-lg shadow-[0_0_20px_hsl(var(--primary)/0.3)] flex items-center justify-center overflow-hidden">
-             <Image 
-                src={bookCover.imageUrl}
-                alt={bookCover.description}
-                fill
-                style={{ objectFit: 'cover' }}
-                data-ai-hint={bookCover.imageHint}
-              />
-          </div>
+          
           <Button size="lg" className="mt-12 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
             <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">Download for free</Link>
           </Button>
@@ -56,10 +47,23 @@ export default function Home() {
         <Separator className="my-12 md:my-20 bg-primary/20" />
 
         {/* Synopsis Section */}
-        <section id="synopsis" className="max-w-4xl mx-auto text-center scroll-mt-20">
-          <h2 className="text-4xl font-headline text-primary mb-8">Synopsis</h2>
-          <div className="space-y-6 text-lg text-foreground/90 font-serif leading-relaxed text-left">
-            <p>Born into one of Bombay’s most elite families, Anya Chandra can bend thoughts and read the hidden corners of the human mind. At fifteen, her father—a second generation Bombay Elite — ordered her first betrayal. Two decades later, she is his most valuable secret, shaping fates from the shadows of South Bombay’s wealth and corruption. But power has left her hollow, and obedience has become a prison. As Anya begins to question the empire built on her gift, she must choose between blood and freedom—between the family that owns her and the self she’s never dared to claim.</p>
+        <section id="synopsis" className="max-w-4xl mx-auto scroll-mt-20">
+          <h2 className="text-4xl font-headline text-primary mb-8 text-center">Synopsis</h2>
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="md:w-1/3 flex-shrink-0">
+              <div className="w-64 h-96 mx-auto md:mx-0 relative bg-card/50 border-2 border-primary/50 rounded-lg shadow-[0_0_20px_hsl(var(--primary)/0.3)] flex items-center justify-center overflow-hidden">
+                <Image 
+                  src={bookCover.imageUrl}
+                  alt={bookCover.description}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  data-ai-hint={bookCover.imageHint}
+                />
+              </div>
+            </div>
+            <div className="md:w-2/3 space-y-6 text-lg text-foreground/90 font-serif leading-relaxed text-left">
+              <p>Born into one of Bombay’s most elite families, Anya Chandra can bend thoughts and read the hidden corners of the human mind. At fifteen, her father—a second generation Bombay Elite — ordered her first betrayal. Two decades later, she is his most valuable secret, shaping fates from the shadows of South Bombay’s wealth and corruption. But power has left her hollow, and obedience has become a prison. As Anya begins to question the empire built on her gift, she must choose between blood and freedom—between the family that owns her and the self she’s never dared to claim.</p>
+            </div>
           </div>
         </section>
 
