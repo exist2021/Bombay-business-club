@@ -54,7 +54,7 @@ export default function Home() {
         {/* Author Section */}
         <section id="author" className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12 scroll-mt-20">
           <Image 
-            src="https://picsum.photos/seed/author/400/400" 
+            src="https://i.postimg.cc/ZR93sssq/IMG-4571.jpg" 
             alt="Author Portrait" 
             width={200}
             height={200}
