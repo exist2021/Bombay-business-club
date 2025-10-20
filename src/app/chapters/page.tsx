@@ -22,7 +22,7 @@ export default function ChaptersPage() {
             </p>
           </div>
           <Button size="lg" className="mt-8 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-            <Link href="https://2532618660820.gumroad.com/l/BBC" target="_blank">Download for free</Link>
+            <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">Download for free</Link>
           </Button>
         </header>
 
