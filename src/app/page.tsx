@@ -33,7 +33,7 @@ export default function Home() {
         <Separator className="my-12 md:my-20 bg-primary/20" />
 
         {/* Synopsis Section */}
-        <section className="max-w-4xl mx-auto text-center">
+        <section id="synopsis" className="max-w-4xl mx-auto text-center scroll-mt-20">
           <div className="flex justify-center mb-8">
             <div className="w-24 h-[2px] bg-gradient-to-r from-transparent via-secondary to-transparent" />
           </div>
@@ -48,7 +48,7 @@ export default function Home() {
         <Separator className="my-12 md:my-20 bg-primary/20" />
 
         {/* Author Section */}
-        <section className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <section id="author" className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12 scroll-mt-20">
           <Image 
             src="https://picsum.photos/seed/author/400/400" 
             alt="Author Portrait" 
@@ -65,6 +65,18 @@ export default function Home() {
           </div>
         </section>
 
+        <Separator className="my-12 md:my-20 bg-primary/20" />
+
+        {/* Pre-Order Section */}
+        <section id="pre-order" className="max-w-2xl mx-auto text-center scroll-mt-20">
+          <h2 className="text-4xl font-headline text-primary mb-8">Pre-Order Now</h2>
+          <p className="text-lg text-foreground/90 font-serif leading-relaxed mb-8">
+            Be among the first to delve into the mysteries of the Bombay Business Club. Pre-order your copy today and receive exclusive bonus content.
+          </p>
+          <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]">
+            Reserve Your Copy
+          </Button>
+        </section>
       </div>
     </AnimatedDiv>
   );
