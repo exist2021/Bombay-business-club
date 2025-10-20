@@ -18,6 +18,8 @@ export default function ChaptersPage() {
     2: 'https://manojnayak.stck.me/chapter/1316352/The-High-Profile-Breakup-We-Cannot-Have-an-Actress-as-a-Bahu',
     3: 'https://manojnayak.stck.me/chapter/1318345/Anyas-disastrous-love-life',
     4: 'https://manojnayak.stck.me/chapter/1321684/Dilip-meets-Anya-at-The-Fashion-Book-Launch',
+    5: 'https://manojnayak.stck.me/chapter/1324793/Chapter-5-The-Three-Meetings',
+    6: 'https://manojnayak.stck.me/chapter/1328025/The-New-York-Exile',
   };
 
   return (
