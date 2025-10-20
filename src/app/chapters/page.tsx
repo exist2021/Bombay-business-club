@@ -48,7 +48,7 @@ export default function ChaptersPage() {
             </h2>
             <div className="bg-card/50 border border-primary/30 rounded-lg p-4 shadow-[0_0_15px_hsl(var(--primary)/0.2)]">
               <audio controls preload="auto" className="w-full">
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
+                <source src="https://drive.google.com/uc?export=download&id=1MgqD8wd1dNCpr9A96J6eoRUG_8sTieHU" type="audio/mp3" />
                 Your browser does not support the audio element.
               </audio>
             </div>
