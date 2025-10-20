@@ -56,11 +56,9 @@ export function Header() {
                     Read Free Chapters
                   </Link>
                 </SheetClose>
-                <SheetClose asChild>
-                  <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-                    <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">Download for free</Link>
-                  </Button>
-                </SheetClose>
+                <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
+                  <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">Download for free</Link>
+                </Button>
               </nav>
             </SheetContent>
           </Sheet>
