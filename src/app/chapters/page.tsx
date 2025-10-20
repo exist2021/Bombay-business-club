@@ -10,6 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { ExternalLink } from 'lucide-react';
 
 
 export default function ChaptersPage() {
@@ -47,7 +48,7 @@ export default function ChaptersPage() {
         <Separator className="my-12 md:my-20 bg-primary/20" />
 
         <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
+          <div className="w-full">
             {chapters.map((chapter) => {
               if (externalLinks[chapter.id]) {
                 return (
@@ -57,30 +58,32 @@ export default function ChaptersPage() {
                         <h3 className="text-2xl font-headline">{chapter.title}</h3>
                         <p className="text-sm text-foreground/80 font-serif font-normal">{chapter.description}</p>
                       </div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 shrink-0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                      <ExternalLink className="h-5 w-5 shrink-0 ml-4" />
                     </Link>
                   </div>
                 )
               }
               return (
-                <AccordionItem value={`item-${chapter.id}`} key={chapter.id}>
-                  <AccordionTrigger className="text-primary hover:text-accent-foreground text-left">
-                    <div>
-                      <h3 className="text-2xl font-headline">{chapter.title}</h3>
-                      <p className="text-sm text-foreground/80 font-serif font-normal">{chapter.description}</p>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                     <article className="max-w-4xl mx-auto text-lg text-foreground/90 font-serif leading-relaxed space-y-6 py-4">
-                      {chapter.paragraphs.map((p, index) => (
-                        <p key={index} className="text-foreground">{p}</p>
-                      ))}
-                    </article>
-                  </AccordionContent>
-                </AccordionItem>
+                <Accordion type="single" collapsible className="w-full" key={chapter.id}>
+                  <AccordionItem value={`item-${chapter.id}`}>
+                    <AccordionTrigger className="text-primary hover:text-accent-foreground text-left">
+                      <div>
+                        <h3 className="text-2xl font-headline">{chapter.title}</h3>
+                        <p className="text-sm text-foreground/80 font-serif font-normal">{chapter.description}</p>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                       <article className="max-w-4xl mx-auto text-lg text-foreground/90 font-serif leading-relaxed space-y-6 py-4">
+                        {chapter.paragraphs.map((p, index) => (
+                          <p key={index} className="text-foreground">{p}</p>
+                        ))}
+                      </article>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               )
             })}
-          </Accordion>
+          </div>
         </div>
       </div>
     </AnimatedDiv>
