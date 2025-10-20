@@ -120,12 +120,192 @@ export const chapters: Chapter[] = [
       <p>The intersection of their paths was still years away. But in a city of thirteen million souls, certain destinies had a way of finding each other—especially when family obligation, desperation, and magic conspired to make it so.</p>
     `,
   },
-  ...Array.from({ length: 7 }, (_, i) => ({
-    id: i + 2,
-    title: `Chapter ${i + 2}: The Invitation`,
-    slug: `chapter-${i + 2}`,
+  {
+    id: 2,
+    title: 'Chapter 2: The High Profile Breakup — We Cannot Have an Actress as a Bahu',
+    slug: 'chapter-2',
     content: `
-      <p>This is the beginning of chapter ${i + 2}. The story unfolds as our characters navigate the intricate web of power and ambition in the heart of Bombay.</p>
+      <p>The rest of the evening passed in a blur. Cake was cut, pictures were taken, gifts were opened. Anya smiled until her face ached, and made plans with Kiara to meet for coffee. When guests finally began departing near midnight, she felt hollowed out, a performance of herself.</p>
+      <p>She’d exchanged numbers with Kiara again. The actress had hugged her goodbye, whispered that she was sorry they’d lost touch, promised they’d reconnect properly. And Anya had hugged her back, already cataloging what she’d need to make her father’s revenge possible—and her own desire a reality.</p>
+      <p>But she’d been careful. When Kiara had used the powder room, Anya had followed and collected a strand of hair from the counter. When the actress had set down her clutch to take a photo, Anya had brushed against it, absorbing the essence of its owner. Small things. Untraceable things.</p>
+      <p>In her bedroom, Anya locked the door and sat on her bed, laying out her collection. A strand of Kiara’s hair. A thread from her crimson dress that had caught on a chair. The memory of her perfume, her laugh, her energy.</p>
+      <p>She wouldn’t act tonight. That would be too obvious, too suspicious. No, this would take time. Patience. The kind of slow, careful destruction that left no evidence, no trail, nothing that could be traced back to the Chandra family.</p>
+      <p>Her phone buzzed—a text from her father: <em>Well done. Keep building the friendship. I’ll let you know when it’s time to act.</em></p>
+      <p>She didn’t respond. Just stared at the message until the screen went dark.</p>
+      <p>But Anya knew she wouldn’t wait for his signal. She’d start tonight. Because she wasn’t just doing this for him—she was doing it for herself. For every time Kiara had made her feel invisible. For Aryan, who’d chosen Kiara over her when they were thirteen. For every Hermès bag Kiara bought with her own commercial money while Anya had to beg her mother for basics.</p>
+      <p>She pulled out her grandmother’s grimoire and her father’s occult texts. Opened them to marked pages. Set up her workspace—candles in sacred geometry, the brass owl at the center.</p>
+      <p>And began constructing the voodoo doll.</p>
+      <p>-----</p>
+      <p><strong>Three Hours Later - 2 AM</strong></p>
+      <p>The doll was complete.</p>
+      <p>Anya held it up to candlelight, examining her work. Perfect proportions—tall, slender, graceful like Kiara. The hair woven into the scalp. The crimson thread around the waist. A tiny photo folded into the chest.</p>
+      <p>She sat cross-legged and began the binding ritual—deep meditation, focused will, techniques learned from texts most people didn’t know existed.</p>
+      <p>The connection snapped into place.</p>
+      <p>And suddenly, Anya’s clairvoyant gift exploded outward.</p>
+      <p>She could FEEL Kiara. Four houses down Malabar Hill—close enough that if she concentrated, she could sense her childhood friend’s presence. Could feel her emotional state—happy, tired from the party, texting with someone (Aryan probably), drifting toward sleep.</p>
+      <p>Anya’s consciousness flowed through the sympathetic link, following invisible threads across the short distance between their mansions. She found Kiara’s ajna chakra and pressed against it gently.</p>
+      <p>Testing.</p>
+      <p>Kiara stirred in her bed, phone slipping from her hand, feeling something undefined. A pressure. A presence.</p>
+      <p>Anya smiled and withdrew.</p>
+      <p>The connection was perfect. Through her clairvoyant sight, she could watch Kiara’s life unfold now. Could tune in whenever she wanted—like a private channel only she could access.</p>
+      <p>She saw Kiara settle back to sleep in her bedroom just four houses away. Peaceful. Unaware.</p>
+      <p>Perfect.</p>
+      <p>Anya wrapped the doll in black silk and began the first working.</p>
+      <p>“<em>Shir mein dard</em>,” she whispered. Pain in the head.</p>
+      <p>She touched the doll’s forehead, visualizing pressure building behind Kiara’s eyes. Not severe—just persistent. The kind that made you irritable, unreliable.</p>
+      <p>Through her empathic gift, she felt it take hold. Felt Kiara wince in her sleep, felt the discomfort registering.</p>
+      <p>Good.</p>
+      <p>Anya held the visualization for twenty minutes, pouring envy and resentment and cold calculation into the spell. Every memory of Kiara effortlessly taking Aryan at thirteen. Every time Kiara had been “polite but distant” at that Diwali party two years ago, her eyes scanning for escape routes. Every casual mention tonight of her film career, her commercial deals, her ability to buy her own Hermès.</p>
+      <p>The rage was quiet, sophisticated, buried under perfect manners and Malabar Hill breeding.</p>
+      <p>But it burned.</p>
+      <p>And it made the magic sharp.</p>
+      <p>When she finished, Anya carefully stored the doll and climbed into bed.</p>
+      <p>Four houses away, Kiara woke with a splitting headache at 3 AM and couldn’t get back to sleep.</p>
+      <p>-----</p>
+      <p><strong>One Week Later</strong></p>
+      <p>“I’m so glad we’re doing this!”</p>
+      <p>Kiara slid into the booth at Candies—their usual spot in Bandra, equidistant from both their Malabar Hill homes. She looked slightly tired, with faint circles under her eyes that makeup didn’t quite hide.</p>
+      <p>“Me too. It’s been too long.” Anya’s smile was warm, genuine. “How’s post-production going?”</p>
+      <p>“Crazy! December release is coming up fast. The studio’s already planning the promotional schedule.” Kiara’s excitement was infectious. “And Aryan’s been so supportive—he came to the editing suite yesterday just to keep me company.”</p>
+      <p>Anya’s smile never wavered. “That’s sweet. You two seem really good together.”</p>
+      <p>“We are! I mean, we’ve only been dating two months, but it feels… right, you know?” Kiara leaned forward conspiratorially. “He wants me to meet his extended family at some yacht party next month. His mom’s apparently very particular about who he dates.”</p>
+      <p>“The Khannas would be. Old Mumbai family, all that.” Anya sipped her coffee. “Are you nervous?”</p>
+      <p>“Terrified! What if they don’t like me?” Kiara laughed, but real anxiety flickered underneath. “And I’ve been having these weird headaches lately—stress, probably—but I’m terrified I’ll get sick right before some important event.”</p>
+      <p>“Have you seen a doctor?”</p>
+      <p>“Yeah, they can’t find anything wrong. Just told me to manage stress better.” Kiara shrugged. “Which is impossible with the film schedule.”</p>
+      <p>“I’m sure it’ll pass,” Anya said soothingly. “You’re probably just exhausted from filming. Your body catching up.”</p>
+      <p>They talked for another hour—easy, comfortable, like the childhood friends they’d once been. Kiara mentioned shopping for a new Kelly bag for the film premiere. Anya admired her vintage Hermès clutch and asked where she found such good pieces.</p>
+      <p>No tension. No edge. Just two Malabar Hill girls reconnecting over expensive coffee.</p>
+      <p>When they parted with hugs and promises to do this weekly, Kiara seemed lighter. Happy to have her old friend back.</p>
+      <p>And Anya walked back to her car feeling satisfied.</p>
+      <p>Because through her clairvoyant sight, she’d been watching Kiara all week. Had seen the headaches disrupting her editing sessions. Had felt her anxiety about meeting Aryan’s extended family. Had registered every small moment of stress and amplified it through the doll.</p>
+      <p>And Kiara suspected nothing. Thought Anya was her ally. Her support system.</p>
+      <p>Perfect.</p>
+      <p>-----</p>
+      <p><strong>Three Weeks Later</strong></p>
+      <p>Anya sat in meditation at 2 AM, consciousness extended across the short distance to Kiara’s house.</p>
+      <p>Through her clairvoyant sight, she watched Kiara pacing her bedroom, phone in hand, clearly distressed.</p>
+      <p>The yacht party was tomorrow. And Kiara had just developed severe nausea.</p>
+      <p>Anya had worked the doll for two hours tonight—the most intense session yet. Visualizing Kiara’s stomach churning, her body rebelling. Making the thought of being on a boat absolutely impossible.</p>
+      <p>Now, through her extended awareness, she felt Kiara run to the bathroom. Felt her vomit. Felt the confusion and terror—Why does this keep happening?</p>
+      <p>Anya smiled in the darkness and pushed harder through the sympathetic link.</p>
+      <p>Make it worse. Make it undeniable.</p>
+      <p>Across Malabar Hill, Kiara spent the next three hours sick, finally texting Aryan at 6 AM that she couldn’t make the party.</p>
+      <p>Through her clairvoyant sight, Anya watched Aryan’s response arrive. Felt his frustration through the emotional threads connecting all of them.</p>
+      <p>Phase one was working perfectly.</p>
+      <p>-----</p>
+      <p><strong>Six Weeks After the Birthday Party</strong></p>
+      <p>The yacht party was beautiful—Anya could see it in real-time through her clairvoyant awareness even as she stood on the deck.</p>
+      <p>Mumbai’s elite in expensive casual wear. Champagne. The Arabian Sea glittering. The Khanna family showing off their wealth with characteristic Malabar Hill understatement—no vulgarity, just effortless luxury.</p>
+      <p>And Kiara, four houses away in her bedroom, too sick to attend.</p>
+      <p>Anya wore simple linen, her hair pulled back, looking healthy and present. Everything Kiara wasn’t.</p>
+      <p>She didn’t need to chase Aryan down. Just made herself visible—laughing with Priya’s friends, looking utterly reliable.</p>
+      <p>He found her by the railing, looking out at the water.</p>
+      <p>“Beautiful day,” he said.</p>
+      <p>“Gorgeous. Your family throws the best parties.”</p>
+      <p>“Kiara was really looking forward to this.” He sounded tired. “She feels terrible.”</p>
+      <p>“I’m sure. These stomach things are awful.”</p>
+      <p>“She’s been having a lot of health issues.” Frustration leaked through his careful tone. “The headaches, now this. Doctors can’t find anything wrong.”</p>
+      <p>Anya said nothing, just offered sympathetic silence.</p>
+      <p>“My mom’s starting to make comments,” Aryan continued, clearly needing to vent. “About reliability. About whether Kiara’s serious enough for our family.”</p>
+      <p>“That must be hard. For both of you.”</p>
+      <p>“It is.” He looked at her. “You’ve known her since we were kids. Was she always like this?”</p>
+      <p>“The Kiara I remember was actually super reliable,” Anya said honestly. “But we were children then. People change. Maybe the Bollywood pressure is too much?”</p>
+      <p>She planted the seed so subtly he’d think it was his own thought.</p>
+      <p>“Maybe,” he said quietly.</p>
+      <p>They stood in comfortable silence. Then he smiled—something shifting in how he looked at her. “I forgot how easy you are to talk to.”</p>
+      <p>“We did grow up together. All of us—you, me, Kiara, Priya. Malabar Hill kids.” Anya’s tone was light, nostalgic. “Remember those summers?”</p>
+      <p>“Yeah.” Something wistful in his voice. “Things were simpler then.”</p>
+      <p>“They were.”</p>
+      <p>He looked at her a moment longer, then rejoined the party.</p>
+      <p>And Anya stood alone, feeling satisfied.</p>
+      <p>Through her clairvoyant sight, she could sense Kiara’s misery four houses away. Could feel Aryan’s growing frustration even as he socialized.</p>
+      <p>The relationship was fracturing exactly as planned.</p>
+      <p>-----</p>
+      <p><strong>Ten Weeks After the Birthday Party</strong></p>
+      <p>Anya no longer needed the weekly coffee dates to track Kiara’s deterioration.</p>
+      <p>Through her clairvoyant gift, she watched everything in real-time. Kiara missing auditions because of headaches. Canceling plans with Aryan’s family because of mysterious nausea. The fights that materialized from nothing.</p>
+      <p>Because Anya was inside Kiara’s head now. Had projected her consciousness through the sympathetic link, taken up residence in Kiara’s ajna chakra—that space behind the forehead where perception originated.</p>
+      <p>From there, she could whisper. Plant suggestions. Twist how Kiara heard Aryan’s words.</p>
+      <p>When Aryan said something innocent, Anya made Kiara hear criticism.</p>
+      <p>When Kiara tried to explain, Anya made the words come out defensive, accusatory.</p>
+      <p>She watched through Kiara’s own eyes as the relationship imploded. Felt through her empathic connection as love turned to exhaustion.</p>
+      <p>And channeled it all back into the magic, making it stronger.</p>
+      <p>Her father coordinated from his end—calling producers, planting rumors about Kiara being “unreliable.” The whispers spread through Bollywood: talented but problematic. Beautiful but flaky.</p>
+      <p>Between Anya’s magical assault and Vikash’s industry manipulation, Kiara’s life was collapsing.</p>
+      <p>And she had no idea why.</p>
+      <p>Through her clairvoyant sight, Anya watched Kiara cry in her bedroom four houses away. Watched her search for answers that didn’t exist in the material world.</p>
+      <p>Watched her slowly break.</p>
+      <p>-----</p>
+      <p><strong>December 5th—Seven Days Before the Khanna Anniversary</strong></p>
+      <p>Anya sat in her father’s study, eyes closed, consciousness extended.</p>
+      <p>“She just found out about the reshoot,” she reported. “December 12th. Same day as the anniversary party.”</p>
+      <p>“Perfect.” Vikash lit a cigarette. “Your work?”</p>
+      <p>“The emotional manipulation is ready. When she tells Aryan, every word will come out wrong.”</p>
+      <p>“Good.”</p>
+      <p>Through her clairvoyant sight, Anya watched Kiara across Malabar Hill, pacing her room, phone in shaking hands.</p>
+      <p>Watched her try to call Aryan. Watched her hesitate, delete the text, rewrite it.</p>
+      <p>Anya was positioned in Kiara’s ajna chakra now, whispering: <em>He won’t understand. He’ll think you’re choosing work over him. He’ll be angry.</em></p>
+      <p>Making Kiara’s anxiety spike. Making the conversation doomed before it even started.</p>
+      <p>“She’s falling apart,” Anya said, still in that meditative state, consciousness spanning the short distance between mansions.</p>
+      <p>“Excellent. When the relationship ends, we move to phase two. Complete career destruction.”</p>
+      <p>“Understood.”</p>
+      <p>Vikash studied his daughter—her composed face, her steady breathing, her absolute control.</p>
+      <p>“You’re very good at this, Anya.”</p>
+      <p>“Thank you.”</p>
+      <p>His gaze traveled over her in that assessing way. “Stay useful.”</p>
+      <p>“I will.”</p>
+      <p>He left, and Anya remained in meditation, watching through her clairvoyant sight as Kiara finally called Aryan.</p>
+      <p>Watched through Kiara’s own perception as the conversation went catastrophically wrong—every word twisted by Anya’s presence in her consciousness, every intention misread, every attempt at explanation sounding like selfishness.</p>
+      <p>Watched as Aryan’s patience finally snapped.</p>
+      <p>And felt nothing.</p>
+      <p>Just cold satisfaction that the plan was working.</p>
+      <p>-----</p>
+      <p><strong>December 12th—The Khanna Anniversary Party</strong></p>
+      <p>Anya wore a peacock-blue sari, elegant and sophisticated. She looked older than fifteen, looked like she belonged among Malabar Hill’s elite.</p>
+      <p>Through her clairvoyant sight, she could feel Kiara at Film City—miles away but visible to her extended awareness. On that sound stage shooting unnecessary scenes, heartbroken, confused.</p>
+      <p>And she could feel Aryan here at his family’s Juhu estate—sad but relieved. Exhausted by three months of chaos.</p>
+      <p>Anya didn’t pursue him. Just existed in the same space—present, healthy, reliable. A Malabar Hill girl who understood his world because she’d grown up in it alongside him.</p>
+      <p>When he found her on the terrace, she already knew what he’d say. Had watched the decision form through her clairvoyant awareness.</p>
+      <p>“It’s over,” he said quietly. “With Kiara.”</p>
+      <p>“I’m sorry.”</p>
+      <p>“Are you?” He looked at her. “You two were supposed to reconnect. Become friends again.”</p>
+      <p>“We did. I care about her.” And it was true—Anya could feel genuine affection for Kiara alongside the cold satisfaction of destroying her. “But I also see what this has done to you. Three months of chaos.”</p>
+      <p>“Yeah.” He studied her face. “You’re different than you were as kids.”</p>
+      <p>“We all are.”</p>
+      <p>“No, I mean—you’re more…” He searched for words. “Present. Solid. The opposite of—”</p>
+      <p>“The opposite of Kiara right now.”</p>
+      <p>“I wasn’t going to say that.”</p>
+      <p>“But it’s true.” Anya’s voice was gentle, matter-of-fact. “She’s falling apart and no one knows why. And you’re exhausted from trying to hold her together.”</p>
+      <p>Aryan said nothing, but something in his expression confirmed it.</p>
+      <p>They stood in silence, and Anya felt the pieces shifting exactly as planned.</p>
+      <p>Not romance. Not yet. Just recognition. Just Aryan seeing her properly for the first time since they were thirteen.</p>
+      <p>Seeing her as Kiara’s opposite. As someone who belonged in his world without struggle.</p>
+      <p>As someone who might, eventually, be more than just Priya’s little sister. More than just another Malabar Hill girl he’d known forever.</p>
+      <p>The thought was forming in him. Anya could sense it through her gifts.</p>
+      <p>And she smiled slightly, looking out at the water, letting the moment settle.</p>
+      <p>Four houses away on Malabar Hill, in the Sharma mansion, Rajesh Sharma watched his daughter fall apart and couldn’t understand why.</p>
+      <p>Couldn’t protect her from invisible forces.</p>
+      <p>Couldn’t know that Vikash Chandra’s revenge was systematic, magical, and utterly without mercy.</p>
+      <p>And his daughter—beautiful, talented, kind—was paying the price for his righteousness.</p>
+      <p>While Vikash Chandra’s daughter stood at a party in a peacock-blue sari, looking elegant and controlled and absolutely lethal.</p>
+      <p>The owl tattoo on her ankle burned beneath the silk.</p>
+      <p>The voodoo doll waited in its rosewood box four houses away.</p>
+      <p>Yet Kiara had one bitter consolation: Anya never won Aryan Khanna.</p>
+      <p>Instead, Anya entered another world—bright, noisy, unpredictable.</p>
+      <p>She found herself drawn to India’s biggest YouTuber.</p>
+      <p>Ten years younger, always talking, unstoppable.</p>
+      <p>Her father scowled and called him a motor mouth.</p>
+      <p>But for Anya, power had new faces.</p>
+      <p>And the real war was only just beginning.</p>
+    `,
+  },
+  ...Array.from({ length: 6 }, (_, i) => ({
+    id: i + 3,
+    title: `Chapter ${i + 3}: The Invitation`,
+    slug: `chapter-${i + 3}`,
+    content: `
+      <p>This is the beginning of chapter ${i + 3}. The story unfolds as our characters navigate the intricate web of power and ambition in the heart of Bombay.</p>
       ${LOREM_IPSUM_PARAGRAPH}
       <p>As the sun set over the Arabian Sea, casting long shadows across the city, a decision was made that would change everything. The air was thick with anticipation, the scent of opportunity mingling with the ever-present aroma of sea salt and spices.</p>
       ${LOREM_IPSUM_PARAGRAPH.repeat(2)}
