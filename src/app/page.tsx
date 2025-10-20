@@ -20,7 +20,7 @@ export default function Home() {
             Bombay Business Club
           </h1>
           <p className="mt-4 max-w-2xl text-xl text-foreground/80 font-serif">
-            Where Secrets Are Bound In Ink and Shadow.
+            Behind Mumbai’s glittering elite lies a business built on buried secrets.
           </p>
           <div className="mt-12 w-64 h-96 bg-card/50 border-2 border-primary/50 rounded-lg shadow-[0_0_20px_hsl(var(--primary)/0.3)] flex items-center justify-center">
              <span className="text-muted-foreground">Book Cover</span>
