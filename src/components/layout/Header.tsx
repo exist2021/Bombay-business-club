@@ -22,7 +22,7 @@ export function Header() {
               Author
             </Link>
             <Link href="/chapters" className="text-primary/80 hover:text-primary transition-colors">
-              Chapters
+              Read Free Chapters
             </Link>
           </nav>
           <Button className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
@@ -48,7 +48,7 @@ export function Header() {
                   Author
                 </Link>
                 <Link href="/chapters" className="text-2xl text-primary/80 hover:text-primary transition-colors">
-                  Chapters
+                  Read Free Chapters
                 </Link>
                 <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
                   <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">Download for free</Link>

@@ -29,7 +29,7 @@ export default function ChaptersPage() {
       <div className="container mx-auto px-4 py-8 md:py-16">
         <header className="text-center mb-12">
           <h1 className="text-5xl md:text-7xl font-headline font-bold text-primary tracking-wider">
-            Chapters
+            Free Chapters
           </h1>
           <div className="mt-4 max-w-3xl mx-auto text-xl text-foreground/80 font-serif space-y-4">
             <p>

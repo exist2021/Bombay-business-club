@@ -72,12 +72,12 @@ export default function Home() {
 
         {/* Read a Chapter Section */}
         <section id="read-chapter" className="max-w-2xl mx-auto text-center scroll-mt-20">
-          <h2 className="text-4xl font-headline text-primary mb-8">Read A Chapter</h2>
+          <h2 className="text-4xl font-headline text-primary mb-8">Read Free Chapters</h2>
           <p className="text-lg text-foreground/90 font-serif leading-relaxed mb-8">
-            Be among the first to delve into the mysteries of the Bombay Business Club. Read the first chapter for free.
+            Be among the first to delve into the mysteries of the Bombay Business Club. Read the first eight chapters for free.
           </p>
           <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-            <Link href="/chapters">Read a Chapter</Link>
+            <Link href="/chapters">Read Free Chapters</Link>
           </Button>
         </section>
       </div>
