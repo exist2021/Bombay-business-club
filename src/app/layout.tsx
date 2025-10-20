@@ -5,7 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Anya Chandra',
+  title: 'A novel by Manoj Nayak',
   description: 'Read the novel "The Bombay Business Club" and support the author.',
 };
 

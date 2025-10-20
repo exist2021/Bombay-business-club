@@ -9,7 +9,7 @@ export function Header() {
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <OwlIcon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
-          <h1 className="text-2xl font-headline font-bold text-foreground">Anya Chandra</h1>
+          <h1 className="text-2xl font-headline font-bold text-foreground">A novel by Manoj Nayak</h1>
         </Link>
         <div className="flex items-center gap-2">
           <SubscribeButton />
