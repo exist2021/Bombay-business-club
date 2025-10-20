@@ -1,3 +1,4 @@
+
 import { AnimatedDiv } from '@/components/ui/AnimatedDiv';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
@@ -63,7 +64,7 @@ export default function Home() {
           <div className='text-center md:text-left'>
             <h2 className="text-4xl font-headline text-primary mb-4">About the Author</h2>
             <p className="text-lg text-foreground/90 font-serif leading-relaxed">
-              Manoj Nayak is a weaver of words and a student of the unseen. With a background in ancient history and a lifelong fascination with the occult, he crafts tales that explore the liminal spaces between myth and reality. "The Obsidian Scroll" is his debut novel, born from a decade of research into forgotten lore and the enduring power of stories.
+              Manoj Nayak is a writer, digital creator, and storyteller exploring the intersections of technology, philosophy, and human connection. His writing portfolio spans long-form essays, newsletters, and short stories that blend reflection with real-world observation. Through his website manojnayak.com and platforms like Substack, he builds what he calls “vibe-coded” narratives—bridging creativity and consciousness. Previously a community builder and entrepreneur, Manoj now focuses on personal knowledge management, experimental apps, and essay-driven media. His recent works, such as “Sadhu Laxmandas,” draw from his nomadic travels across India, combining introspection, humor, and wisdom to illuminate the search for meaning.
             </p>
           </div>
         </section>
