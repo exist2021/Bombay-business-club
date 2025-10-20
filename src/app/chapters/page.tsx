@@ -1,3 +1,4 @@
+
 import { AnimatedDiv } from '@/components/ui/AnimatedDiv';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
@@ -36,23 +37,38 @@ export default function ChaptersPage() {
 
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="w-full">
-            {chapters.map((chapter) => (
-              <AccordionItem value={`item-${chapter.id}`} key={chapter.id}>
-                <AccordionTrigger className="text-primary hover:text-accent-foreground text-left">
-                  <div>
-                    <h3 className="text-2xl font-headline">{chapter.title}</h3>
-                    <p className="text-sm text-foreground/80 font-serif font-normal">{chapter.description}</p>
+            {chapters.map((chapter) => {
+              if (chapter.id === 1) {
+                return (
+                  <div key={chapter.id} className="border-b">
+                    <Link href="https://manojnayak.stck.me/chapter/1313573/The-Malabar-Hill-Birthday-Party" target="_blank" rel="noopener noreferrer" className="flex flex-1 items-center justify-between py-4 font-medium text-primary hover:text-accent-foreground text-left transition-all hover:underline">
+                      <div>
+                        <h3 className="text-2xl font-headline">{chapter.title}</h3>
+                        <p className="text-sm text-foreground/80 font-serif font-normal">{chapter.description}</p>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 shrink-0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                    </Link>
                   </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                   <article className="max-w-4xl mx-auto text-lg text-foreground/90 font-serif leading-relaxed space-y-6 py-4">
-                    {chapter.paragraphs.map((p, index) => (
-                      <p key={index} className="text-foreground">{p}</p>
-                    ))}
-                  </article>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
+                )
+              }
+              return (
+                <AccordionItem value={`item-${chapter.id}`} key={chapter.id}>
+                  <AccordionTrigger className="text-primary hover:text-accent-foreground text-left">
+                    <div>
+                      <h3 className="text-2xl font-headline">{chapter.title}</h3>
+                      <p className="text-sm text-foreground/80 font-serif font-normal">{chapter.description}</p>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                     <article className="max-w-4xl mx-auto text-lg text-foreground/90 font-serif leading-relaxed space-y-6 py-4">
+                      {chapter.paragraphs.map((p, index) => (
+                        <p key={index} className="text-foreground">{p}</p>
+                      ))}
+                    </article>
+                  </AccordionContent>
+                </AccordionItem>
+              )
+            })}
           </Accordion>
         </div>
       </div>
