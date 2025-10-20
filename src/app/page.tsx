@@ -39,9 +39,7 @@ export default function Home() {
           </div>
           <h2 className="text-4xl font-headline text-primary mb-8">Synopsis</h2>
           <div className="space-y-6 text-lg text-foreground/90 font-serif leading-relaxed text-left">
-            <p>In the gaslit alleys of a city that never sleeps, where forgotten gods whisper from crumbling cathedrals and arcane societies trade in forbidden knowledge, a relic of immense power is rediscovered. The Obsidian Scroll, said to contain the final words of a dying cosmos, has resurfaced after centuries of slumber. Its ink is said to rewrite reality, its parchment a map to the heart of creation itself.</p>
-            <p>Elara, a gifted but disgraced scribe cast out for her unorthodox methods, is the only one who can decipher its celestial script. Hunted by the ruthless collectors of the Onyx Hand and guided by a shadowy benefactor whose motives are as veiled as the city's perpetual fog, she must navigate a world of gilded cages and velvet-gloved threats. Every secret she uncovers brings her closer to a truth that could either save her world or shatter it into oblivion.</p>
-            <p>As alliances shift like shadows in a dark library, Elara must decide who to trust. The cost of failure is not merely her own life, but the very fabric of existence. The scroll's power is a seductive poison, and its final secret is a revelation so profound it threatens to unravel the nature of gods and mortals alike.</p>
+            <p>Born into one of Mumbai’s most elite families, Anya Chandra can bend thoughts and read the hidden corners of the human mind. At fifteen, her father—a second generation Bombay Elite — ordered her first betrayal. Two decades later, she is his most valuable secret, shaping fates from the shadows of South Bombay’s wealth and corruption. But power has left her hollow, and obedience has become a prison. As Anya begins to question the empire built on her gift, she must choose between blood and freedom—between the family that owns her and the self she’s never dared to claim.</p>
           </div>
         </section>
 
