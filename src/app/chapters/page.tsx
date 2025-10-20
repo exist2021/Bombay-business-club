@@ -13,6 +13,13 @@ import {
 
 
 export default function ChaptersPage() {
+  const externalLinks: { [key: number]: string } = {
+    1: 'https://manojnayak.stck.me/chapter/1313573/The-Malabar-Hill-Birthday-Party',
+    2: 'https://manojnayak.stck.me/chapter/1316352/The-High-Profile-Breakup-We-Cannot-Have-an-Actress-as-a-Bahu',
+    3: 'https://manojnayak.stck.me/chapter/1318345/Anyas-disastrous-love-life',
+    4: 'https://manojnayak.stck.me/chapter/1321684/Dilip-meets-Anya-at-The-Fashion-Book-Launch',
+  };
+
   return (
     <AnimatedDiv>
       <div className="container mx-auto px-4 py-8 md:py-16">
@@ -38,10 +45,10 @@ export default function ChaptersPage() {
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="w-full">
             {chapters.map((chapter) => {
-              if (chapter.id === 1) {
+              if (externalLinks[chapter.id]) {
                 return (
                   <div key={chapter.id} className="border-b">
-                    <Link href="https://manojnayak.stck.me/chapter/1313573/The-Malabar-Hill-Birthday-Party" target="_blank" rel="noopener noreferrer" className="flex flex-1 items-center justify-between py-4 font-medium text-primary hover:text-accent-foreground text-left transition-all hover:underline">
+                    <Link href={externalLinks[chapter.id]} target="_blank" rel="noopener noreferrer" className="flex flex-1 items-center justify-between py-4 font-medium text-primary hover:text-accent-foreground text-left transition-all hover:underline">
                       <div>
                         <h3 className="text-2xl font-headline">{chapter.title}</h3>
                         <p className="text-sm text-foreground/80 font-serif font-normal">{chapter.description}</p>
