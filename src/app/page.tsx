@@ -2,6 +2,7 @@ import { AnimatedDiv } from '@/components/ui/AnimatedDiv';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -25,8 +26,8 @@ export default function Home() {
           <div className="mt-12 w-64 h-96 bg-card/50 border-2 border-primary/50 rounded-lg shadow-[0_0_20px_hsl(var(--primary)/0.3)] flex items-center justify-center">
              <span className="text-muted-foreground">Book Cover</span>
           </div>
-          <Button size="lg" className="mt-12 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]">
-            Acquire Your Copy
+          <Button size="lg" className="mt-12 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
+            <Link href="/chapters">Acquire Your Copy</Link>
           </Button>
         </header>
 
@@ -65,14 +66,14 @@ export default function Home() {
 
         <Separator className="my-12 md:my-20 bg-primary/20" />
 
-        {/* Pre-Order Section */}
-        <section id="pre-order" className="max-w-2xl mx-auto text-center scroll-mt-20">
-          <h2 className="text-4xl font-headline text-primary mb-8">Pre-Order Now</h2>
+        {/* Read a Chapter Section */}
+        <section id="read-chapter" className="max-w-2xl mx-auto text-center scroll-mt-20">
+          <h2 className="text-4xl font-headline text-primary mb-8">Read A Chapter</h2>
           <p className="text-lg text-foreground/90 font-serif leading-relaxed mb-8">
-            Be among the first to delve into the mysteries of the Bombay Business Club. Pre-order your copy today and receive exclusive bonus content.
+            Be among the first to delve into the mysteries of the Bombay Business Club. Read the first chapter for free.
           </p>
-          <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]">
-            Reserve Your Copy
+          <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
+            <Link href="/chapters">Read a Chapter</Link>
           </Button>
         </section>
       </div>
