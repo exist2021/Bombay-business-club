@@ -38,3 +38,5 @@ export function generateStaticParams() {
     id: chapter.id.toString(),
   }));
 }
+
+    
