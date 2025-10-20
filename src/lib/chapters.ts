@@ -1367,5 +1367,15 @@ export const chapters = [
       "It wouldn’t last. Nothing ever did in her life.",
       "But for now, it was enough."
     ]
+  },
+  {
+    id: 8,
+    title: "Chapter 8: Placeholder",
+    description: "This is a placeholder for chapter 8.",
+    paragraphs: [
+      "Chapter 8 content will be available soon."
+    ]
   }
 ]
+
+    
