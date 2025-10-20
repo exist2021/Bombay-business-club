@@ -17,7 +17,7 @@ export default function Home() {
             }}
           />
           <h1 className="text-5xl md:text-7xl font-headline font-bold text-primary tracking-wider">
-            The Obsidian Scroll
+            Bombay Business Club
           </h1>
           <p className="mt-4 max-w-2xl text-xl text-foreground/80 font-serif">
             Where Secrets Are Bound In Ink and Shadow.

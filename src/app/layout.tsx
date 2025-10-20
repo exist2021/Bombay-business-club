@@ -5,7 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'The Obsidian Scroll',
+  title: 'Bombay Business Club',
   description: 'Where Secrets Are Bound In Ink and Shadow.',
 };
 
