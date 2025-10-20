@@ -9,6 +9,8 @@ Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility 
 
 [Join the Discord Community](https://discord.gg/cRFFHYye7t)
 
+This is a test to trigger the deployment workflow.
+
 ## Sponsors
 
 <p align="center">
