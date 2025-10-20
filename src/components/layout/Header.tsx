@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
 
@@ -40,7 +40,7 @@ export function Header() {
         <div className="md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" onClick={() => setIsSheetOpen(true)}>
                 <Menu className="h-6 w-6 text-primary" />
                 <span className="sr-only">Open menu</span>
               </Button>
@@ -57,7 +57,7 @@ export function Header() {
                     Read Free Chapters
                   </Link>
                   <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-                    <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">Download for free</Link>
+                    <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank" onClick={() => setIsSheetOpen(false)}>Download for free</Link>
                   </Button>
               </nav>
             </SheetContent>
