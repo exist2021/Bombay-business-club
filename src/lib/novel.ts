@@ -1,3 +1,4 @@
+
 export type Chapter = {
   id: number;
   title: string;
@@ -687,20 +688,317 @@ export const chapters: Chapter[] = [
       <p>And the spell—unintentional but no less powerful—had already taken hold.</p>
     `,
   },
-  ...Array.from({ length: 4 }, (_, i) => ({
-    id: i + 5,
-    title: `Chapter ${i + 5}: The Invitation`,
-    slug: `chapter-${i + 5}`,
+  {
+    id: 5,
+    title: 'Chapter 5: The Three Meetings',
+    slug: 'chapter-5',
     content: `
-      <p>This is the beginning of chapter ${
-        i + 5
-      }. The story unfolds as our characters navigate the intricate web of power and ambition in the heart of Bombay.</p>
-      ${LOREM_IPSUM_PARAGRAPH}
-      <p>As the sun set over the Arabian Sea, casting long shadows across the city, a decision was made that would change everything. The air was thick with anticipation, the scent of opportunity mingling with the ever-present aroma of sea salt and spices.</p>
-      ${LOREM_IPSUM_PARAGRAPH.repeat(2)}
-      <p>And so, the journey begins. Each step forward is a step into the unknown, a dance with destiny in the city of dreams.</p>
+      <h2>The Discovery</h2>
+      <p>Three days after the fashion book launch, Dilip was lying in bed at 2 AM, obsessively scrolling through Twitter, when he saw it.</p>
+      <p><em>Manav Hiranandani @ManavHiranandani</em><br>
+      <em>Fabulous evening discussing fashion & memory with @ShefaliVasudeva! Special shoutout to @AnyaChandra for the fascinating conversation about textile symbolism.</em></p>
+      <p>There was a photo. And she was tagged.</p>
+      <p>He clicked: @AnyaChandra. Private account. Bio: <em>Filmmaker. Mumbai.</em> Profile picture: street art of a Koli fisherwoman.</p>
+      <p><em>Anya Chandra.</em></p>
+      <p>And then it hit him like a punch to the chest.</p>
+      <p>The email.</p>
+      <p>He’d sent that email months ago. Back when he’d seen Vikash Chandra’s tweet about his daughter’s documentary work. He’d written to anya.chandra.films@gmail.com asking about featuring her project.</p>
+      <p>She’d replied. Politely declined. Said she’d pass his details along.</p>
+      <p>And then he’d forgotten about it. Moved on. Until now.</p>
+      <p><em>She knew who I was. At the fashion launch. When I was staring at her. She already knew.</em></p>
+      <p>The realization made his skin prickle. She’d received his email months ago, seen his name, his website, probably looked him up. And then, weeks later, she’d shown up at that event, stood alone near the samosa table, been aware of him watching her.</p>
+      <p>She’d known exactly who he was all along.</p>
+      <p>Six days later, Rajesh Mehta from Cafe Mangi—a popular chain across Andheri—called him about advertising. One lakh fifty thousand for six months.</p>
+      <p>Dilip walked out of that meeting in a daze.</p>
+      <p>The timing was strange. He’d emailed Anya. She’d said she’d recommend him. And now this.</p>
+      <p><em>Was there a connection?</em></p>
+      <p>He searched online. Found nothing linking Cafe Mangi to the Chandras.</p>
+      <p><em>Just good luck</em>, he told himself. <em>Finally.</em></p>
+      <p>But the doubt lingered.</p>
+      <p>-----</p>
+      <h2>The Devdutt Talk</h2>
+      <p><em>Manav Hiranandani @ManavHiranandani</em><br>
+      <em>BIG EVENT! Devdutt Pattanaik discussing mythology at Hiranandani Business Park next Saturday! 5 PM. Don’t miss! 🕉️</em></p>
+      <p>Dilip’s heart jumped. <em>She might be there.</em></p>
+      <p>He RSVP’d immediately.</p>
+      <p>Saturday arrived. He changed clothes twice, settling on dark jeans and a black shirt. The venue was enormous—proper auditorium, stadium seating. He found a seat in the middle section and scanned the crowd nervously.</p>
+      <p>She wasn’t there.</p>
+      <p>By 5 PM, the auditorium was filling up. Dilip had given up hope when, at exactly 4:58, someone slid silently into the seat beside him.</p>
+      <p>He turned.</p>
+      <p>Anya.</p>
+      <p>Jeans, simple blue kurta, sneakers. Hair in a messy bun. A small smile playing at her lips—mischievous, like she’d pulled off a perfect prank.</p>
+      <p>“I’m Dilip.”</p>
+      <p>“I know. Anya.” She held out her hand.</p>
+      <p>They shook hands. Her grip was light, brief.</p>
+      <p>“I am the one who emailed. About the documentary and Mumbai Pulse collaboration .”</p>
+      <p>On his other side, a boy around thirteen was already seated with his mother. The woman kept glancing at Anya, clearly recognizing her.</p>
+      <p>“Excuse me,” the woman leaned across her son. “Are you Anya Chandra?”</p>
+      <p>Anya smiled politely. “Yes.”</p>
+      <p>“Oh my god! Aditya, do you know who this is?” She was speaking too loudly. “I just think what your family does is so wonderful.”</p>
+      <p>The boy—Aditya—looked embarrassed. “Mum, please.”</p>
+      <p>Finally, the woman left Aanya alone, Dilip seized the opportunity before they get interrupted again, he asked for her number, she hesitated for a moment and then passed it to Dilip.</p>
+      <p>At exactly 5 PM, the lights dimmed.</p>
+      <p>Manav Hiranandani appeared on stage wearing flowing silk pants in burgundy and a cream kurta, delicate silver chains at his neck.</p>
+      <p>“Welcome! Tonight, the wonderful Devdutt Pattanaik!”</p>
+      <p>The talk began. Devdutt spoke about mythology, gender, ancient texts.</p>
+      <p>Dilip tried to focus. But he was mostly aware of Anya beside him.</p>
+      <p>Ten minutes into the talk, she started shaking her leg.</p>
+      <p>Just for a minute or two. A slow, deliberate movement. Her knee brushed his once.</p>
+      <p>Dilip glanced at her. She was looking straight ahead, expression perfectly neutral.</p>
+      <p>But there was something in her stillness—an awareness. She knew exactly what she was doing.</p>
+      <p>Then she stopped. Went completely still. The moment passed.</p>
+      <p>The talk ended ninety minutes later. Lights came up.</p>
+      <p>Dilip turned to say something—</p>
+      <p>But a tall woman appeared. Elegant, sharp features, expensive jewelry.</p>
+      <p>“Anya.”</p>
+      <p>“Meera, hi.” Anya stood.</p>
+      <p>Dilip noticed she didn’t introduce him. The two women moved away together, voices low, immediately absorbed in their own conversation about jewelry designs and some exhibition. Dilip couldn’t hear what they were saying.</p>
+      <p>Meanwhile the Dhirubhai Ambani School boy knew Dilip and starting asking all startup related questions about Mumbai Pulse. Like what were his growth plans, what was his CAC/LTV”</p>
+      <p>Dilip was amused, a 13 year old boy from Dhirubhai is so intelligent, at 13 he only wanted to peek up a woman’s skirt.</p>
+      <p>A few neighbors spotted Dilip. Quick hellos. “Good talk.” “See you around.”</p>
+      <p>By the time Dilip looked back, Anya was already at the exit.</p>
+      <p>He walked to his car, feeling like he’d been part of some elaborate prank orchestrated with Manav’s help. She’d known he’d be there. She’d planned this surprise entrance.</p>
+      <p>But in his phone, he had her number. That was something.</p>
+      <p>-----</p>
+      <h2>The Art Exhibition</h2>
+      <p>Two weeks later, another tweet:</p>
+      <p><em>Manav Hiranandani @ManavHiranandani</em><br>
+      <em>AMAZING art happening this Saturday! Factory conversion in Lower Parel—emerging artists, installations, live music. 6 PM onwards. Come see real Mumbai creativity! 🎨🎸</em></p>
+      <p>Dilip saw it on Thursday evening. Another Manav event. Another chance she might be there.</p>
+      <p>He RSVP’d.</p>
+      <p>Saturday evening, he arrived at the venue—an old textile factory building in Lower Parel, now converted into a temporary gallery space. Exposed brick walls, industrial lighting, art installations scattered across the cavernous floor. A small stage at one end where a rock band was doing sound check.</p>
+      <p>The crowd was young, artsy, dressed in that deliberately casual way that somehow cost money. Dilip felt out of place in his simple jeans and shirt.</p>
+      <p>He wandered through the installations, pretending to appreciate abstract sculptures and paintings he didn’t understand. Kept scanning for Anya.</p>
+      <p>She wasn’t there.</p>
+      <p>At 6:45, he was standing near a large canvas—splashes of red and black—when he felt something shift in the room’s energy.</p>
+      <p>People’s voices dropped slightly. Heads turned, then deliberately turned away.</p>
+      <p>Someone important had arrived.</p>
+      <p>Dilip looked toward the entrance.</p>
+      <p>Manav Hiranandani was there, wearing a flowing emerald silk kurta with intricate gold embroidery and matching jewelry, gesturing expansively as he showed three people around. A man in his late forties, compact and controlled in an expensive charcoal suit. A woman beside him, elegant and striking, her fairness almost luminous under the industrial lights. And a younger woman—mid-twenties, taller and fairer than Anya, with an artist’s grace in her movements.</p>
+      <p>The man walked with absolute confidence. Not arrogant, just certain of his place in any room.</p>
+      <p>Manav was playing host, guiding them through the installations, explaining pieces with theatrical enthusiasm.</p>
+      <p>And the man was walking in Dilip’s general direction.</p>
+      <p>As he got closer, Dilip felt an unexpected warmth radiating from him. The man’s presence wasn’t cold or intimidating—it was magnetic, almost friendly. He had an ease about him, a confidence that felt welcoming rather than threatening.</p>
+      <p><em>What positive vibes</em>, Dilip thought, slightly dazed.</p>
+      <p>The man passed within a few feet of him. Their eyes met for a fraction of a second. The man’s expression was neutral, assessing, but not hostile.</p>
+      <p>Then he moved on, Manav still talking animatedly beside him, the two women following quietly.</p>
+      <p>The older woman glanced back at Dilip. Her face was pale, worried. Her eyes lingered on him for a moment too long before she looked away, as if she wanted to say something but couldn’t.</p>
+      <p>The younger woman—who looked so much like Anya but taller, fairer—didn’t look at him at all. Just followed, speaking quietly to her mother.</p>
+      <p>Dilip stood frozen, trying to process what had just happened.</p>
+      <p>He pulled out his phone, opened Twitter, searched: <em>Vikash Chandra</em></p>
+      <p>The images loaded. The man from moments ago stared back at him from the screen.</p>
+      <p><em>Oh god. That was Vikash Chandra.</em></p>
+      <p>Vikash Chandra. Anya’s father. One of Mumbai’s most powerful men. And he’d walked straight toward Dilip, close enough to touch, radiating this strange warmth that felt almost deliberate.</p>
+      <p>And the woman who’d looked worried—that must have been Maya Chandra, Anya’s mother.</p>
+      <p>And the younger woman who looked like a taller, fairer version of Anya—that had to be Priya, the sister from New York.</p>
+      <p>Dilip scanned the room again. <em>Where’s Anya?</em></p>
+      <p>She wasn’t here. Just her entire family, showing up at an art event hosted by Manav, walking past him, checking him out.</p>
+      <p><em>This can’t be coincidence.</em></p>
+      <p>The Chandras stayed for forty-five minutes. Vikash spoke briefly with the gallery organizers, looked at a few paintings with studied interest, asked Manav intelligent questions about the artists. Maya and Priya followed, graceful and composed. Then they departed as smoothly as they’d arrived, Manav escorting them to their car with elaborate farewells.</p>
+      <p>The older woman—Maya—glanced back once more at Dilip before she left. That same worried expression. As if she wanted to say something but couldn’t. As if she knew something he didn’t.</p>
+      <p>After they left, the room’s energy shifted back to normal. Conversations resumed their previous volume. The rock band started their set.</p>
+      <p>Dilip stayed for another hour, but his mind was elsewhere.</p>
+      <p><em>Why were they here? Why did Vikash walk straight toward me? Why did Maya look worried? Why was Priya—who looked so much like Anya—pretending I didn’t exist? And where was Anya?</em></p>
+      <p>He left around 9 PM, driving back to Andheri in a daze.</p>
+      <p>At home, he sat on his bed and stared at his phone.</p>
+      <p>He wanted to text Anya. Ask her what that was about. Ask her if her family knew about him, if they’d come to the exhibition specifically because he’d RSVP’d.</p>
+      <p>But what would he say? <em>Hey, your dad showed up at an art show and walked near me and it felt really weird?</em></p>
+      <p>That sounded paranoid. Delusional.</p>
+      <p><em>Maybe it was just coincidence</em>, he told himself. <em>Rich people go to art shows. The Chandras support culture. This doesn’t have to be about you.</em></p>
+      <p>But Vikash Chandra’s presence had felt too deliberate. That walk straight toward him. That brief eye contact. The positive energy that had felt almost staged—like Vikash wanted Dilip to feel welcomed, approved of.</p>
+      <p>And Maya’s worried face. That felt real. Unscripted.</p>
+      <p>Dilip fell asleep that night with more questions than answers, wondering what game he’d accidentally stumbled into.</p>
+      <p>-----</p>
+      <h2>The Bank Crisis and the Coffee</h2>
+      <p>Two weeks later, Dilip’s father’s debts caught up with him. The bank issued a show cause notice on the family house in Andheri. The accumulated loans, the guarantees he’d signed for relatives who’d never paid back, the money borrowed for failed ventures—all of it had finally come due.</p>
+      <p>Dilip had to sell. Pay the bank, pay relatives, send money to his mother and sister.</p>
+      <p>After everything was settled, enough remained for a deposit on a small flat in Bandra.</p>
+      <p>Bandra. Where Bollywood stars lived. Where coffee cost two hundred rupees. Where people spoke English more than Hindi.</p>
+      <p>It felt aspirational. Ambitious. Like maybe he was finally becoming someone.</p>
+      <p>His friends thought he was insane. “Bandra? Why? Your entire readership is in Andheri!”</p>
+      <p>Dilip didn’t tell them the truth: <em>Because I want to be closer to her world.</em></p>
+      <p>He moved in mid-May.</p>
+      <p>Dilip, now in Bandra, tnis is where Anya also loved, he think he should grab a coffee with Aanya, he emails her. </p>
+      <p><strong>Dilip:</strong> <em>Would you want to grab coffee sometime to catch up??</em></p>
+      <p>No response for three days.</p>
+      <p>He repeats the email two more times. </p>
+      <p>He tried again: <em>Just to catch up.</em></p>
+      <p>Still nothing.</p>
+      <p>On the fourth email, Dilip is persistent: </p>
+      <p>Finally there is a reply: <strong>Anya:</strong> <em>Sorry. Been busy. July 4th, 4 PM? Gloria Jean’s in Bandra?</em></p>
+      <p>Fifteen days away. But she’d responded.</p>
+      <p><strong>Dilip:</strong> <em>Yes. See you then.</em></p>
+      <p>-----</p>
+      <p>July 4th arrived.</p>
+      <p>Dilip got to Gloria Jean’s at 3:45, wearing a black Puma t-shirt and brown cotton pants. Casual but neat.</p>
+      <p>The café was strangely packed. Every table occupied. People shoulder-to-shoulder. The noise level was chaotic for a Tuesday afternoon.</p>
+      <p><em>This is strange</em>, he thought. <em>Why is it so full?</em></p>
+      <p>He scanned for empty seats. Found none. Then spotted Anya at a corner table.</p>
+      <p>She was already there, fifteen minutes early, wearing a black top and brown pants.</p>
+      <p><em>Brown pants. Black top. We’re matching again.</em></p>
+      <p>He walked over. “Hi.”</p>
+      <p>She looked up. “She asks him whether he would like to grab his coffee, he asks her if she wants one, she says no.”</p>
+      <p>Dilip joined the queue, He ordered a latte, waited, kept glancing back at Anya to make sure she was real. The café was absurdly full. Everyone engrossed in conversations, laptops, phones. No one looking at them.</p>
+      <p><em>It feels staged.</em></p>
+      <p>Seated now, Dilip stares at her, she stares him down, she is saying, that’s not proper etiquette in her mind.</p>
+      <p>She breaks the ice, dilip has no idea, on what to to talk, his world is very small.Anya knows about the same. She eases in , and makes small talk. </p>
+      <p>They talk about some other people who are writing about culture in the city. </p>
+      <p>Aanya does most of the talking, she asks him about his family, his sister. </p>
+      <p>After about 30 minutes she checks her watch. “I should go.”</p>
+      <p>“Okay.”</p>
+      <p>She stood. He stood. They looked at each other.</p>
+      <p>Neither said anything.</p>
+      <p>She walked toward the exit. He saw her eyes were slightly wet, her cheeks flushed pink.</p>
+      <p><em>Allergies</em>, he thought. <em>Or something else.</em></p>
+      <p>He watched her get into a wine red SUV outside. The door closed. The vehicle pulled away.</p>
+      <p>He walked past where she’d been standing, heading to his own car, feeling hollow.</p>
+      <p>And then he noticed: everyone was leaving.</p>
+      <p>Within five minutes, the entire café had cleared. Tables occupied for their whole conversation were suddenly empty. The barista looked confused and relieved.</p>
+      <p><em>It was staged. All of it. Vikash Chandra filled this place with extras.</em></p>
+      <p>The realization was chilling.</p>
+      <p><em>What am I getting into?</em></p>
+      <p>-----</p>
+      <h2>The Confession</h2>
+      <p>That night, Dilip wrote a love letter.</p>
+      <p>He’d never written one before. Never been the kind of man who put feelings into words. But something about the afternoon—about Anya’s tears, her flushed cheeks, the way she’d looked at him before leaving—demanded expression.</p>
+      <p>He wrote for two hours. Deleted everything. Started again.</p>
+      <p>By midnight, he had something. Not poetry. Not sophisticated prose. Just honest, clumsy truth about not being able to stop thinking about her, about feeling alive for the first time in years, about seeing her in a way no one else seemed to.</p>
+      <p>It wasn’t good. Rambling, too intense, probably embarrassing.</p>
+      <p>He saved it to his phone and texted her next day at 1 PM.</p>
+      <p><strong>Dilip:</strong> *Hey. I need to tell you something. Can I call you?*</p>
+      <p>He didn’t expect a response. It was 1 AM. She was probably asleep.</p>
+      <p>His phone buzzed almost immediately.</p>
+      <p><strong>Anya:</strong> *Give me 10 minutes. I’ll call you.*</p>
+      <p>At 1:12 PM, his phone rang.</p>
+      <p>“Hello?”</p>
+      <p>“Hi.” Her voice was soft, intimate. “What did you want to tell me?”</p>
+      <p>“I—can I read you something? I wrote—it’s going to sound stupid, but just—can I just read it?”</p>
+      <p>“Okay.”</p>
+      <p>Dilip opened the letter on his phone. His hands were shaking.</p>
+      <p>He read it aloud. Every word. Every embarrassing confession. His voice cracking slightly.</p>
+      <p>When he finished, there was silence on the other end.</p>
+      <p>Long, terrible silence.</p>
+      <p>“Anya?”</p>
+      <p>“I’m here.” Her voice was thick, strange. “But I’m leaving for New York next week.”</p>
+      <p>His stomach dropped. “What?”</p>
+      <p>“To stay with my sister. She needs help settling in, and I—I need some space from Mumbai. From everything here.” She took a breath. “And I have a boyfriend there. In New York. ”</p>
+      <p>Dilip sat on his bed, phone still in his hand, feeling like he’d been punched in the stomach.</p>
+      <p>At 1:47 AM, his phone buzzed.</p>
+      <p><strong>Anya:</strong> *I’m not too young. I’m 30.*</p>
+      <p>Just that. One text. No explanation.</p>
+      <p>Dilip stared at it.</p>
+      <p>She’d hung up on him. Said she had a boyfriend. Said she was leaving.</p>
+      <p>And then texted to clarify her age. To correct his assumption. To make sure he knew she was thirty, not younger, not inappropriate.</p>
+      <p><em>Why does that matter if you’re leaving? If you have a boyfriend? If this can’t happen?</em></p>
+      <p>But he didn’t text back. Didn’t know what to say.</p>
+      <p>Just lay back on his bed and stared at his ceiling, feeling simultaneously crushed and confused and strangely, inexplicably hopeful.</p>
+      <p>Because she’d corrected him. Because her eyes had been watery. Because her voice had cracked when she said *“I have to go.”*</p>
+      <p>Something wasn’t right. Something in the story didn’t fit.</p>
+      <p><em>I’m not too young. I’m 30.</em></p>
+      <p>-----</p>
+      <h2>Meanwhile, in Mumbai</h2>
+      <p>The next morning, Anya sat in the Malabar Hill mansion dining room. Her parents were at breakfast—her father behind the Economic Times, her mother scrolling through her phone with her chai.</p>
+      <p>“Beta, we need to talk about this Dilip,” Maya said without looking up.</p>
+      <p>Anya’s hand froze on her teacup.</p>
+      <p>“Your father had him investigated,” Maya continued, her voice measured. “Clean record, decent background. Upper middle class family, inherited business.”</p>
+      <p>Vikash lowered his newspaper slightly. “Not ambitious enough. Too comfortable with mediocrity. Running a small website when he could be doing much more.”</p>
+      <p>“We had hopes,” Maya said, finally looking at her daughter. “A normal man, someone outside our world, someone who might give you stability. But he seems too laid back. Not driven. He’s not going to make anything of his career.”</p>
+      <p>“You don’t know that,” Anya said quietly.</p>
+      <p>“We know enough.” Vikash’s voice was flat. “He sold his family house to pay debts. Moved to a smaller flat in Bandra. He’s sliding down, not climbing up. That’s not someone who can handle the complexities of our world.”</p>
+      <p>“Or the complexities of you,” Anya said.</p>
+      <p>Her father finally looked at her. “Forget about him. You’re leaving for New York next week anyway. Priya needs you there. Take the time. Clear your head. When you come back, we’ll discuss other options.”</p>
+      <p>“Other options.”</p>
+      <p>“Better options.” Maya’s voice was gentle but firm. “Men who can actually provide for you, protect you, match you. Not some struggling journalist playing at business.”</p>
+      <p>Anya said nothing. Just stared at her chai, watching the milk swirl.</p>
+      <p>“Also,” Maya added, “if he keeps emailing you, sending messages—your father will have someone talk to him. Make things clear. We don’t want this dragging on.”</p>
+      <p>“You’re going to threaten him.”</p>
+      <p>“We’re going to protect you,” Vikash said. “From making another mistake. Like the cinematographer. Like that French boy. Like every other disaster you’ve brought to our door.”</p>
+      <p>He went back to his newspaper. The conversation was over.</p>
+      <p>Anya stood and left the dining room, her breakfast untouched.</p>
+      <p>In her bedroom, she stared at her phone.</p>
+      <p>At Dilip’s message from last night: *Can I call you?*</p>
+      <p>At her own response, sent at 1:47 AM after hanging up on him: *I’m not too young. I’m 30.*</p>
+      <p>She didn’t know what she’d meant by that. Didn’t know what she wanted.</p>
+      <p>Just knew that something in her chest had cracked when she’d heard his voice reading that clumsy, earnest love letter. Something that had been sealed shut for years.</p>
+      <p>And now her parents were telling her to forget him. To move to New York. To let them handle it.</p>
+      <p><em>Universal truth</em>, she thought bitterly. *Women move on fast. Men pine for years.*</p>
+      <p>She knew which one she was supposed to be.</p>
+      <p>She just wasn’t sure if she could manage it.</p>
+      <p>A week later, she flew to New York.</p>
+      <p>-----</p>
+      <h2>The Emails Begin</h2>
+      <p>Three days after Anya left for New York, Dilip sent an email.</p>
+      <p><strong>From:</strong> [dilip.shrivastava@mumbaipulse.in](mailto:dilip.shrivastava@mumbaipulse.in)<br>
+      <strong>To:</strong> [anya.chandra.films@gmail.com](mailto:anya.chandra.films@gmail.com)<br>
+      **Subject:** Permission Still Granted?<br>
+      **Date:** August 15, 2025, 8:23 AM</p>
+      <p>Anya,</p>
+      <p>I know you said you’re leaving for New York. I know you have a boyfriend there. I know this probably can’t happen the way I hoped it might.</p>
+      <p>But you also said I could keep emailing once. Does that permission still stand?</p>
+      <p>I’m not trying to change your mind. I’m not trying to be that guy who doesn’t respect boundaries. I just—I liked talking to you. I liked knowing you were reading, even if you weren’t responding.</p>
+      <p>If you want me to stop, tell me. I’ll stop.</p>
+      <p>But if it’s okay, I’d like to keep writing. Just to send thoughts into the void. Just to have somewhere to put all this feeling.</p>
+      <p>Your choice.</p>
+      <p>Dilip</p>
+      <p>-----</p>
+      <p>The response came that evening, sent from a Brooklyn IP address.</p>
+      <p><strong>From:</strong> [anya.chandra.films@gmail.com](mailto:anya.chandra.films@gmail.com)<br>
+      **To:** [dilip.shrivastava@mumbaipulse.in](mailto:dilip.shrivastava@mumbaipulse.in)<br>
+      **Subject:** Re: Permission Still Granted?<br>
+      **Date:** August 28, 2025, 7:45 PM (EST)</p>
+      <p>Permission granted.</p>
+      <p>I can’t promise I’ll respond. The time zones are difficult, and my situation is complicated.</p>
+      <p>But yes. You can write.</p>
+      <p>A</p>
+      <p>-----</p>
+      <p>And so he did.</p>
+      <p>He wrote about films he was watching late at night. About monsoons flooding Bandra differently than Andheri. About the strange loneliness of being forty and starting over in a new neighborhood.</p>
+      <p>He sent them knowing she might not be reading them. Knowing she was probably moving on, probably with that boyfriend she’d mentioned, probably forgetting about the awkward coffee and the late-night confession.</p>
+      <p>But he kept writing anyway.</p>
+      <p>Because stopping felt like giving up.</p>
+      <p>And Dilip wasn’t quite ready to give up yet.</p>
+      <p>-----</p>
+      <h2>Meanwhile, in Brooklyn</h2>
+      <p>Anya read every email.</p>
+      <p>Sitting in Priya’s apartment, or on the subway, or late at night when she couldn’t sleep. Read them and felt something crack open in her chest that had been sealed for years.</p>
+      <p>Priya noticed.</p>
+      <p>“Who are you texting?”</p>
+      <p>“No one.”</p>
+      <p>“You’re smiling at your phone. That’s not a ‘no one’ smile.” Priya sat beside her on the couch. “Is it that Dilip guy? The one Maa and Papa were talking about?”</p>
+      <p>Anya closed her phone. “They want me to forget him.”</p>
+      <p>“Do you want to forget him?”</p>
+      <p>“I barely know him.”</p>
+      <p>“That’s not an answer.”</p>
+      <p>Anya was quiet for a long moment. Then: “He writes to me. Emails. About films and his work and his thoughts about Mumbai. He doesn’t expect responses. Just writes anyway.”</p>
+      <p>“That’s either very romantic or very stalkerish.”</p>
+      <p>“It’s romantic,” Anya said quietly. “He’s—gentle. Lonely in a way I understand. Sees things the way I see them.”</p>
+      <p>“So why are you here? Why aren’t you in Mumbai with him?”</p>
+      <p>“Because Papa and Maa want me with him only on their terms. Which means it’s not really my choice. Which means even if I went back, even if we tried—it would all be orchestrated. Controlled. Another relationship destroyed before it even started.” She looked at her sister. “How do you trust something when you know it’s been arranged?”</p>
+      <p>Priya didn’t have an answer.</p>
+      <p>Neither did Anya.</p>
+      <p>So she just kept reading his emails. Kept not responding. Kept feeling something build in her chest that felt suspiciously like hope, even though hope was the most dangerous thing a Chandra daughter could carry.</p>
+      <p>-----</p>
+      <p>Two weeks after Anya arrived in Brooklyn, Maya called.</p>
+      <p>“Beta, how are you feeling?”</p>
+      <p>“Fine, Maa.”</p>
+      <p>“Priya says you seem better. Calmer. The change of scene is good for you.”</p>
+      <p>“I’m fine.”</p>
+      <p>“Your father and I have been thinking. About your mental health. About what you need right now.” Maya’s voice was careful, measured. “We think you need something to focus on. Someone to care for. Like when people get a puppy and it helps them feel better.”</p>
+      <p>“Maa, I’m not getting a puppy.”</p>
+      <p>“Not a puppy, beta. A person. A boy—well, he’s only twenty, almost ten years younger than you. Engineering student. He went to Dhirubhai Ambani, very good family—his parents are doctors, his sister too. But he’s struggling right now. Some drug issues. Prescription pills, nothing too serious, but he needs guidance.”</p>
+      <p>“You want me to be friends with a twenty-year-old drug addict?”</p>
+      <p>“He’s not an addict, beta. Just—lost. His family is worried. They’re elite people, very respectable, but he’s the dumbest one in the family, he knows it, and it’s destroying him. He dropped out of medicine, barely passing engineering, using pills to cope.” Maya paused. “I thought maybe helping him would help you too. Give you purpose. Something to care about that isn’t yourself.”</p>
+      <p>“Maa—”</p>
+      <p>“Just meet him when you get back. Be his friend. You’re good with people who are struggling. You understand them. Maybe you can help him find his direction.”</p>
+      <p>Anya wanted to argue. Wanted to say that she wasn’t a therapist, that fixing broken twenty-year-olds wasn’t her responsibility, that this was just another distraction from the real problem.</p>
+      <p>But she was exhausted. Exhausted from fighting. Exhausted from wanting things her parents would never let her have.</p>
+      <p>“Fine,” she said. “I’ll meet him.”</p>
+      <p>“Good. His name is Rohan. I’ll set it up for when you’re back in Mumbai.”</p>
+      <p>After the call ended, Anya sat on Priya’s couch and stared at her phone.</p>
+      <p>At Dilip’s latest email, sent that morning: *Watched “In the Mood for Love” last night. That scene where they practice confronting their cheating spouses—playing out conversations they’ll never have. Made me think about all the things we don’t say to each other.*</p>
+      <p>She didn’t respond.</p>
     `,
-  })),
+  },
 ];
 
 export function getChapterBySlug(slug: string): Chapter | undefined {
