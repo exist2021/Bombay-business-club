@@ -447,7 +447,7 @@ export const chapters = [
       "But then the comedian started weaving subtle jabs into his sets: jokes about “old-money families who own the city,” punchlines about “men who smile while they ruin you,” bits that felt too close to home. After a particularly pointed show at a club in Lower Parel, her father summoned her.",
       "“He thinks he’s brave,” Vikash said, stubbing out his cigarette. “But bravery without power is just noise. And noise can be silenced.”",
       "The comedian’s gigs began drying up. Venues “forgot” to confirm bookings. His YouTube channel was hit with a wave of copyright strikes. Within two months, he was performing at open mics in Pune, then stopped posting altogether. Anya never heard from him again.",
-      "Then there was Rohan.",
+      "“Then there was Rohan.",
       "Rohan Deshmukh—assistant director on her film, twenty-eight, with slicked-back hair and designer stubble and expensive cologne that didn’t quite mask something desperate underneath. Good-looking in a calculated way, charming on the surface, but Anya’s clairvoyant gifts caught something else: ambition without ethics, narcissism wrapped in flattery, the particular hunger of someone from a semi-criminal background who saw the Chandras as a path to legitimacy and wealth.",
       "Her father’s spies reported back that Rohan had connections to a small-time smuggling operation in Thane. Nothing major, but enough to show he wasn’t opposed to bending rules. That he came from a family that made their money through grey-market electronics and import-export schemes that didn’t quite withstand scrutiny.",
       "Vikash was cautiously interested. “At least this one understands how the real world works. Not like your idealistic French boy or your revolutionary screenwriter.”",
@@ -477,7 +477,7 @@ export const chapters = [
       "In the end, they were hysterically fighting, Kartik calling up guys Anya’s was dating and Anya calling up Kartik wife and ratting Aditya out.",
       "Vikas Chandra had to speak to the god of Indian cricket and request that he help Aditya come to his senses.",
       "Sunil Joshi did the job, Kartik Mehra, stopped texting and calling. Maya nurtured her daughter back to health.",
-      "Maya said “Beta, you’re twenty-six. Beautiful, talented, successful. But you keep choosing wrong.” Maya’s voice was gentle, non-judgmental. “The cinematographer who asked too many questions. The screenwriter who thinks wealth is evil. The criminal who tried to blackmail us. And now your father’s married best friend.”",
+      "“Maya said “Beta, you’re twenty-six. Beautiful, talented, successful. But you keep choosing wrong.” Maya’s voice was gentle, non-judgmental. “The cinematographer who asked too many questions. The screenwriter who thinks wealth is evil. The criminal who tried to blackmail us. And now your father’s married best friend.”",
       "She said it factually, without cruelty.",
       "“You’re looking for something you can’t have. Men from our world are too powerful—dangerous. Men outside our world are too curious or too idealistic—dangerous. Married men end badly—always.” She paused. “So what’s left?”",
       "Anya said nothing.",
@@ -496,7 +496,9 @@ export const chapters = [
       "“Same thing, in our family.” Anya kept her voice flat. “Enjoy Florence. I’ll come to the wedding.”",
       "She meant it kindly, but Priya heard it for what it was: goodbye to the sister she’d known. Anya was still alive, still functional, still breathing. But something essential had been extinguished.",
       "Somewhere Else in Mumbai",
-      "Somewhere in Andheri, in a modest two-bedroom apartment with paint peeling from the ceiling and traffic noise constant through single-pane windows, He was forty-three. His children were teenagers now, living with their mother, he has last seen them a decade back. He an ordinary man was about to meet the blue blooded princess in a few months."
+      "Somewhere in Andheri, in a modest two-bedroom apartment with paint peeling from the ceiling and traffic noise constant through single-pane windows,",
+      "He was forty-three. His children were teenagers now, living with their mother, he has last seen them a decade back.",
+      "He an ordinary man was about to meet the blue blooded princess in a few months."
     ]
   },
   {
@@ -779,7 +781,7 @@ export const chapters = [
       "His friends thought he was insane. “Bandra? Why? Your entire readership is in Andheri!”",
       "Dilip didn’t tell them the truth: Because I want to be closer to her world.",
       "He moved in mid-May.",
-      "Dilip, now in Bandra, this is where Anya also lived, he think he should grab a coffee with Aanya, he emails her.",
+      "Dilip, now in Bandra, tnis is where Anya also loved, he think he should grab a coffee with Aanya, he emails her.",
       "Dilip: Would you want to grab coffee sometime to catch up??",
       "No response for three days.",
       "He repeats the email two more times.",
@@ -1366,6 +1368,4 @@ export const chapters = [
       "But for now, it was enough."
     ]
   }
-];
-
-    
+]
