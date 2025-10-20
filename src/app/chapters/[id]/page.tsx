@@ -25,7 +25,7 @@ export default function ChapterPage({ params }: { params: { id: string } }) {
 
         <article className="max-w-4xl mx-auto text-lg text-foreground/90 font-serif leading-relaxed space-y-6">
           {chapter.paragraphs.map((p, index) => (
-            <p key={index}>{p}</p>
+            <p key={index} className="text-foreground">{p}</p>
           ))}
         </article>
       </div>
