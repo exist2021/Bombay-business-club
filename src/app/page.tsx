@@ -12,7 +12,7 @@ export default function Home() {
             The Bombay Business Club
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-foreground/80">
-            In the bustling metropolis of Bombay, where fortunes are made and secrets are buried, a group of ambitious entrepreneurs forms an exclusive club. But as their ambitions clash and their pasts catch up, they find that the price of success might be more than they're willing to pay.
+            Born into one of Mumbai’s most elite families, Anya Chandra can bend thoughts and read the hidden corners of the human mind. At fifteen, her father—a second generation Bombay Elite — ordered her first betrayal. Two decades later, she is his most valuable secret, shaping fates from the shadows of South Bombay’s wealth and corruption. But power has left her hollow, and obedience has become a prison. As Anya begins to question the empire built on her gift, she must choose between blood and freedom—between the family that owns her and the self she’s never dared to claim.
           </p>
         </header>
 
