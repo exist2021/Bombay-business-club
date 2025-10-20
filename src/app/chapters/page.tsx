@@ -1,9 +1,15 @@
 import { AnimatedDiv } from '@/components/ui/AnimatedDiv';
 import { Button } from '@/components/ui/button';
-import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { chapters } from '@/lib/chapters';
 import Link from 'next/link';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
 
 export default function ChaptersPage() {
   return (
@@ -29,19 +35,25 @@ export default function ChaptersPage() {
         <Separator className="my-12 md:my-20 bg-primary/20" />
 
         <div className="max-w-4xl mx-auto">
-          {chapters.map((chapter, index) => (
-            <div key={chapter.id}>
-              <Link href={`/chapters/${chapter.id}`} className="block hover:bg-card/50 rounded-lg transition-colors p-2 -m-2">
-                <Card className="bg-transparent border-none shadow-none">
-                  <CardHeader>
-                    <CardTitle className="text-primary hover:text-accent-foreground">{chapter.title}</CardTitle>
-                    <CardDescription className="text-foreground/80 font-serif">{chapter.description}</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-              {index < chapters.length - 1 && <Separator className="my-4 md:my-6 bg-primary/20" />}
-            </div>
-          ))}
+          <Accordion type="single" collapsible className="w-full">
+            {chapters.map((chapter) => (
+              <AccordionItem value={`item-${chapter.id}`} key={chapter.id}>
+                <AccordionTrigger className="text-primary hover:text-accent-foreground text-left">
+                  <div>
+                    <h3 className="text-2xl font-headline">{chapter.title}</h3>
+                    <p className="text-sm text-foreground/80 font-serif font-normal">{chapter.description}</p>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                   <article className="max-w-4xl mx-auto text-lg text-foreground/90 font-serif leading-relaxed space-y-6 py-4">
+                    {chapter.paragraphs.map((p, index) => (
+                      <p key={index} className="text-foreground">{p}</p>
+                    ))}
+                  </article>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </AnimatedDiv>
