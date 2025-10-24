@@ -89,7 +89,7 @@ export default function Home() {
           </div>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="w-full sm:w-auto bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-              <Link href="upi://pay?pa=9892334681@ybl" target="_blank">
+              <Link href="gpay://upi/pay?pa=9892334681@ybl&pn=Manoj%20Nayak&am=99&cu=INR&tn=Bombay%20Business%20Club%20Pre-order" target="_blank">
                 <IndianRupee />
                 Pre-order (₹99)
               </Link>
