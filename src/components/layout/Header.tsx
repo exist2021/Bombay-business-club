@@ -24,6 +24,7 @@ export function Header() {
     { href: '/', text: 'Home' },
     { href: '/#author', text: 'Author' },
     { href: '/chapters', text: 'Read Free Chapters' },
+    { href: '/#pre-order', text: 'Pre-order'},
     { href: mailtoHref, text: 'Contact' },
   ];
 
