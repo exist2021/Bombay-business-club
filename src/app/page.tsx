@@ -5,7 +5,7 @@ import { Separator } from '@/components/ui/separator';
 import { bookCover } from '@/lib/chapters';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Book, Feather } from 'lucide-react';
+import { Book, Feather, IndianRupee, Globe } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -87,9 +87,20 @@ export default function Home() {
             </ul>
             <p>Secure your special edition and support the novel's journey.</p>
           </div>
-          <Button size="lg" className="mt-10 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-            <Link href="upi://pay?pa=9892334681" target="_blank">Pre-order Now</Link>
-          </Button>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button size="lg" className="w-full sm:w-auto bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
+              <Link href="upi://pay?pa=9892334681@ybl" target="_blank">
+                <IndianRupee />
+                Pre-order (India)
+              </Link>
+            </Button>
+            <Button size="lg" className="w-full sm:w-auto bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
+              <Link href="https://www.paypal.com/paypalme/manojrnayak" target="_blank">
+                <Globe />
+                Pre-order (International)
+              </Link>
+            </Button>
+          </div>
         </section>
 
         <Separator className="my-12 md:my-20 bg-primary/20" />
