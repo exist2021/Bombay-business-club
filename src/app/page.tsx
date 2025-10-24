@@ -5,7 +5,7 @@ import { Separator } from '@/components/ui/separator';
 import { bookCover } from '@/lib/chapters';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Book, Feather, IndianRupee, Globe } from 'lucide-react';
+import { Book, Feather, IndianRupee, Globe, DollarSign } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -91,13 +91,13 @@ export default function Home() {
             <Button size="lg" className="w-full sm:w-auto bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
               <Link href="upi://pay?pa=9892334681@ybl" target="_blank">
                 <IndianRupee />
-                Pre-order (India)
+                Pre-order (₹99)
               </Link>
             </Button>
             <Button size="lg" className="w-full sm:w-auto bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
               <Link href="https://www.paypal.com/paypalme/manojrnayak" target="_blank">
-                <Globe />
-                Pre-order (International)
+                <DollarSign />
+                Pre-order ($5)
               </Link>
             </Button>
           </div>
