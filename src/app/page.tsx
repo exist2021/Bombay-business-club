@@ -5,6 +5,7 @@ import { Separator } from '@/components/ui/separator';
 import { bookCover } from '@/lib/chapters';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Book, Feather } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -68,6 +69,31 @@ export default function Home() {
         </section>
 
         <Separator className="my-12 md:my-20 bg-primary/20" />
+
+        {/* Pre-order Section */}
+        <section id="pre-order" className="max-w-3xl mx-auto text-center scroll-mt-20 bg-card/30 border border-primary/20 rounded-lg p-8 md:p-12 shadow-[0_0_25px_hsl(var(--primary)/0.2)]">
+          <h2 className="text-4xl font-headline text-primary mb-6">Pre-order Your Copy</h2>
+          <div className="text-lg text-foreground/90 font-serif leading-relaxed space-y-6">
+            <p>Be one of the first to own "The Bombay Business Club". Your pre-order includes:</p>
+            <ul className="text-left max-w-md mx-auto space-y-3 list-inside">
+              <li className="flex items-start gap-3">
+                <Book className="w-5 h-5 mt-1 text-primary/80 shrink-0"/>
+                <span>A personally signed physical copy of the book, delivered to your doorstep.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Feather className="w-5 h-5 mt-1 text-primary/80 shrink-0"/>
+                <span>An immediate digital version to start reading right away.</span>
+              </li>
+            </ul>
+            <p>Secure your special edition and support the novel's journey.</p>
+          </div>
+          <Button size="lg" className="mt-10 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
+            <Link href="https://razorpay.com/payment-link/plink_RXF2BHm7CcqCZr" target="_blank">Pre-order Now</Link>
+          </Button>
+        </section>
+
+        <Separator className="my-12 md:my-20 bg-primary/20" />
+
 
         {/* Author Section */}
         <section id="author" className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12 scroll-mt-20">
