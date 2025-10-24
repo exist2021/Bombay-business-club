@@ -95,7 +95,7 @@ export default function Home() {
               </Link>
             </Button>
             <Button size="lg" className="w-full sm:w-auto bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-              <Link href="https://www.paypal.com/paypalme/manojrnayak" target="_blank">
+              <Link href="https://www.paypal.com/paypalme/manojrnayak/5USD" target="_blank">
                 <DollarSign />
                 Pre-order ($5)
               </Link>
