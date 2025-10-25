@@ -75,7 +75,7 @@ export default function Home() {
           <div className="text-lg text-foreground/90 font-serif leading-relaxed mb-8 space-y-4">
              <p>Pre-order your copy of The Bombay Business Club today.</p>
             <p className="text-base text-foreground/70">
-              Your pre-order includes a digital copy of the book and a personally signed physical copy, which will be shipped upon the official release.
+              Your pre-order is for the digital ebook, which will be automatically delivered to your Kindle library on release day.
             </p>
           </div>
           <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
