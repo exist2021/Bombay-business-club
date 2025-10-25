@@ -23,7 +23,6 @@ export function Header() {
   const navLinks = [
     { href: '/', text: 'Home' },
     { href: '/#author', text: 'Author' },
-    { href: '/#preorder', text: 'Pre-order'},
     { href: '/chapters', text: 'Read Free Chapters' },
     { href: mailtoHref, text: 'Contact' },
   ];
