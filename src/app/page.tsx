@@ -14,6 +14,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export default function Home() {
   return (
@@ -95,39 +101,50 @@ export default function Home() {
             </ul>
             <p>Secure your special edition and support the novel's journey.</p>
           </div>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Button size="lg" className="w-full sm:w-auto bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-              <Link href="gpay://upi/pay?pa=9892334681@ybl&pn=Manoj%20Nayak&am=99&cu=INR&tn=Bombay%20Business%20Club%20Pre-order" target="_blank">
-                <IndianRupee />
-                Pre-order (₹99)
-              </Link>
-            </Button>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto bg-primary/10 text-primary hover:bg-primary/20 rounded-md">
-                  <QrCode />
-                  Scan QR to Pay
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md bg-card border-primary/30">
-                <DialogHeader>
-                  <DialogTitle className="text-primary font-headline text-2xl">Scan to Pay (₹99)</DialogTitle>
-                  <DialogDescription>
-                    Use any UPI app to scan the QR code and complete your payment.
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="flex items-center justify-center p-4">
-                  <Image src="https://i.postimg.cc/nLwhm5vf/63a04444-3acc-40e0-afb2-a40f9b5f0c22.jpg" alt="UPI QR Code" width={250} height={250} className="rounded-lg border-2 border-primary/50"/>
-                </div>
-              </DialogContent>
-            </Dialog>
-            <Button size="lg" className="w-full sm:w-auto bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-              <Link href="https://www.paypal.com/paypalme/manojrnayak/5USD" target="_blank">
-                <DollarSign />
-                Pre-order ($5)
-              </Link>
-            </Button>
-          </div>
+          <Dialog>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button size="lg" className="w-full sm:w-auto bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]">
+                    <IndianRupee />
+                    Pre-order (₹99)
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-56 bg-card border-primary/30">
+                  <DropdownMenuItem asChild>
+                    <Link href="gpay://upi/pay?pa=9892334681@ybl&pn=Manoj%20Nayak&am=99&cu=INR&tn=Bombay%20Business%20Club%20Pre-order" target="_blank" className="cursor-pointer">
+                      <IndianRupee />
+                      Pay with GPay
+                    </Link>
+                  </DropdownMenuItem>
+                  <DialogTrigger asChild>
+                    <DropdownMenuItem className="cursor-pointer">
+                      <QrCode />
+                      Scan QR to Pay
+                    </DropdownMenuItem>
+                  </DialogTrigger>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <Button size="lg" className="w-full sm:w-auto bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
+                <Link href="https://www.paypal.com/paypalme/manojrnayak/5USD" target="_blank">
+                  <DollarSign />
+                  Pre-order ($5)
+                </Link>
+              </Button>
+            </div>
+            <DialogContent className="sm:max-w-md bg-card border-primary/30">
+              <DialogHeader>
+                <DialogTitle className="text-primary font-headline text-2xl">Scan to Pay (₹99)</DialogTitle>
+                <DialogDescription>
+                  Use any UPI app to scan the QR code and complete your payment.
+                </DialogDescription>
+              </DialogHeader>
+              <div className="flex items-center justify-center p-4">
+                <Image src="https://i.postimg.cc/nLwhm5vf/63a04444-3acc-40e0-afb2-a40f9b5f0c22.jpg" alt="UPI QR Code" width={250} height={250} className="rounded-lg border-2 border-primary/50"/>
+              </div>
+            </DialogContent>
+          </Dialog>
         </section>
 
         <Separator className="my-12 md:my-20 bg-primary/20" />
