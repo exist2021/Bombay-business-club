@@ -10,7 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { ExternalLink, Headphones } from 'lucide-react';
+import { ExternalLink, Headphones, Download } from 'lucide-react';
 
 
 export default function ChaptersPage() {
@@ -41,6 +41,18 @@ export default function ChaptersPage() {
             </p>
           </div>
 
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
+              <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">
+                <Download className="mr-2 h-5 w-5" />
+                Download for Free
+              </Link>
+            </Button>
+            <Button size="lg" className="bg-transparent border border-primary text-primary hover:bg-primary/10 rounded-md" asChild>
+              <Link href="https://www.amazon.in/dp/B0FXRW8RPY" target="_blank">Pre-order on Amazon</Link>
+            </Button>
+          </div>
+
           <div className="mt-10 max-w-2xl mx-auto">
             <h2 className="text-2xl font-headline text-primary mb-4 flex items-center justify-center gap-3">
               <Headphones className="w-6 h-6"/>
@@ -51,9 +63,6 @@ export default function ChaptersPage() {
             </div>
           </div>
           
-          <Button size="lg" className="mt-10 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-            <Link href="https://www.amazon.in/dp/B0FXRW8RPY" target="_blank">Pre-order on Amazon</Link>
-          </Button>
         </header>
 
         <Separator className="my-12 md:my-20 bg-primary/20" />
