@@ -79,7 +79,7 @@ export default function Home() {
         <Separator className="my-12 md:my-20 bg-primary/20" />
 
         {/* Pre-order Section */}
-        <section id="pre-order" className="max-w-3xl mx-auto text-center scroll-mt-20 bg-card/30 border border-primary/20 rounded-lg p-8 md:p-12 shadow-[0_0_25px_hsl(var(--primary)/0.2)]">
+        <section id="pre-order" className="max-w-4xl mx-auto text-center scroll-mt-20 bg-card/30 border border-primary/20 rounded-lg p-8 md:p-12 shadow-[0_0_25px_hsl(var(--primary)/0.2)]">
           <h2 className="text-4xl font-headline text-primary mb-6">Pre-order Your Copy</h2>
           <div className="text-lg text-foreground/90 font-serif leading-relaxed space-y-6">
             <p>Be one of the first to own "The Bombay Business Club". Your pre-order includes:</p>
@@ -95,7 +95,7 @@ export default function Home() {
             </ul>
             <p>Secure your special edition and support the novel's journey.</p>
           </div>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Button size="lg" className="w-full sm:w-auto bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
               <Link href="gpay://upi/pay?pa=9892334681@ybl&pn=Manoj%20Nayak&am=99&cu=INR&tn=Bombay%20Business%20Club%20Pre-order" target="_blank">
                 <IndianRupee />
@@ -121,8 +121,6 @@ export default function Home() {
                 </div>
               </DialogContent>
             </Dialog>
-          </div>
-          <div className="mt-4">
             <Button size="lg" className="w-full sm:w-auto bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
               <Link href="https://www.paypal.com/paypalme/manojrnayak/5USD" target="_blank">
                 <DollarSign />
@@ -169,5 +167,3 @@ export default function Home() {
     </AnimatedDiv>
   );
 }
-
-    
