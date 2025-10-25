@@ -5,7 +5,15 @@ import { Separator } from '@/components/ui/separator';
 import { bookCover } from '@/lib/chapters';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Book, Feather, IndianRupee, Globe, DollarSign } from 'lucide-react';
+import { Book, Feather, IndianRupee, DollarSign, QrCode } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 export default function Home() {
   return (
@@ -94,6 +102,27 @@ export default function Home() {
                 Pre-order (₹99)
               </Link>
             </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" variant="outline" className="w-full sm:w-auto bg-primary/10 text-primary hover:bg-primary/20 rounded-md">
+                  <QrCode />
+                  Scan QR to Pay
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md bg-card border-primary/30">
+                <DialogHeader>
+                  <DialogTitle className="text-primary font-headline text-2xl">Scan to Pay (₹99)</DialogTitle>
+                  <DialogDescription>
+                    Use any UPI app to scan the QR code and complete your payment.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="flex items-center justify-center p-4">
+                  <Image src="https://i.postimg.cc/nLwhm5vf/63a04444-3acc-40e0-afb2-a40f9b5f0c22.jpg" alt="UPI QR Code" width={250} height={250} className="rounded-lg border-2 border-primary/50"/>
+                </div>
+              </DialogContent>
+            </Dialog>
+          </div>
+          <div className="mt-4">
             <Button size="lg" className="w-full sm:w-auto bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
               <Link href="https://www.paypal.com/paypalme/manojrnayak/5USD" target="_blank">
                 <DollarSign />
@@ -140,3 +169,5 @@ export default function Home() {
     </AnimatedDiv>
   );
 }
+
+    
