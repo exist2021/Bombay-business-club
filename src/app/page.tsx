@@ -5,7 +5,6 @@ import { Separator } from '@/components/ui/separator';
 import { bookCover } from '@/lib/chapters';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Book, Feather } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -66,6 +65,24 @@ export default function Home() {
               <p>Born into one of Bombay’s most elite families, Anya Chandra can bend thoughts and read the hidden corners of the human mind. At fifteen, her father—a second generation Bombay Elite — ordered her first betrayal. Two decades later, she is his most valuable secret, shaping fates from the shadows of South Bombay’s wealth and corruption. But power has left her hollow, and obedience has become a prison. As Anya begins to question the empire built on her gift, she must choose between blood and freedom—between the family that owns her and the self she’s never dared to claim.</p>
             </div>
           </div>
+        </section>
+
+        <Separator className="my-12 md:my-20 bg-primary/20" />
+
+        {/* Pre-order Section */}
+        <section id="preorder" className="max-w-2xl mx-auto text-center scroll-mt-20">
+          <h2 className="text-4xl font-headline text-primary mb-8">Pre-order the Book</h2>
+          <div className="text-lg text-foreground/90 font-serif leading-relaxed mb-8 space-y-4">
+             <p>Pre-order your copy of The Bombay Business Club today.</p>
+            <p className="text-base text-foreground/70">
+              Your pre-order includes a digital copy of the book and a personally signed physical copy, which will be shipped upon the official release.
+            </p>
+          </div>
+          <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
+            <Link href="https://www.amazon.in/dp/B0FXRW8RPY" target="_blank">
+              Pre-order on Amazon
+            </Link>
+          </Button>
         </section>
 
         <Separator className="my-12 md:my-20 bg-primary/20" />
