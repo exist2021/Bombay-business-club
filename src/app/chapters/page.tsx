@@ -37,7 +37,7 @@ export default function ChaptersPage() {
               The first 8 chapters of The Bombay Business Club are available here to read for free. The book is currently being written. 
             </p>
             <p>
-              For access to upcoming chapters as they are released, you can download the entire work-in-progress book.
+              For access to upcoming chapters as they are released, you can pre-order the book.
             </p>
           </div>
 
@@ -52,7 +52,7 @@ export default function ChaptersPage() {
           </div>
           
           <Button size="lg" className="mt-10 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-            <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">Download for free</Link>
+            <Link href="https://www.amazon.in/dp/B0FXRW8RPY" target="_blank">Pre-order on Amazon</Link>
           </Button>
         </header>
 

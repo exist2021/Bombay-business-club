@@ -24,7 +24,6 @@ export function Header() {
     { href: '/', text: 'Home' },
     { href: '/#author', text: 'Author' },
     { href: '/chapters', text: 'Read Free Chapters' },
-    { href: '/#pre-order', text: 'Pre-order'},
     { href: mailtoHref, text: 'Contact' },
   ];
 
@@ -45,7 +44,7 @@ export function Header() {
         </nav>
         <div className="hidden md:flex">
           <Button className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-            <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">Download for free</Link>
+            <Link href="https://www.amazon.in/dp/B0FXRW8RPY" target="_blank">Pre-order on Amazon</Link>
           </Button>
         </div>
 
@@ -79,11 +78,11 @@ export function Header() {
                 asChild
               >
                 <Link
-                  href="https://2532618660820.gumroad.com/l/zsgti"
+                  href="https://www.amazon.in/dp/B0FXRW8RPY"
                   target="_blank"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Download for free
+                  Pre-order on Amazon
                 </Link>
               </Button>
             </nav>
