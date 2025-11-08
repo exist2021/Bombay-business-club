@@ -16,7 +16,7 @@ export function Header() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
-  const emailTo = 'manoj@manojnayak.com';
+  const emailTo = 'manoj@thebbc.shop';
   const emailSubject = 'feedback on your novel The Bombay Business Club';
   const mailtoHref = `mailto:${emailTo}?subject=${encodeURIComponent(emailSubject)}`;
 

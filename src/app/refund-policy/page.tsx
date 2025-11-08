@@ -27,11 +27,11 @@ export default function RefundPolicyPage() {
           </ul>
 
           <h2 className="text-3xl font-headline text-primary pt-6">How to Request a Cancellation or Report Damage</h2>
-          <p>To cancel your order within the 48-hour window or to report a damaged item, please email us at manoj@manojnayak.com with your order number and a clear description of your request.</p>
+          <p>To cancel your order within the 48-hour window or to report a damaged item, please email us at manoj@thebbc.shop with your order number and a clear description of your request.</p>
 
           <h2 className="text-3xl font-headline text-primary pt-6">Contact Us</h2>
           <p>If you have any questions about our Refund & Cancellation Policy, please contact us:</p>
-          <p>Manoj Nayak<br />manoj@manojnayak.com</p>
+          <p>Manoj Nayak<br />manoj@thebbc.shop</p>
         </article>
       </div>
     </AnimatedDiv>

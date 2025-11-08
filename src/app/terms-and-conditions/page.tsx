@@ -37,7 +37,7 @@ export default function TermsAndConditionsPage() {
           <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will provide notice of any changes by posting the new Terms and Conditions on this page.</p>
 
           <h2 className="text-3xl font-headline text-primary pt-6">Contact Us</h2>
-          <p>If you have any questions about these Terms, please contact us at manoj@manojnayak.com.</p>
+          <p>If you have any questions about these Terms, please contact us at manoj@thebbc.shop.</p>
         </article>
       </div>
     </AnimatedDiv>

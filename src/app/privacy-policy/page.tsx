@@ -47,7 +47,7 @@ export default function PrivacyPolicyPage() {
 
           <h2 className="text-3xl font-headline text-primary pt-6">Contact Us</h2>
           <p>If you have any questions regarding this privacy policy, you may contact us using the information below:</p>
-          <p>Manoj Nayak<br />manoj@manojnayak.com</p>
+          <p>Manoj Nayak<br />manoj@thebbc.shop</p>
         </article>
       </div>
     </AnimatedDiv>
