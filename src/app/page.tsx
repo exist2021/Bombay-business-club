@@ -42,7 +42,7 @@ export default function Home() {
           
           <div className="mt-12 w-full max-w-2xl aspect-video relative bg-card/50 border-2 border-primary/50 rounded-lg shadow-[0_0_20px_hsl(var(--primary)/0.3)] overflow-hidden">
             <iframe
-              src="https://player.vimeo.com/video/1128958261"
+              src="https://player.vimeo.com/video/1135209706"
               width="100%"
               height="100%"
               frameBorder="0"
