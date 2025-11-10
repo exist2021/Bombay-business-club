@@ -64,18 +64,15 @@ export default function Home() {
         <section id="synopsis" className="max-w-4xl mx-auto scroll-mt-20">
           <h2 className="text-4xl font-headline text-primary mb-8 text-center">Synopsis</h2>
           <div className="space-y-4 text-lg text-foreground/90 font-serif leading-relaxed text-left">
-            <p>The Bombay Business Club is a sweeping, hypnotic family saga about power, inheritance, and the invisible machinery of control that runs through Mumbai’s elite. It’s a story of one woman’s struggle to break free from the gilded cage built by her parents — a dynasty where wealth, manipulation, and clairvoyance are passed down like heirlooms.</p>
-            <p>At fifteen, Anya Chandra discovers she can bend people’s minds to her will. Her father, Vikash Chandra, the Harvard-educated patriarch of India’s tenth-largest conglomerate, sees not a gift — but a weapon. From that moment, Anya becomes an invisible instrument of his empire: her clairvoyance used to read competitors, dismantle enemies, and protect a fortune built on Partition-era blood money.</p>
-            <p>Under Vikash’s cold, exacting eye and her mother Maya’s elegant complicity, Anya learns that power isn’t about words — it’s about what can be controlled without being seen. As she grows up among the marble corridors of Malabar Hill, she’s trained not in affection, but in strategy; not in empathy, but in obedience.</p>
-            <p>But obedience comes with a price.</p>
-            <p>Across nine interlinked chapters spanning two decades, Anya’s journey unfolds through betrayals both intimate and political — a destroyed actress, a forbidden love in New York, a sister’s marriage torn apart, a YouTuber’s manufactured fame, and the quiet ruin of every man who loved her.</p>
-            <p>Each story deepens the web — revealing how the Bombay Business Club, a network of billionaires who secretly shape the city’s destiny, governs through loyalty, fear, and ancient occult knowledge.</p>
-            <p>In this world, family is business. Business is war. And love is just another asset to be managed.</p>
-            <p>By thirty, Anya begins to see the truth: that she has been used her entire life — her gifts turned against the very people she tried to save. Her father controls governments; her mother controls hearts; and she controls nothing but the ghosts of her own choices.</p>
-            <p>When an old lover reappears, and the lines between loyalty and revenge blur, Anya must decide whether to continue serving the empire that raised her — or destroy it from within.</p>
-            <p>Told with the psychological intensity of Succession, the dark glamour of The White Lotus, and the mystical undercurrents of The Night Circus, The Bombay Business Club is a haunting portrait of Mumbai’s elite — where magic meets money, and the cost of power is always personal.</p>
-            <p>This is not a story about rebellion. It’s about complicity — about the quiet ways women survive inside systems designed to consume them.</p>
-            <p>Through Anya’s eyes, we see a city where skyscrapers rise on silence, where love is currency, and where even clairvoyance cannot predict the one thing that truly matters: freedom.</p>
+            <p>The Bombay Business Club is a dark, hypnotic tale about three people bound by love, control, and the invisible machinery of wealth.</p>
+            <p>A daughter is born with the power to bend minds.</p>
+            <p>A father builds an empire on her obedience.</p>
+            <p>And a man from outside their world mistakes her captivity for connection.</p>
+            <p>Set amid Mumbai’s billionaires and their secret occult networks, the story traces a dynasty where clairvoyance is inherited like property, and affection is just another instrument of control. As the daughter’s devotion deepens, it becomes impossible to tell where love ends and possession begins.</p>
+            <p>When the outsider enters their orbit, desire turns into a test of class, magic, and morality—pulling him into the same web of manipulation that once trapped her.</p>
+            <p>In this world, family is business. Business is war.</p>
+            <p>And devotion is the most dangerous spell of all.</p>
+            <p>Told with the intensity of Succession and the sensual unease of The Night Circus, The Bombay Business Club is a portrait of wealth’s quiet violence—where every act of love is also an act of power.</p>
           </div>
         </section>
 
