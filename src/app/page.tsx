@@ -16,7 +16,7 @@ import {
 
 export default function Home() {
   const downloadLink = "https://drive.google.com/drive/folders/1gnFl1h4scumw3b_CzOdWVWY-IypM8IgG";
-  const amazonINLink = "https://www.amazon.in/dp/B0D44P723G";
+  const amazonINLink = "https://www.amazon.in/dp/B0FXRW8RPY";
   const amazonCOMLink = "https://www.amazon.com/Bombay-Business-Club-Daughters-Devotion/dp/B0G1N5K34Q/ref=tmm_pap_swatch_0";
   const koboLink = "https://www.kobo.com/in/en/ebook/the-bombay-business-club?sId=542882e6-25df-4be5-8d6b-3969f246e08b&ssId=0ZBFMY-hj5_XrG0gAedWY&cPos=1";
   const gumroadLink = "https://2532618660820.gumroad.com/l/zsgti?_gl=1*j7704z*_ga*MTA4MzAwMzI5MC4xNzYyNDMxMTEz*_ga_6LJN6D94N6*czE3NjI4ODYyMTEkbzYkZzAkdDE3NjI4ODYyMTEkajYwJGwwJGgw";
