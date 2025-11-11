@@ -157,7 +157,7 @@ export default function Home() {
             Be among the first to delve into the mysteries of The Bombay Business Club. Read the first eight chapters for free.
           </p>
           <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-            <Link href="/chapters">Read Free Chapters</Link>
+            <Link href="/chapters">Read</Link>
           </Button>
         </section>
       </div>
