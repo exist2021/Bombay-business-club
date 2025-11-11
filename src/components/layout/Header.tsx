@@ -69,6 +69,24 @@ export function Header() {
     us: "https://www.amazon.com/Bombay-Business-Club-Daughters-Devotion/dp/B0G1N5K34Q/ref=tmm_pap_swatch_0"
   };
 
+  const BuyBookDropdown = () => (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]">
+          Buy the Book <ChevronDown className="h-4 w-4" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <DropdownMenuItem asChild>
+          <Link href={amazonLinks.in} target="_blank">Amazon India</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href={amazonLinks.us} target="_blank">Amazon.com (US)</Link>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+
   return (
     <header className="py-4 px-4 md:px-8 sticky top-0 z-50 bg-background">
       <div className="container mx-auto flex items-center justify-between">
@@ -101,21 +119,7 @@ export function Header() {
           </DropdownMenu>
         </nav>
         <div className="hidden md:flex">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]">
-                Buy on Amazon <ChevronDown className="h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem asChild>
-                <Link href={amazonLinks.in} target="_blank">Amazon India</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href={amazonLinks.us} target="_blank">Amazon.com (US)</Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <BuyBookDropdown />
         </div>
 
         {/* Mobile Menu Button */}
@@ -146,21 +150,9 @@ export function Header() {
                <Link href={whatsAppHref} target="_blank" rel="noopener noreferrer" className="text-2xl text-primary/80 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>WhatsApp</Link>
                <Link href={instagramHref} target="_blank" rel="noopener noreferrer" className="text-2xl text-primary/80 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Instagram</Link>
               
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button size="lg" className="mt-6 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md">
-                    Buy on Amazon <ChevronDown className="h-4 w-4" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  <DropdownMenuItem asChild>
-                    <Link href={amazonLinks.in} target="_blank">Amazon India</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link href={amazonLinks.us} target="_blank">Amazon.com (US)</Link>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <div className="mt-6">
+                <BuyBookDropdown />
+              </div>
             </nav>
           </div>
         </div>
