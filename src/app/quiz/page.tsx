@@ -57,30 +57,31 @@ const QuizPage = () => {
           {tag:"empath", txt:"Protect him secretly — mercy matters."},
           {tag:"idealist", txt:"Remove him — a silenced witness is final."}
         ]},
-        {
-            q: "For ten years Anya Chandra has lived like a ghost — no interviews, no friends, no career. Rohan once married her in secret, then vanished. If that marriage ever becomes public, Dilip’s accusations will suddenly look real. Vikash’s power now depends on one woman’s silence. What does he do next?",
-            choices: [
-                { tag: "strategist", txt: "Keep Anya hidden — as long as she stays invisible, the truth stays uncertain." },
-                { tag: "idealist", txt: "Eliminate Dilip — end the risk before he can link Anya’s story to his evidence." },
-                { tag: "empath", txt: "Bring Anya out carefully — let her appear in public, calm and smiling, to make the world believe everything is normal." }
-            ]
-        },
-        {
-            q: "Every choice you’ve made shapes the story. You’ve weighed love against power, control against fear. Now step back. The story was never just about them — it was about what you believe. Whose mind do you understand best?",
-            choices: [
-                { tag: "strategist", txt: "Vikash Chandra — power must be protected, no matter the cost." },
-                { tag: "empath", txt: "Anya Chandra — love can be both a weapon and a wound." },
-                { tag: "idealist", txt: "Dilip Shrivastava — truth is worth dying for, even if no one listens." },
-            ]
-        },
-        {
-            q: "The story is balanced on a knife’s edge. Vikash still holds the empire. Rohan still has the reach. Dilip still has the truth. And Anya will marry whoever ends up holding power. There are no heroes left — only survivors. Who truly wins?",
-            choices: [
-                { tag: "strategist", txt: "Vikash Chandra — control never dies; it only changes shape." },
-                { tag: "empath", txt: "Rohan Bhatt — visibility is power; the screen always wins." },
-                { tag: "idealist", txt: "Dilip Shrivastava — the truth hurts, but it outlives everyone." }
-            ]
-        }
+      {
+        q: "For ten years Anya Chandra has lived like a ghost — no interviews, no friends, no career. Rohan once married her in secret, then vanished. If that marriage ever becomes public, Dilip’s accusations will suddenly look real. Vikash’s power now depends on one woman’s silence. What does he do next?",
+        choices: [
+          { tag: "strategist", txt: "Keep Anya hidden — as long as she stays invisible, the truth stays uncertain." },
+          { tag: "idealist", txt: "Eliminate Dilip — end the risk before he can link Anya’s story to his evidence." },
+          { tag: "empath", txt: "Bring Anya out carefully — let her appear in public, calm and smiling, to make the world believe everything is normal." }
+        ]
+      },
+      {
+        q: "Every choice you’ve made shapes the story. You’ve weighed love against power, control against fear. Now step back. The story was never just about them — it was about what you believe. Whose mind do you understand best?",
+        choices: [
+          { tag: "strategist", txt: "Vikash Chandra — power must be protected, no matter the cost." },
+          { tag: "empath", txt: "Anya Chandra — love can be both a weapon and a wound." },
+          { tag: "idealist", txt: "Dilip Shrivastava — truth is worth dying for, even if no one listens." },
+          { tag: "neutral", txt: "Rohan Bhatt — fame forgives everything; survival is the only honesty left." }
+        ]
+      },
+      {
+        q: "The story is balanced on a knife’s edge. Vikash still holds the empire. Rohan still has the reach. Dilip still has the truth. And Anya will marry whoever ends up holding power. There are no heroes left — only survivors. Who truly wins?",
+        choices: [
+          { tag: "strategist", txt: "Vikash Chandra — control never dies; it only changes shape." },
+          { tag: "empath", txt: "Rohan Bhatt — visibility is power; the screen always wins." },
+          { tag: "idealist", txt: "Dilip Shrivastava — the truth hurts, but it outlives everyone." }
+        ]
+      }
     ];
 
     let idx = 0;
@@ -171,15 +172,16 @@ const QuizPage = () => {
 
     function finish(){
       if (quiz) quiz.style.display='none';
-      const tally = { strategist:0, empath:0, idealist:0 };
+      const tally = { strategist:0, empath:0, idealist:0, neutral:0 };
       answers.forEach(a=>{ tally[a.tag as keyof typeof tally] = (tally[a.tag as keyof typeof tally]||0) + 1; });
-      const order = ['strategist','empath','idealist'];
+      const order = ['strategist','empath','idealist','neutral'];
       let top = order[0];
       order.forEach(k=>{ if(tally[k as keyof typeof tally] > tally[top as keyof typeof tally]) top = k; });
       const profiles = {
         strategist: { emoji: '🦉', title: 'The Strategist', p1: 'You think like Vikash — precise, ruthless, and composed. You reduce choices to variables and time to currency. You prefer control over chaos.', p2: 'This clarity wins battles but risks losing souls. The map is clean; the board can be lonely.'},
         empath: { emoji: '⚖️', title: 'The Empath', p1: 'You think like Anya — compassionate, cautious, and human. You weigh pain alongside outcome and try to preserve people.', p2: 'This kindness saves lives, but it can be exploited. Know when mercy is strategy, and when it is a cost.'},
-        idealist: { emoji: '💀', title: 'The Idealist', p1: 'You think like the truth-tellers — daring, principled, and willing to burn bridges for revelation. Truth matters more than safety.', p2: 'This courage inspires, but it can be self-destructive. Revelation changes the world — and you may be changed with it.'}
+        idealist: { emoji: '💀', title: 'The Idealist', p1: 'You think like the truth-tellers — daring, principled, and willing to burn bridges for revelation. Truth matters more than safety.', p2: 'This courage inspires, but it can be self-destructive. Revelation changes the world — and you may be changed with it.'},
+        neutral: { emoji: '🎭', title: 'The Survivor', p1: 'You think like Rohan — adaptable, pragmatic, and driven by self-preservation. You understand that in a world of power plays, the only winning move is to stay in the game.', p2: 'This flexibility ensures survival, but at what cost? When loyalty is a currency, you risk becoming a ghost in your own story.'}
       };
       const profile = profiles[top as keyof typeof profiles];
       if (resEmoji) resEmoji.textContent = profile.emoji;
