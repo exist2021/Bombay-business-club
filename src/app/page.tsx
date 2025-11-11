@@ -8,13 +8,13 @@ import Link from 'next/link';
 import { Download } from 'lucide-react';
 
 export default function Home() {
-  const downloadLink = "https://drive.google.com/file/d/10VWzIzRciJ7hcDplTYwHdgDtbPdeA_nE/view?usp=drivesdk";
+  const downloadLink = "https://drive.google.com/drive/folders/1gnFl1h4scumw3b_CzOdWVWY-IypM8IgG";
 
   const DownloadButton = () => (
       <Button asChild size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]">
         <Link href={downloadLink} target="_blank">
           <Download className="mr-2 h-5 w-5" />
-          Download for Free
+          Download PDF/EPUB
         </Link>
       </Button>
   );

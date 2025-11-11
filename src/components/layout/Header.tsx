@@ -56,7 +56,7 @@ export function Header() {
 
   const whatsAppHref = "https://chat.whatsapp.com/G6LHQqvoh21LFOfwpCeqKH";
   const instagramHref = "https://www.instagram.com/bombaybusinessclub?igsh=YWV0d3R1NWM2MXh6&utm_source=qr";
-  const downloadLink = "https://drive.google.com/file/d/10VWzIzRciJ7hcDplTYwHdgDtbPdeA_nE/view?usp=drivesdk";
+  const downloadLink = "https://drive.google.com/drive/folders/1gnFl1h4scumw3b_CzOdWVWY-IypM8IgG";
 
 
   const navLinks = [
@@ -70,7 +70,7 @@ export function Header() {
     <Button asChild className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]">
       <Link href={downloadLink} target="_blank">
         <Download className="mr-2 h-4 w-4" />
-        Download for Free
+        Download PDF/EPUB
       </Link>
     </Button>
   );
