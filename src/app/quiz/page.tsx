@@ -1,18 +1,13 @@
+
 'use client';
 import { useEffect, useRef } from 'react';
 import { initializeFirebase, useFirestore } from '@/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 
-const QuizPage = () => {
-  const initialized = useRef(false);
+const QuizComponent = () => {
   const firestore = useFirestore();
 
   useEffect(() => {
-    if (initialized.current) {
-      return;
-    }
-    initialized.current = true;
-    
     /* ================================= CONFIG ================================= */
     const TELEMETRY_QUEUE_KEY = 'bbc_quiz_telemetry_queue_v1';
     const RETRY_INTERVAL_MS = 10000; // automatic retry every 10s
@@ -134,9 +129,11 @@ const QuizPage = () => {
     if (consent) (consent as HTMLInputElement).addEventListener('change', ()=> (startBtn as HTMLButtonElement).disabled = !(consent as HTMLInputElement).checked);
     if(startBtn) startBtn.addEventListener('click', ()=> {
       if(!(consent as HTMLInputElement).checked){ alert('Please agree to send answers anonymously.'); return; }
-      intro.style.display = 'none';
-      quiz.style.display = 'block';
-      quiz.setAttribute('aria-hidden','false');
+      if(intro) intro.style.display = 'none';
+      if(quiz) {
+        quiz.style.display = 'block';
+        quiz.setAttribute('aria-hidden','false');
+      }
       idx = 0; answers = [];
       render();
     });
@@ -351,24 +348,26 @@ const QuizPage = () => {
     }
 
     let flushTimer: NodeJS.Timeout | null = null;
-    async function flushLoop(){
-      try {
-        let anySent = false;
-        for(let n=0;n<3;n++){
-          const q = readQueue();
-          if(q.length===0) break;
-          const ok = await flushOne();
-          if(ok) anySent = true;
-          else break; 
+    function flushLoop(){
+      (async () => {
+        try {
+          let anySent = false;
+          for(let n=0;n<3;n++){
+            const q = readQueue();
+            if(q.length===0) break;
+            const ok = await flushOne();
+            if(ok) anySent = true;
+            else break; 
+          }
+          if(anySent && telemetryStatus) telemetryStatus.textContent = 'sent (queued flushed)';
+        } catch(e){
+          console.warn('flushLoop error', e);
+        } finally {
+          refreshQueueUI();
+          if(flushTimer) clearTimeout(flushTimer);
+          flushTimer = setTimeout(flushLoop, RETRY_INTERVAL_MS);
         }
-        if(anySent && telemetryStatus) telemetryStatus.textContent = 'sent (queued flushed)';
-      } catch(e){
-        console.warn('flushLoop error', e);
-      } finally {
-        refreshQueueUI();
-        if(flushTimer) clearTimeout(flushTimer);
-        flushTimer = setTimeout(flushLoop, RETRY_INTERVAL_MS);
-      }
+      })();
     }
 
     window.addEventListener('online', ()=> { flushLoop(); });
@@ -420,66 +419,65 @@ const QuizPage = () => {
 
   }, [firestore]);
 
-  const quizStyles = `
-    :root{
-      --bg1:#03050b; --bg2:#0b1220;
-      --card:#0f1b2b; --card-contrast:rgba(255,255,255,0.10);
-      --gold:#ffd98a; --gold-strong:#C9A25A;
-      --teal:#80e4d8; --text:#f6f7f8; --muted:#bcd7d1;
-      --danger:#f07a7a;
-    }
-    *{box-sizing:border-box}
-    .wrap{max-width:820px;margin:0 auto;padding:18px;}
-    .header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;}
-    .title{font-family:'Playfair Display', Georgia, serif;color:var(--gold);font-size:1.5rem;margin:0;}
-    .tagline{color:var(--teal);font-style:italic;font-size:0.95rem;}
-    .panel{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border-radius:14px;padding:16px;margin-bottom:14px;border:1px solid var(--card-contrast);box-shadow:0 8px 30px rgba(0,0,0,0.6);}
-    .context{color:var(--text);font-size:1rem;line-height:1.6;}
-    .controls{display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap;}
-    .consent{font-size:0.95rem;color:var(--muted);display:flex;align-items:center;gap:8px;}
-    .start-btn{background:linear-gradient(90deg,var(--gold),#fff3b8);color:#07131e;padding:12px 16px;border-radius:12px;border:none;font-weight:700;cursor:pointer;font-size:1rem;}
-    .start-btn[disabled]{opacity:0.6;cursor:not-allowed;}
-    .quiz{display:none;}
-    .progress{text-align:center;color:var(--teal);font-size:0.95rem;margin-bottom:10px;}
-    .card{background:var(--card);border-radius:12px;padding:14px;border:1px solid var(--card-contrast);box-shadow:0 6px 20px rgba(0,0,0,0.6);}
-    .context-line{color:#dfeee6;font-size:0.95rem;margin-bottom:10px;}
-    .question{color:var(--gold-strong);font-weight:700;font-size:1.05rem;margin-bottom:12px;line-height:1.4;}
-    .choices{display:flex;flex-direction:column;gap:12px;}
-    .choice{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:14px;border-radius:10px;text-align:left;font-size:1rem;cursor:pointer;}
-    .choice:active{transform:translateY(1px);}
-    .choice:hover{background:rgba(255,255,255,0.06);}
-    .choice.selected{border-color:var(--teal);background:rgba(128,228,216,0.06);}
-    .back-row{display:flex;justify-content:flex-start;margin-top:12px;}
-    .back-btn{background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--muted);padding:10px 12px;border-radius:10px;cursor:pointer;}
-    .result{display:none;margin-top:16px;padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid var(--card-contrast);box-shadow:0 8px 24px rgba(0,0,0,0.6);}
-    .result h2{color:var(--gold-strong);margin:0 0 6px 0;font-size:1.2rem;}
-    .result .short{color:var(--teal);font-weight:700;margin-bottom:8px;}
-    .profile{color:#e7f7f1;line-height:1.6;margin-top:8px;font-size:0.98rem;}
-    .breakdown{margin-top:12px;color:var(--teal);font-weight:600;font-size:0.95rem;}
-    .emblem-wrap{display:flex;justify-content:center;margin-top:12px;}
-    .telemetry{margin-top:12px;font-size:0.95rem;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
-    .telemetry .status{font-weight:700;}
-    .telemetry .queued{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);color:var(--muted);}
-    .telemetry .retrybtn{padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--muted);cursor:pointer;}
-    .telemetry .err{display:block;color:var(--danger);font-size:0.88rem;margin-top:6px;white-space:pre-wrap;}
-    .cta-row{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
-    .cta{display:inline-block;background:linear-gradient(90deg,var(--gold),#fff3b8);color:#07131e;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;}
-    .reset-btn{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--muted);padding:10px 12px;border-radius:8px;cursor:pointer;}
-    .footer{margin-top:18px;text-align:center;color:#9aa6a0;font-size:0.95rem;}
-    .small-debug{font-size:0.82rem;color:#9aa6a0;margin-top:8px;}
-
-    @media (max-width:420px){
-      .wrap{padding:12px;}
-      .title{font-size:1.25rem;}
-      .question{font-size:1rem;}
-      .choice{padding:12px;font-size:0.98rem;}
-      .start-btn{padding:12px;width:100%;}
-    }
-  `;
 
   return (
-    <div>
-      <style dangerouslySetInnerHTML={{ __html: quizStyles }} />
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
+        :root{
+          --bg1:#03050b; --bg2:#0b1220;
+          --card:#0f1b2b; --card-contrast:rgba(255,255,255,0.10);
+          --gold:#ffd98a; --gold-strong:#C9A25A;
+          --teal:#80e4d8; --text:#f6f7f8; --muted:#bcd7d1;
+          --danger:#f07a7a;
+        }
+        *{box-sizing:border-box}
+        .wrap{max-width:820px;margin:0 auto;padding:18px;}
+        .header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;}
+        .title{font-family:'Playfair Display', Georgia, serif;color:var(--gold);font-size:1.5rem;margin:0;}
+        .tagline{color:var(--teal);font-style:italic;font-size:0.95rem;}
+        .panel{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border-radius:14px;padding:16px;margin-bottom:14px;border:1px solid var(--card-contrast);box-shadow:0 8px 30px rgba(0,0,0,0.6);}
+        .context{color:var(--text);font-size:1rem;line-height:1.6;}
+        .controls{display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+        .consent{font-size:0.95rem;color:var(--muted);display:flex;align-items:center;gap:8px;}
+        .start-btn{background:linear-gradient(90deg,var(--gold),#fff3b8);color:#07131e;padding:12px 16px;border-radius:12px;border:none;font-weight:700;cursor:pointer;font-size:1rem;}
+        .start-btn[disabled]{opacity:0.6;cursor:not-allowed;}
+        .quiz{display:none;}
+        .progress{text-align:center;color:var(--teal);font-size:0.95rem;margin-bottom:10px;}
+        .card{background:var(--card);border-radius:12px;padding:14px;border:1px solid var(--card-contrast);box-shadow:0 6px 20px rgba(0,0,0,0.6);}
+        .context-line{color:#dfeee6;font-size:0.95rem;margin-bottom:10px;}
+        .question{color:var(--gold-strong);font-weight:700;font-size:1.05rem;margin-bottom:12px;line-height:1.4;}
+        .choices{display:flex;flex-direction:column;gap:12px;}
+        .choice{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:14px;border-radius:10px;text-align:left;font-size:1rem;cursor:pointer;}
+        .choice:active{transform:translateY(1px);}
+        .choice:hover{background:rgba(255,255,255,0.06);}
+        .choice.selected{border-color:var(--teal);background:rgba(128,228,216,0.08);}
+        .back-row{display:flex;justify-content:flex-start;margin-top:12px;}
+        .back-btn{background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--muted);padding:10px 12px;border-radius:10px;cursor:pointer;}
+        .result{display:none;margin-top:16px;padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid var(--card-contrast);box-shadow:0 8px 24px rgba(0,0,0,0.6);}
+        .result h2{color:var(--gold-strong);margin:0 0 6px 0;font-size:1.2rem;}
+        .result .short{color:var(--teal);font-weight:700;margin-bottom:8px;}
+        .profile{color:#e7f7f1;line-height:1.6;margin-top:8px;font-size:0.98rem;}
+        .breakdown{margin-top:12px;color:var(--teal);font-weight:600;font-size:0.95rem;}
+        .emblem-wrap{display:flex;justify-content:center;margin-top:12px;}
+        .telemetry{margin-top:12px;font-size:0.95rem;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+        .telemetry .status{font-weight:700;}
+        .telemetry .queued{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);color:var(--muted);}
+        .telemetry .retrybtn{padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--muted);cursor:pointer;}
+        .telemetry .err{display:block;color:var(--danger);font-size:0.88rem;margin-top:6px;white-space:pre-wrap;}
+        .cta-row{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+        .cta{display:inline-block;background:linear-gradient(90deg,var(--gold),#fff3b8);color:#07131e;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700;}
+        .reset-btn{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--muted);padding:10px 12px;border-radius:8px;cursor:pointer;}
+        .footer{margin-top:18px;text-align:center;color:#9aa6a0;font-size:0.95rem;}
+        .small-debug{font-size:0.82rem;color:#9aa6a0;margin-top:8px;}
+
+        @media (max-width:420px){
+          .wrap{padding:12px;}
+          .title{font-size:1.25rem;}
+          .question{font-size:1rem;}
+          .choice{padding:12px;font-size:0.98rem;}
+          .start-btn{padding:12px;width:100%;}
+        }
+      ` }} />
       <div className="wrap" role="main" aria-live="polite">
         <div className="header">
           <div>
@@ -546,18 +544,17 @@ const QuizPage = () => {
         <div className="footer">“The strong do what they can and the weak suffer what they must.” — Thucydides</div>
         <div className="small-debug" id="debugLine" aria-hidden="true"></div>
       </div>
-    </div>
+    </>
   );
 };
 
-// As this page now relies on a client-side hook `useFirestore`, we need a parent component
-// to provide the Firebase context. We can create a simple wrapper for that.
+
 import { FirebaseClientProvider } from '@/firebase';
 
-export default function QuizPageWrapper() {
+export default function QuizPage() {
   return (
     <FirebaseClientProvider>
-      <QuizPage />
+      <QuizComponent />
     </FirebaseClientProvider>
   );
 }
