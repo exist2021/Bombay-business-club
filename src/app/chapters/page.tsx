@@ -15,6 +15,7 @@ import { ExternalLink, Headphones, Download, BookOpen } from 'lucide-react';
 
 export default function ChaptersPage() {
   const storyLink = 'https://manojnayak.stck.me/story/1313571/The-Bombay-Business-Club';
+  const downloadLink = "https://drive.google.com/file/d/10VWzIzRciJ7hcDplTYwHdgDtbPdeA_nE/view?usp=drivesdk";
 
   return (
     <AnimatedDiv>
@@ -34,7 +35,7 @@ export default function ChaptersPage() {
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-              <Link href="https://2532618660820.gumroad.com/l/zsgti?_gl=1*1rgioke*_ga*MTA4MzAwMzI5MC4xNzYyNDMxMTEz*_ga_6LJN6D94N6*czE3NjI4NTM5MzckbzUkZzAkdDE3NjI4NTM5MzckajYwJGwwJGgw" target="_blank">
+              <Link href={downloadLink} target="_blank">
                 <Download className="mr-2 h-5 w-5" />
                 Download PDF/EPUB
               </Link>
