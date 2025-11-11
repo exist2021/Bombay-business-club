@@ -81,10 +81,6 @@ export default function Home() {
             ></iframe>
           </div>
           
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <BuyTheBookDropdown />
-            <DownloadButton />
-          </div>
         </header>
 
         <Separator className="my-12 md:my-20 bg-primary/20" />
