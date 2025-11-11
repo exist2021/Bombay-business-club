@@ -23,6 +23,10 @@ export default function ChaptersPage() {
     6: 'https://manojnayak.stck.me/chapter/1328025/The-New-York-Exile',
     7: 'https://manojnayak.stck.me/chapter/1332184/The-Betrayal-and-the-Accident',
     8: 'https://manojnayak.stck.me/chapter/1336960/The-YouTubers-Rise-and-Fall',
+    9: 'https://manojnayak.stck.me/post/156428/The-Decade-of-Silence',
+    10: 'https://manojnayak.stck.me/post/156434/The-Vashikaran',
+    11: 'https://manojnayak.stck.me/post/156441/The-Alibaug-Secret',
+    12: 'https://manojnayak.stck.me/post/156442/The-Breaking-Point',
   };
 
   return (
