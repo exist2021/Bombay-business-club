@@ -9,12 +9,12 @@ const QuizPage = () => {
       return;
     }
     initialized.current = true;
-
+    
     /* ================================= CONFIG ================================= */
     const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyYvmDRXjeDqJmk4MyWVfv6evhRkE-zA44-lMfOHXXt9veH4Sygmo1UzfNajZNauPiNIQ/exec";
     const TELEMETRY_QUEUE_KEY = 'bbc_quiz_telemetry_queue_v1';
     const RETRY_INTERVAL_MS = 10000; // automatic retry every 10s
-
+    
     /* ========================= QUESTIONS (9 narrative) ======================== */
     const QUESTIONS = [
       {
@@ -103,7 +103,7 @@ const QuizPage = () => {
 
     /* ======================= STATE & ELEMENTS ======================= */
     let idx = 0;
-    let answers = [];
+    let answers: any[] = [];
     let questionStart = 0;
 
     const intro = document.getElementById('intro');
@@ -141,6 +141,7 @@ const QuizPage = () => {
 
     /* ========================= RENDER ========================= */
     function render(){
+      if(!progressEl || !contextLine || !questionEl || !choicesEl || !backBtn) return;
       if(idx >= QUESTIONS.length) return finish();
       const q = QUESTIONS[idx];
       progressEl.textContent = `Question ${idx+1} of ${QUESTIONS.length}`;
@@ -174,7 +175,7 @@ const QuizPage = () => {
       });
     }
 
-    if (backBtn) backBtn.onclick = ()=>{
+    if(backBtn) backBtn.onclick = ()=>{
       if(idx>0){ idx--; render(); }
     };
 
@@ -185,6 +186,8 @@ const QuizPage = () => {
 
     /* ==================== FINISH & PERSONA ==================== */
     function finish(){
+      if(!quiz || !result || !resTitle || !resShort || !resProfile || !resBreakdown || !emblemWrap || !telemetryStatus || !telemetryErr) return;
+      
       quiz.style.display = 'none';
       quiz.setAttribute('aria-hidden','true');
       result.style.display = 'block';
@@ -235,7 +238,7 @@ const QuizPage = () => {
       sendOrQueueTelemetry(payload).then(ok=>{
         if(ok){
           telemetryStatus.textContent = 'sent';
-          telemetryQueued.style.display = 'none';
+          if(telemetryQueued) telemetryQueued.style.display = 'none';
           (telemetryStatus as HTMLElement).style.color = '#9adbcf';
         } else {
           telemetryStatus.textContent = 'failed';
@@ -277,21 +280,29 @@ const QuizPage = () => {
       }
     }
 
-    async function trySend(payload){
+    async function trySend(payload) {
       try {
+        const formData = new FormData();
+        formData.append('data', JSON.stringify(payload));
+    
         const res = await fetch(WEBHOOK_URL, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+          body: formData,
         });
-        if(res.ok) return true;
-        const txt = await res.text().catch(()=>'(no body)');
-        telemetryErr.style.display = 'block';
-        telemetryErr.textContent = `Server responded: ${res.status} ${res.statusText}\n${txt}`;
+    
+        if (res.ok) return true;
+    
+        const txt = await res.text().catch(() => '(no body)');
+        if (telemetryErr) {
+          telemetryErr.style.display = 'block';
+          telemetryErr.textContent = `Server responded: ${res.status} ${res.statusText}\n${txt}`;
+        }
         return false;
-      } catch(err){
-        telemetryErr.style.display = 'block';
-        telemetryErr.textContent = `Fetch error: ${err && (err as Error).message ? (err as Error).message : String(err)}`;
+      } catch (err) {
+        if (telemetryErr) {
+          telemetryErr.style.display = 'block';
+          telemetryErr.textContent = `Fetch error: ${err && (err as Error).message ? String(err) : 'Unknown error'}`;
+        }
         return false;
       }
     }
@@ -303,7 +314,7 @@ const QuizPage = () => {
       refreshQueueUI();
     }
 
-    function readQueue(){
+    function readQueue(): any[] {
       try {
         const raw = localStorage.getItem(TELEMETRY_QUEUE_KEY);
         if(!raw) return [];
@@ -317,6 +328,7 @@ const QuizPage = () => {
     }
 
     function refreshQueueUI(){
+      if (!telemetryQueued || !retryBtn) return;
       const q = readQueue();
       if(q.length>0){
         telemetryQueued.style.display='inline-block';
@@ -343,7 +355,7 @@ const QuizPage = () => {
       return false;
     }
 
-    let flushTimer = null;
+    let flushTimer: NodeJS.Timeout | null = null;
     async function flushLoop(){
       try {
         let anySent = false;
@@ -354,7 +366,7 @@ const QuizPage = () => {
           if(ok) anySent = true;
           else break; 
         }
-        if(anySent) telemetryStatus.textContent = 'sent (queued flushed)';
+        if(anySent && telemetryStatus) telemetryStatus.textContent = 'sent (queued flushed)';
       } catch(e){
         console.warn('flushLoop error', e);
       } finally {
@@ -367,8 +379,8 @@ const QuizPage = () => {
     window.addEventListener('online', ()=> { flushLoop(); });
 
     if(retryBtn) retryBtn.addEventListener('click', ()=> {
-      telemetryErr.style.display = 'none';
-      telemetryStatus.textContent = 'retrying…';
+      if(telemetryErr) telemetryErr.style.display = 'none';
+      if(telemetryStatus) telemetryStatus.textContent = 'retrying…';
       flushLoop();
     });
 
@@ -384,18 +396,20 @@ const QuizPage = () => {
 
     if(resetBtn) resetBtn.addEventListener('click', ()=> {
       idx = 0; answers = []; questionStart = 0;
-      result.style.display = 'none';
-      quiz.style.display = 'none';
-      intro.style.display = 'block';
-      telemetryStatus.textContent = 'pending';
-      telemetryErr.style.display = 'none';
-      (telemetryStatus as HTMLElement).style.color = '';
+      if (result) result.style.display = 'none';
+      if (quiz) quiz.style.display = 'none';
+      if (intro) intro.style.display = 'block';
+      if (telemetryStatus) telemetryStatus.textContent = 'pending';
+      if (telemetryErr) telemetryErr.style.display = 'none';
+      if (telemetryStatus) (telemetryStatus as HTMLElement).style.color = '';
       refreshQueueUI();
-      emblemWrap.innerHTML = '';
+      if (emblemWrap) emblemWrap.innerHTML = '';
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      (document.getElementById('consentChk') as HTMLInputElement).checked = false;
-      (document.getElementById('startBtn') as HTMLButtonElement).disabled = true;
-      debugLine.textContent = '';
+      const consentChk = document.getElementById('consentChk') as HTMLInputElement;
+      if(consentChk) consentChk.checked = false;
+      const startBtn = document.getElementById('startBtn') as HTMLButtonElement;
+      if(startBtn) startBtn.disabled = true;
+      if (debugLine) debugLine.textContent = '';
     });
 
     document.addEventListener('visibilitychange', ()=> {
@@ -542,5 +556,3 @@ const QuizPage = () => {
 };
 
 export default QuizPage;
-
-    
