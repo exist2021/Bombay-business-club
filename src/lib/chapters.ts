@@ -28,13 +28,13 @@ export const chapters: Chapter[] = [
   },
   {
     id: 3,
-    title: "Chapter 3: The Years of Broken Things (Age 18-28)",
+    title: "Chapter 3: The Years of Broken Things",
     description: "Three years post-Kiara, eighteen-year-old Anya attracts Aryan’s attention, but Maya intervenes—marriage would expose family secrets. Sent to NYU, Anya meets French filmmaker Jean-Luc, who’s mysteriously deported after three months. A comedian boyfriend loses all gigs after joking about powerful families. Assistant director Rohan attempts drugging/blackmail and disappears. At twenty-five, she has a hysterical affair with married cricket star Kartik Mehra. Every relationship is systematically destroyed by her father’s invisible hand. By thirty, Anya is hollow, broken, waiting—accepting her inescapable cage while understanding she’ll never have genuine freedom or love.",
     paragraphs: []
   },
   {
     id: 4,
-    title: "Chapter 4: The Fashion Book Launch (Age 30/40)",
+    title: "Chapter 4: The Fashion Book Launch",
     description: "Forty-year-old divorced Dilip Shrivastava attends a fashion book launch hoping to see historian Aditi Sengupta. Instead, he spots thirty-year-old Anya Chandra—stunning, lonely, somehow aware of his staring without looking. He’s mesmerized. Later discovering she’s Vikash Chandra’s daughter and received his earlier email about collaborating, he realizes she knew who he was. When Cafe Mangi offers significant advertising shortly after, he suspects connections. The timing feels orchestrated. Anya recognizes Dilip as exactly what her parents seek: ordinary, controllable, grateful—someone who’ll seem like her choice while remaining manageable for Vikash’s purposes.",
     paragraphs: []
   },
@@ -46,19 +46,19 @@ export const chapters: Chapter[] = [
   },
   {
     id: 6,
-    title: "Chapter 6: The New York Exile (Age 30-34)",
+    title: "Chapter 6: The New York Exile",
     description: "Thirty-year-old Anya flees to sister Priya’s Brooklyn apartment. Maya suggests mentoring Rohan Bhat, a clueless twenty-year-old starting a YouTube fitness channel. Anya finds unexpected satisfaction teaching him. Her father shelves her documentary—two years of work killed. Lonely, she begins an affair with cousin Abhay Malhotra. She confesses to Maya, who responds with surprising warmth while warning that Abhay now knows dangerous secrets. Worse, Anya develops attraction to brother-in-law Marco. When pregnant Priya suspects betrayal and explodes, Maya convinces Anya to return home. At thirty-two, Anya finally understands even her mother’s warmth serves Vikash’s control. Her cage is inescapable.",
     paragraphs: []
   },
   {
     id: 7,
-    title: "Chapter 7: The Betrayal and the Accident (Age 34)",
+    title: "Chapter 7: The Betrayal and the Accident",
     description: "Back in Mumbai at thirty-four, Anya works as Vikash’s invisible weapon while mentoring Rohan’s successful YouTube channel. Her cousin Abhay has been compromised—sleeping with Korean CEO Min-Jun Park and betraying Vikash’s operations (₹3,500 crores lost). Vikash orders Anya to confirm Abhay’s treachery using clairvoyant gifts. She discovers complete betrayal and defection plans. Next day, Abhay “accidentally” drowns in Goa—obvious assassination disguised as cardiac arrest. Devastated, Anya realizes her intelligence work caused his death. Rohan provides uncomplicated comfort, offering genuine friendship. The chapter reveals lethal consequences of Anya’s gifts and Vikash’s ruthlessness while establishing Rohan as sincere presence.",
     paragraphs: []
   },
   {
     id: 8,
-    title: "Chapter 8: The YouTuber’s Rise and Fall (Age 34-39)",
+    title: "Chapter 8: The YouTuber’s Rise and Fall",
     description: "Twenty-four-year-old Rohan keeps Anya afloat with his growing YouTube success—secretly controlled by Vikash’s algorithm manipulation. Rohan dreams of billionaire status, working obsessively. Maya initially approves but grows jealous of Anya’s influence. When Anya spends two months in Albania, Vikash observes Rohan’s content becoming recklessly opinionated. Deciding he’s unacceptable, Vikash throttles his performance while scheduling impossible opportunities. Orchestrated Valentine’s photos with actress Jhanvi Kapoor appear compromising. Hurt by weeks of cancellations, Anya ends it. Meanwhile, Dilip has written emails for ten years despite silence—persistence Vikash notes as useful. At thirty-nine, approaching forty, Anya receives “the talk” about her future.",
     paragraphs: []
   },
