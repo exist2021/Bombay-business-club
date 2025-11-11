@@ -169,7 +169,7 @@ export default function Home() {
           </div>
           <div className="mt-12">
             <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-              <Link href="/chapters">Read the First 8 Chapters</Link>
+              <Link href="/chapters">Read Now</Link>
             </Button>
           </div>
         </section>
