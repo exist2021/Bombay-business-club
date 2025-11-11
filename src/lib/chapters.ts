@@ -61,5 +61,29 @@ export const chapters: Chapter[] = [
     title: "Chapter 8: The YouTuber’s Rise and Fall (Age 34-39)",
     description: "Twenty-four-year-old Rohan keeps Anya afloat with his growing YouTube success—secretly controlled by Vikash’s algorithm manipulation. Rohan dreams of billionaire status, working obsessively. Maya initially approves but grows jealous of Anya’s influence. When Anya spends two months in Albania, Vikash observes Rohan’s content becoming recklessly opinionated. Deciding he’s unacceptable, Vikash throttles his performance while scheduling impossible opportunities. Orchestrated Valentine’s photos with actress Jhanvi Kapoor appear compromising. Hurt by weeks of cancellations, Anya ends it. Meanwhile, Dilip has written emails for ten years despite silence—persistence Vikash notes as useful. At thirty-nine, approaching forty, Anya receives “the talk” about her future.",
     paragraphs: []
+  },
+  {
+    id: 9,
+    title: "Chapter 9 — After Ten Years",
+    description: "At fifty, Dilip Shrivastava writes a farewell email to Anya Chandra after a decade of unanswered letters. Vikash, always monitoring his daughter’s communications, instructs Anya to re-engage him using a fake identity, @Alish99. Their light social-media chats evolve into intimacy as Dilip falls for her voice again. When he confesses a past affair with a rich man’s wife, Anya lashes out, ending contact—only for him to unblock her days later. Their bond resumes under Vikash’s surveillance, who studies every exchange to weaponize affection into control. The “love story” becomes a psychological experiment setting the stage for complete domination.",
+    paragraphs: []
+  },
+  {
+    id: 10,
+    title: "Chapter 10 – The Vashikaran",
+    description: "At forty, Anya deepens her psychic bond with fifty-year-old journalist Dilip Shrivastava after her father Vikash orders her to stop written contact and bind him through ritual. She performs a vashikaran—using his hair, clothes, and her blood—to enslave his mind. While he mistakes the telepathic link for love, Vikash and Maya manipulate Anya through her ex-lover Nandita’s paid “reappearance.” Dilip gradually perceives the trap: every relationship in Anya’s life has been orchestrated by her parents to keep her dependent. The realization fractures their connection and exposes the family’s total psychological control.",
+    paragraphs: []
+  },
+  {
+    id: 11,
+    title: "Chapter 11 – The Alibaug Secret",
+    description: "Dilip’s visions confirm that Anya is sexually enslaved by her father. She telepathically reveals the truth: on Independence Day in Alibaug, Vikash forced her compliance, beginning their ongoing incestuous relationship. Maya senses the shift at home, choosing silence for survival. A careless public kiss between father and daughter nearly exposes them, prompting Maya’s furious warning that one slip will destroy the family. That night, Vikash re-asserts control, promising secrecy while continuing the abuse. Dilip, consumed by jealousy and powerlessness, realizes he can never compete with the Chandras’ wealth or domination, as Anya retreats further into captivity.",
+    paragraphs: []
+  },
+  {
+    id: 12,
+    title: "Chapter 12 – The Breaking Point",
+    description: "After Vikash’s heart attack, Anya becomes his caretaker while secretly conspiring with Maya and Priya to escape his grip. They plan a clandestine New Year’s Eve marriage between Anya and YouTuber Rohan to block Vikash’s chosen match, the subservient Dilip. The wedding succeeds, but Rohan flees after witnessing Anya and Vikash’s dark rituals of torture and magic. Dilip tries to expose the abuse to police, politicians, and activists, only to be dismissed and left to die under Anya’s voodoo control. By January, he escapes Mumbai for Prayagraj, still bound to her telepathically. Anya remains a prisoner in her father’s empire—the cycle of power and possession unbroken.",
+    paragraphs: []
   }
 ]
