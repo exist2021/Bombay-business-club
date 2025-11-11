@@ -54,7 +54,7 @@ export default function Home() {
           </div>
           
           <Button size="lg" className="mt-12 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-            <Link href="https://www.amazon.in/dp/B0FXRW8RPY" target="_blank">Pre-order on Amazon</Link>
+            <Link href="https://www.amazon.in/dp/B0FXRW8RPY" target="_blank">Buy on Amazon</Link>
           </Button>
         </header>
 
@@ -78,18 +78,18 @@ export default function Home() {
 
         <Separator className="my-12 md:my-20 bg-primary/20" />
 
-        {/* Pre-order Section */}
-        <section id="preorder" className="max-w-4xl mx-auto text-center scroll-mt-20">
-          <h2 className="text-4xl font-headline text-primary mb-8">Pre-order the Book</h2>
+        {/* Buy Section */}
+        <section id="buy" className="max-w-4xl mx-auto text-center scroll-mt-20">
+          <h2 className="text-4xl font-headline text-primary mb-8">Buy the Book</h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
             <div className="md:w-2/3 text-lg text-foreground/90 font-serif leading-relaxed text-center md:text-left mb-8 md:mb-0 space-y-4">
-              <p>Pre-order your copy of The Bombay Business Club today.</p>
+              <p>Buy your copy of The Bombay Business Club today.</p>
               <p className="text-base text-foreground/70">
-                Your pre-order is for the digital ebook, which will be automatically delivered to your Kindle library on release day.
+                Your purchase is for the digital ebook, which will be automatically delivered to your Kindle library.
               </p>
               <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
                 <Link href="https://www.amazon.in/dp/B0FXRW8RPY" target="_blank">
-                  Pre-order on Amazon
+                  Buy on Amazon
                 </Link>
               </Button>
             </div>
