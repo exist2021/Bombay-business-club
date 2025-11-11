@@ -1,8 +1,6 @@
-
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { ScriptProps } from 'next/script';
 
 const QuizPage = () => {
   const initialized = useRef(false);
@@ -12,315 +10,277 @@ const QuizPage = () => {
       return;
     }
     initialized.current = true;
-
+    
+    /* Telemetry URL */
     const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwSeKmUeyUg05IplbHCCCbsbAxIrsIid9UZodDvlbd-OM1jWFElNsbtL1RCDodKqfhr/exec";
+
+    /* Canonical 9-question set (with secret-marriage detail) */
     const QUESTIONS = [
-      { q: "Vikash Chandra has two problems. Rohan, a YouTuber with a dangerous reach, and Dilip, a common man who knows dark secrets. Who should he deal with first?",
-        choices: [
-          {tag:"strategist", txt:"Rohan — loud voices spread too quickly."},
-          {tag:"idealist", txt:"Dilip — secrets can destroy quietly."},
-          {tag:"empath", txt:"Neither — control both and wait."}
-        ]},
-      { q: "Dilip hints he might talk, but has little proof. How should Vikash respond?",
-        choices: [
-          {tag:"strategist", txt:"Offer money and incentives to keep him quiet."},
-          {tag:"empath", txt:"Convince him gently; fear breaks trust."},
-          {tag:"idealist", txt:"Set an example — make leakage costly."}
-        ]},
-      { q: "Rohan posts a vague video criticizing the family. What’s the move?",
-        choices: [
-          {tag:"strategist", txt:"Contain: remove platform access and allies."},
-          {tag:"empath", txt:"Engage: try to calm him and offer a deal."},
-          {tag:"idealist", txt:"Expose him — let truth do the work."}
-        ]},
-      { q: "Anya seems distant. Does Vikash assume defiance or fatigue?",
-        choices: [
-          {tag:"strategist", txt:"Defiance — suppress early."},
-          {tag:"empath", txt:"Fatigue — give illusion of freedom."},
-          {tag:"idealist", txt:"Uncertain — watch and collect signals."}
-        ]},
-      { q: "A public scandal could ruin reputation but clear rivals. What does he do?",
-        choices: [
-          {tag:"strategist", txt:"Leak strategically — control the narrative."},
-          {tag:"empath", txt:"Bury it quietly — stability matters."},
-          {tag:"idealist", txt:"Let it explode — chaos reveals truths."}
-        ]},
-      { q: "A trusted aide suggests a ritual to bind loyalty. Is ritual useful?",
-        choices: [
-          {tag:"strategist", txt:"Use ritual tactically — belief is leverage."},
-          {tag:"empath", txt:"Avoid rituals — they replace real trust."},
-          {tag:"idealist", txt:"Embrace it — symbols change behavior."}
-        ]},
-      { q: "Dilip is vulnerable and alone. Do you coerce him into compliance or remove him?",
-        choices: [
-          {tag:"strategist", txt:"Coerce — keep the asset alive while useful."},
-          {tag:"empath", txt:"Protect him secretly — mercy matters."},
-          {tag:"idealist", txt:"Remove him — a silenced witness is final."}
-        ]},
       {
-        q: "For ten years Anya Chandra has lived like a ghost — no interviews, no friends, no career. Rohan once married her in secret, then vanished. If that marriage ever becomes public, Dilip’s accusations will suddenly look real. Vikash’s power now depends on one woman’s silence. What does he do next?",
+        context: "Vikash built his empire by controlling people and stories. Two men now hold pieces of truth that can unmake him. Rohan Bhatt — India’s leading YouTuber — secretly married his daughter Anya; that secret alone could destroy everything. Dilip Shrivastava — a common man ruined by Vikash — is whispering at the edges.",
+        q: "Who does the bad-boy billionaire act against first?",
         choices: [
-          { tag: "strategist", txt: "Keep Anya hidden — as long as she stays invisible, the truth stays uncertain." },
-          { tag: "idealist", txt: "Eliminate Dilip — end the risk before he can link Anya’s story to his evidence." },
-          { tag: "empath", txt: "Bring Anya out carefully — let her appear in public, calm and smiling, to make the world believe everything is normal." }
+          { tag: "rohan", txt: "Rohan Bhatt — fame can convert loyalty into exposure." },
+          { tag: "dilip", txt: "Dilip Shrivastava — a common man’s secrets corrode quietly." },
+          { tag: "neither", txt: "Neither — control both and wait for the clearer opening." }
         ]
       },
+
       {
-        q: "Every choice you’ve made shapes the story. You’ve weighed love against power, control against fear. Now step back. The story was never just about them — it was about what you believe. Whose mind do you understand best?",
+        context: "Dilip is talking to anyone who listens. He has anger, not proof; ignoring him is risky.",
+        q: "Vikash does not buy silence; he breeds obedience. What is his move against Dilip?",
         choices: [
-          { tag: "strategist", txt: "Vikash Chandra — power must be protected, no matter the cost." },
-          { tag: "empath", txt: "Anya Chandra — love can be both a weapon and a wound." },
-          { tag: "idealist", txt: "Dilip Shrivastava — truth is worth dying for, even if no one listens." },
-          { tag: "neutral", txt: "Rohan Bhatt — fame forgives everything; survival is the only honesty left." }
+          { tag: "contain", txt: "Isolate and surveil Dilip until fear quiets him." },
+          { tag: "punish", txt: "Send a warning — escalate the cost of talking to force compliance." },
+          { tag: "erase", txt: "Remove him — silence the source before rumours spread." }
         ]
       },
+
       {
-        q: "The story is balanced on a knife’s edge. Vikash still holds the empire. Rohan still has the reach. Dilip still has the truth. And Anya will marry whoever ends up holding power. There are no heroes left — only survivors. Who truly wins?",
+        context: "Rohan is loyal but always on camera. One unscripted moment could reveal the hidden marriage or validate suspicion.",
+        q: "Rohan’s visibility is a constant risk. How should Vikash handle India’s most-watched man?",
         choices: [
-          { tag: "strategist", txt: "Vikash Chandra — control never dies; it only changes shape." },
-          { tag: "empath", txt: "Rohan Bhatt — visibility is power; the screen always wins." },
-          { tag: "idealist", txt: "Dilip Shrivastava — the truth hurts, but it outlives everyone." }
+          { tag: "keep", txt: "Keep him visible and scripted — let fame serve control." },
+          { tag: "fade", txt: "Reduce his public appearances to test loyalty without the spotlight." },
+          { tag: "erase", txt: "Stage an accident — remove a public liability cleanly." }
+        ]
+      },
+
+      {
+        context: "At home the fights flare and cool. Anya needs cover; she cannot just walk away. A marriage could hide the strain and protect the image.",
+        q: "Vikash needs a social fix fast. Who does Anya realistically marry — and what does that choice mean for power?",
+        choices: [
+          { tag: "rohan", txt: "Rohan Bhatt — public partner, but can she trust the man who once fled?" },
+          { tag: "dilip", txt: "Dilip Shrivastava — lower status but nearer and desperate." },
+          { tag: "vikashpick", txt: "Whoever Vikash picks — an optics solution, not romance." }
+        ]
+      },
+
+      {
+        context: "Rumours gather traction. A public scandal would ruin reputation and succession plans — Vikash will not confess.",
+        q: "Which move stops the immediate leak without admitting fault?",
+        choices: [
+          { tag: "negotiate", txt: "Bend Dilip into silence and leverage him quietly." },
+          { tag: "removeDilip", txt: "Eliminate Dilip — silence the only credible threat." },
+          { tag: "removeRohan", txt: "Remove Rohan — a visible mouth gone quiet calms panic." }
+        ]
+      },
+
+      {
+        context: "After any big move the household needs a signal that things are under control.",
+        q: "To steady the house quickly, which action does Vikash take that directly involves Rohan, Dilip, or Anya?",
+        choices: [
+          { tag: "tighten", txt: "Tighten the leash on Rohan and Dilip — more limits, more surveillance." },
+          { tag: "neutralize", txt: "Neutralize Dilip’s credibility — ruin his name and standing." },
+          { tag: "presentAnya", txt: "Present Anya calm and visible — reset the public story." }
+        ]
+      },
+
+      {
+        context: "Anya’s secret marriage to Rohan would validate Dilip’s timeline and make his accusations credible.",
+        q: "If proof could surface, what does Vikash choose right now to protect the dynasty?",
+        choices: [
+          { tag: "hideAnya", txt: "Keep Anya invisible — no proof, no scandal." },
+          { tag: "killDilip", txt: "Eliminate Dilip — remove the connector between marriage and accusations." },
+          { tag: "showAnya", txt: "Let Anya appear calm and loyal — use her voice to discredit claims." }
+        ]
+      },
+
+      {
+        context: "You’ve seen motives and moves: power, fear, fame and truth in sharp relief.",
+        q: "Whose reasoning feels closest to yours — whose mind do you understand best?",
+        choices: [
+          { tag: "vikash", txt: "Vikash Chandra — preserve power at all costs." },
+          { tag: "anya", txt: "Anya Chandra — safety, love and survival shape choices." },
+          { tag: "dilip", txt: "Dilip Shrivastava — truth matters even at great cost." },
+          { tag: "rohan", txt: "Rohan Bhatt — fame is influence; visibility is survival." }
+        ]
+      },
+
+      {
+        context: "Everything balances now: Vikash holds wealth, Rohan holds reach, Dilip holds knowledge, and Anya will follow power.",
+        q: "Who, in your judgement, truly wins this game? (Anya will marry the one who holds power.)",
+        choices: [
+          { tag: "vikashwins", txt: "Vikash Chandra — control adapts and survives." },
+          { tag: "rohanwins", txt: "Rohan Bhatt — reach and platform reshape outcomes." },
+          { tag: "dilipwins", txt: "Dilip Shrivastava — truth endures beyond power." }
         ]
       }
     ];
 
-    let idx = 0;
-    let answers: any[] = [];
-    let questionStart = 0;
+    let idx = 0, answers: any[] = [], questionStart = 0;
+    const intro = document.getElementById('intro'),
+          startBtn = document.getElementById('startBtn'),
+          consent = document.getElementById('consentChk') as HTMLInputElement,
+          quiz = document.getElementById('quiz'),
+          progress = document.getElementById('progress'),
+          contextLine = document.getElementById('contextLine'),
+          questionEl = document.getElementById('question'),
+          choicesEl = document.getElementById('choices'),
+          backRow = document.getElementById('backRow'),
+          result = document.getElementById('result'),
+          resProfile = document.getElementById('resProfile');
 
-    const intro = document.getElementById('intro');
-    const startBtn = document.getElementById('startBtn') as HTMLButtonElement | null;
-    const consentChk = document.getElementById('consentChk') as HTMLInputElement | null;
-    const quiz = document.getElementById('quiz');
-    const progress = document.getElementById('progress');
-    const questionEl = document.getElementById('question');
-    const choicesEl = document.getElementById('choices');
-    const backBtn = document.getElementById('backBtn') as HTMLButtonElement | null;
-    const nextBtn = document.getElementById('nextBtn') as HTMLButtonElement | null;
-    const result = document.getElementById('result');
-    const resEmoji = document.getElementById('resEmoji');
-    const resTitle = document.getElementById('resTitle');
-    const resProfile = document.getElementById('resProfile');
-    
-    if (consentChk && startBtn) {
-      consentChk.addEventListener('change', ()=>{ startBtn.disabled = !consentChk.checked; });
-    }
-
-    if(startBtn && consentChk && intro && quiz) {
-      startBtn.addEventListener('click', ()=>{
-        if(!consentChk.checked) { alert('Please allow anonymous data collection to continue.'); return; }
-        intro.style.display='none';
-        quiz.style.display='block';
+    if (consent && startBtn) {
+      consent.addEventListener('change', ()=> (startBtn as HTMLButtonElement).disabled = !consent.checked);
+      startBtn.addEventListener('click', ()=> {
+        if(!consent.checked){ alert('Please agree to send answers anonymously to continue.'); return; }
+        intro!.style.display = 'none';
+        quiz!.style.display = 'block';
         idx = 0; answers = [];
         render();
       });
     }
 
 
-    function nowMs(){ return Date.now(); }
-
+    /* Render with Back button and restore previous choice highlight */
     function render(){
-      if (idx < 0) idx = 0;
-      if (idx >= QUESTIONS.length) { 
-        finish(); 
-        return; 
-      }
-      
+      if(idx >= QUESTIONS.length) return finish();
       const q = QUESTIONS[idx];
-      
-      if (progress) progress.textContent = `Question ${idx+1} of ${QUESTIONS.length}`;
-      if (questionEl) questionEl.textContent = q.q;
-      if (choicesEl) choicesEl.innerHTML = '';
-      
-      q.choices.forEach((c, ci)=>{
-        const btn = document.createElement('button');
-        btn.className = 'choice';
-        btn.textContent = c.txt;
-        btn.onclick = ()=>{ select(ci); };
-        if (choicesEl) choicesEl.appendChild(btn);
-      });
-      
-      questionStart = nowMs();
-      if (backBtn) backBtn.style.visibility = idx === 0 ? 'hidden' : 'visible';
-      if (nextBtn) nextBtn.disabled = true;
-    }
+      progress!.textContent = `Question ${idx+1} of ${QUESTIONS.length}`;
+      contextLine!.textContent = q.context;
+      questionEl!.textContent = q.q;
+      choicesEl!.innerHTML = '';
+      backRow!.innerHTML = '';
+      questionStart = Date.now();
 
-    function select(choiceIndex: number){
-      const q = QUESTIONS[idx];
-      const choice = q.choices[choiceIndex];
-      const t = (nowMs() - questionStart)/1000;
-      answers.push({ index: idx+1, question: q.q, choiceIndex, choiceText: choice.txt, tag: choice.tag, timeTaken: t });
-      idx++;
-      setTimeout(()=>{ render(); }, 120);
-    }
-    
-    function goBack(){
-      if(idx<=0) return;
-      idx = Math.max(0, idx-1);
-      answers.pop();
-      render();
-    }
-    
-    if(backBtn) {
-      backBtn.onclick = goBack;
-    }
-    
-    if(nextBtn) {
-        nextBtn.onclick = () => { /* nextQ logic seems missing, but let's keep it empty */ };
-    }
+      // show choices
+      q.choices.forEach((c)=>{
+        const b = document.createElement('button');
+        b.className = 'choice';
+        b.textContent = c.txt;
 
-
-    function finish(){
-      if (quiz) quiz.style.display='none';
-      const tally = { strategist:0, empath:0, idealist:0, neutral:0 };
-      answers.forEach(a=>{ tally[a.tag as keyof typeof tally] = (tally[a.tag as keyof typeof tally]||0) + 1; });
-      const order = ['strategist','empath','idealist','neutral'];
-      let top = order[0];
-      order.forEach(k=>{ if(tally[k as keyof typeof tally] > tally[top as keyof typeof tally]) top = k; });
-      const profiles = {
-        strategist: { emoji: '🦉', title: 'The Strategist', p1: 'You think like Vikash — precise, ruthless, and composed. You reduce choices to variables and time to currency. You prefer control over chaos.', p2: 'This clarity wins battles but risks losing souls. The map is clean; the board can be lonely.'},
-        empath: { emoji: '⚖️', title: 'The Empath', p1: 'You think like Anya — compassionate, cautious, and human. You weigh pain alongside outcome and try to preserve people.', p2: 'This kindness saves lives, but it can be exploited. Know when mercy is strategy, and when it is a cost.'},
-        idealist: { emoji: '💀', title: 'The Idealist', p1: 'You think like the truth-tellers — daring, principled, and willing to burn bridges for revelation. Truth matters more than safety.', p2: 'This courage inspires, but it can be self-destructive. Revelation changes the world — and you may be changed with it.'},
-        neutral: { emoji: '🎭', title: 'The Survivor', p1: 'You think like Rohan — adaptable, pragmatic, and driven by self-preservation. You understand that in a world of power plays, the only winning move is to stay in the game.', p2: 'This flexibility ensures survival, but at what cost? When loyalty is a currency, you risk becoming a ghost in your own story.'}
-      };
-      const profile = profiles[top as keyof typeof profiles];
-      if (resEmoji) resEmoji.textContent = profile.emoji;
-      if (resTitle) resTitle.textContent = profile.title;
-      if (resProfile) resProfile.innerHTML = `<p>${profile.p1}</p><p style="margin-top:10px">${profile.p2}</p><p style="margin-top:12px;color:#b8d9c9;font-size:13px">Score breakdown — Strategist: ${tally.strategist}, Empath: ${tally.empath}, Idealist: ${tally.idealist}</p>`;
-      if (result) result.style.display='block';
-      
-      const payload = {
-        submissionId: (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : (Math.random().toString(36).slice(2)+Date.now()),
-        timestamp: new Date().toISOString(),
-        questions: answers,
-        finalArchetype: top,
-        scoreBreakdown: tally,
-        device: navigator.userAgent || null,
-        locale: navigator.language || null,
-        consent: !!(consentChk && consentChk.checked)
-      };
-
-      (async function send(){
-        try{
-          const res = await fetch(WEBHOOK_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
-          if(!res.ok) throw new Error('network');
-          console.log('Telemetry sent');
-        }catch(err){
-          console.warn('Send failed, retrying once...', err);
-          try{
-            await new Promise(r=>setTimeout(r,800));
-            await fetch(WEBHOOK_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
-            console.log('Telemetry sent on retry');
-          }catch(e){
-            console.error('Telemetry failed', e);
-          }
+        // highlight if previously chosen
+        if(answers[idx] && answers[idx].choice === c.txt){
+          b.style.borderColor = '#a8dadc';
+          b.style.background = 'rgba(168,218,220,0.06)';
         }
-      })();
+
+        b.onclick = ()=>{
+          // store / overwrite current answer
+          answers[idx] = {
+            index: idx+1,
+            context: q.context,
+            question: q.q,
+            choice: c.txt,
+            tag: c.tag,
+            timeTakenSec: Math.round((Date.now() - questionStart) / 1000)
+          };
+          idx++;
+          setTimeout(render, 120);
+        };
+        choicesEl!.appendChild(b);
+      });
+
+      // Back button (if not at first)
+      if(idx > 0){
+        const backBtn = document.createElement('button');
+        backBtn.className = 'back-btn';
+        backBtn.textContent = '⬅ Back';
+        backBtn.onclick = ()=>{
+          if(idx > 0){ idx--; render(); }
+        };
+        backRow!.appendChild(backBtn);
+      }
+    }
+
+    /* Finish: show quote and send telemetry */
+    function finish(){
+      quiz!.style.display = 'none';
+      result!.style.display = 'block';
+      resProfile!.innerHTML = "<p>“The strong do what they can and the weak suffer what they must.\" — Thucydides</p><p>Your answers have been recorded anonymously to help us understand how readers think about power, fame, and truth.</p>";
+      const payload = { timestamp: new Date().toISOString(), answers, ua: navigator.userAgent || '' };
+      fetch(WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type':'application/json' }, body: JSON.stringify(payload) })
+        .then(()=>console.log('Telemetry sent'))
+        .catch(e=>console.warn('Telemetry failed', e));
     }
   }, []);
 
   const quizStyles = `
-    body {
-        background: linear-gradient(180deg, #061020, #07131e) !important;
-        color: #d6efe6 !important;
-    }
     :root{
-      --bg1:#061020;
-      --bg2:#07131e;
-      --gold:#C9A25A;
-      --emerald:#2FA06A;
-      --muted:#d6efe6;
-      --card: rgba(255,255,255,0.03);
+      --bg1:#0b1220; --bg2:#0f1b2b; --gold:#C9A25A; --accent:#a8dadc; --muted:#d6efe6; --card:rgba(255,255,255,0.03);
     }
-    .quiz-body {
+    .quiz-body, .quiz-body body {
         height:100%;
         margin:0;
-        background:linear-gradient(180deg,var(--bg1),var(--bg2));
-        color:var(--muted);
+        background:linear-gradient(180deg,var(--bg1),var(--bg2)) !important;
+        color:var(--muted) !important;
         font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-    .wrap{max-width:720px;margin:0 auto;padding:18px;box-sizing:border-box;}
-    .intro{background:var(--card);border-radius:12px;padding:18px;text-align:center;border:1px solid rgba(255,255,255,0.04);}
-    .cover{width:100%;max-width:440px;border-radius:12px;box-shadow:0 14px 40px rgba(0,0,0,0.6);display:block;margin:10px auto;}
-    .quiz-body h1{font-family:'Playfair Display', Georgia, serif;color:var(--gold);margin:10px 0;font-size:20px;}
-    .tagline{color:var(--emerald);font-size:15px;margin-bottom:8px;font-style:italic;}
-    .lead{color:#e6f3ea;font-size:15px;line-height:1.45;margin:8px 0 18px;}
-    .consent{display:flex;gap:10px;align-items:center;justify-content:center;margin:10px 0;}
+    .wrap{max-width:820px;margin:0 auto;padding:20px;box-sizing:border-box;}
+    .intro{background:var(--card);border-radius:14px;padding:22px;border:1px solid rgba(255,255,255,0.04);}
+    .quiz-body h1{font-family:'Playfair Display', Georgia, serif;color:var(--gold);margin:6px 0 10px;font-size:26px;text-align:center;}
+    .tagline{color:var(--accent);font-style:italic;text-align:center;margin-bottom:12px;}
+    .context{color:#e8f7f5;line-height:1.5;font-size:15px;margin-bottom:12px;}
+    .context strong{color:#ffffff;}
+    .consent{display:flex;gap:12px;align-items:center;margin:12px 0;}
     .consent input{width:18px;height:18px;}
-    .start-btn{background:linear-gradient(90deg,var(--gold),#EED699);color:#07131e;padding:12px 18px;border-radius:10px;border:none;font-weight:700;cursor:pointer;font-size:16px;}
+    .start-btn{background:linear-gradient(90deg,var(--gold),#EED699);color:#07131e;padding:12px 18px;border-radius:10px;border:none;
+      font-weight:700;cursor:pointer;font-size:16px;}
     .start-btn[disabled]{opacity:0.5;cursor:not-allowed;}
-    .quiz{display:none;margin-top:16px;}
-    .progress{color:var(--emerald);text-align:center;margin-bottom:10px;font-size:15px;}
-    .card{background:var(--card);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.04);}
-    .question{color:var(--gold);font-weight:700;font-size:20px;margin-bottom:12px;line-height:1.3;}
+    .quiz{display:none;margin-top:18px;}
+    .progress{text-align:center;margin-bottom:10px;color:var(--accent);font-size:14px;}
+    .card{background:var(--card);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03);}
+    .context-line{color:#d9f0ec;font-size:14px;margin-bottom:8px;}
+    .question{color:var(--gold);font-weight:700;font-size:18px;margin-bottom:10px;line-height:1.35;}
     .choices{display:flex;flex-direction:column;gap:10px;}
-    .choice{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--muted);padding:12px;border-radius:10px;text-align:left;font-size:17px;cursor:pointer;}
-    .choice:hover{background:rgba(255,255,255,0.03);transform:translateX(3px);transition:transform .12s;}
-    .nav{display:flex;justify-content:space-between;gap:10px;margin-top:14px;}
-    .nav button{flex:1;padding:10px;border-radius:10px;border:none;font-weight:700;cursor:pointer;font-size:15px;}
-    .back{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04);}
-    .next{background:linear-gradient(90deg,var(--emerald),#47d19b);color:#07131e;}
-    .result{display:none;text-align:left;padding:20px;margin-top:16px;background:var(--card);border-radius:12px;border:1px solid rgba(255,255,255,0.04);}
-    .result h2{color:var(--gold);font-size:20px;margin:6px 0;}
-    .result .emoji{font-size:40px;margin-bottom:8px;}
-    .result p{color:#d3efe3;line-height:1.6;font-size:15px;}
-    .cta{display:inline-block;margin-top:14px;background:linear-gradient(90deg,var(--emerald),#47d19b);color:#07131e;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:700;}
-    .quiz-body footer{color:#9aa6a0;text-align:center;margin-top:18px;font-size:13px;}
-    @media (min-width:760px){
-      .wrap{padding:28px;}
-      .quiz-body h1{font-size:24px;}
-      .question{font-size:22px;}
-      .choice{font-size:18px;}
-    }
-    @media (max-width:420px){
-      .quiz-body h1{font-size:18px;}
-      .question{font-size:18px;}
-      .choice{font-size:15px;}
+    .choice{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:12px;border-radius:10px;
+      text-align:left;font-size:15px;cursor:pointer;}
+    .choice:hover{background:rgba(255,255,255,0.02);transform:translateX(3px);transition:transform .12s;}
+    .back-row{display:flex;justify-content:flex-start;margin-top:8px;}
+    .back-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px 12px;border-radius:8px;cursor:pointer;}
+    .back-btn:hover{background:rgba(255,255,255,0.02);}
+    .result{display:none;text-align:center;padding:20px;margin-top:18px;background:var(--card);border-radius:12px;}
+    .result h2{color:var(--gold);margin-bottom:6px;}
+    .result p{color:#dfeee3;line-height:1.6;}
+    .quiz-body footer{text-align:center;margin-top:18px;font-size:13px;color:#9aa6a0;}
+    a.cta{display:inline-block;margin-top:12px;background:linear-gradient(90deg,#8ad0b5,#47d19b);color:#07131e;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;}
+    @media(max-width:520px){
+      .wrap{padding:14px;} .quiz-body h1{font-size:20px;} .question{font-size:17px;} .choice{font-size:14px;}
     }
   `;
-
+  
   return (
-    <>
+    <div className="quiz-body">
       <style dangerouslySetInnerHTML={{ __html: quizStyles }} />
-      <div className="quiz-body">
-        <div className="wrap" role="main">
-          <div id="intro" className="intro" aria-labelledby="title">
-            <h1 id="title">The Bombay Business Club — Survival Quiz</h1>
-            <div className="tagline">A Game Theory experiment in power, control, and desire.</div>
-            <div className="lead">Step into a world where every decision has a cost. Choose like a strategist. Lose like a human. In this short experiment, your moves reveal how you think about power.</div>
-            <label className="consent">
-              <input type="checkbox" id="consentChk" />
-              <span style={{ fontSize: '14px', color: '#dfeee3' }}>I agree to share my answers anonymously for research and game-development purposes.</span>
-            </label>
-            <div style={{ marginTop: '10px' }}><button id="startBtn" className="start-btn" disabled>▶ Begin the Experiment</button></div>
+      <div className="wrap" role="main">
+        <div id="intro" className="intro" aria-labelledby="title">
+          <h1 id="title">The Bombay Business Club — Survival Quiz</h1>
+          <div className="tagline">A Game Theory experiment in power, control and survival.</div>
+
+          <div className="context">
+            <strong>Quick context (30 seconds):</strong><br />
+            <strong>Vikash Chandra</strong> — the bad-boy billionaire: ruthless, obsessed with reputation and succession.<br />
+            <strong>Anya</strong> — his daughter, once a film face, now hidden; her word can validate or destroy him.<br />
+            <strong>Rohan Bhatt</strong> — India’s leading YouTuber, secretly married to Anya; that union must stay hidden.<br />
+            <strong>Dilip Shrivastava</strong> — a common man who knows dangerous things about the family.<br /><br />
+            This quiz is a short game-theory experiment: your choices show how you think about power and survival in their world. No prior knowledge needed.
           </div>
 
-          <div id="quiz" className="quiz" aria-live="polite">
-            <div id="progress" className="progress">Question 1 of 10</div>
-            <div className="card">
-              <div id="question" className="question"></div>
-              <div id="choices" className="choices" role="list"></div>
-            </div>
-            <div className="nav">
-              <button id="backBtn" className="back" aria-label="Back">← Back</button>
-              <button id="nextBtn" className="next" aria-label="Next" disabled>Next →</button>
-            </div>
-          </div>
-
-          <div id="result" className="result" role="region" aria-live="polite">
-            <div className="emoji" id="resEmoji"></div>
-            <h2 id="resTitle"></h2>
-            <div id="resProfile"></div>
-            <a className="cta" href="https://www.thebbc.shop/chapters" target="_blank" rel="noopener">📖 Read the full story → thebbc.shop/chapters</a>
-          </div>
-
-          <footer>© The Bombay Business Club — <a href="https://thebbc.shop" style={{ color: 'var(--gold)', textDecoration: 'none' }}>thebbc.shop</a></footer>
+          <label className="consent"><input type="checkbox" id="consentChk" /> <span style={{fontSize: '14px'}}>I agree to send my answers anonymously for research and development.</span></label>
+          <div style={{marginTop: '12px', textAlign: 'center'}}><button id="startBtn" className="start-btn" disabled>▶ Start Quiz</button></div>
         </div>
+
+        <div id="quiz" className="quiz" aria-live="polite">
+          <div id="progress" className="progress"></div>
+          <div className="card" role="region" aria-label="Question card">
+            <div id="contextLine" className="context-line"></div>
+            <div id="question" className="question"></div>
+            <div id="choices" className="choices" role="list"></div>
+            <div id="backRow" className="back-row" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div id="result" className="result" role="status" aria-live="polite">
+          <h2 id="resTitle">🎭 The Game Ends Here</h2>
+          <p id="resProfile"></p>
+          <a className="cta" href="https://www.thebbc.shop/chapters" target="_blank" rel="noopener">Read the story free — thebbc.shop/chapters</a>
+        </div>
+
+        <footer>© The Bombay Business Club — <a href="https://thebbc.shop" style={{color:'var(--gold)',textDecoration:'none'}}>thebbc.shop</a></footer>
       </div>
-    </>
+    </div>
   );
 };
 
 export default QuizPage;
-
-    
