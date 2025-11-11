@@ -155,24 +155,22 @@ export default function Home() {
 
         <Separator className="my-12 md:my-20 bg-primary/20" />
 
-        {/* Read a Chapter Section */}
+        {/* Audio Overview Section */}
         <section id="read-chapter" className="max-w-4xl mx-auto text-center scroll-mt-20">
-          <h2 className="text-4xl font-headline text-primary mb-8">Read Free Chapters</h2>
+          <h2 className="text-4xl font-headline text-primary mb-8 flex items-center justify-center gap-3">
+            <Headphones className="w-8 h-8"/>
+            Audio Overview
+          </h2>
           <p className="text-lg md:text-xl text-foreground/90 font-serif leading-relaxed mb-8">
-            Be among the first to delve into the mysteries of The Bombay Business Club. Read the first eight chapters for free.
+            Listen to an audio summary of the novel's key plot points and character arcs.
           </p>
-          <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-            <Link href="/chapters">Read</Link>
-          </Button>
-          
-          <div className="mt-10 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-headline text-primary mb-4 flex items-center justify-center gap-3">
-              <Headphones className="w-6 h-6"/>
-              Audio Overview
-            </h2>
-            <div className="bg-card/50 border-primary/30 rounded-lg shadow-[0_0_15px_hsl(var(--primary)/0.2)]">
-              <div className="elfsight-app-e06c07fb-6acd-4753-bd3a-fed6a6614c23" data-elfsight-app-lazy></div>
-            </div>
+          <div className="max-w-2xl mx-auto bg-card/50 border-primary/30 rounded-lg shadow-[0_0_15px_hsl(var(--primary)/0.2)]">
+            <div className="elfsight-app-e06c07fb-6acd-4753-bd3a-fed6a6614c23" data-elfsight-app-lazy></div>
+          </div>
+          <div className="mt-12">
+            <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
+              <Link href="/chapters">Read the First 8 Chapters</Link>
+            </Button>
           </div>
         </section>
       </div>
