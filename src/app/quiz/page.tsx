@@ -10,9 +10,9 @@ const QuizPage = () => {
       return;
     }
     initialized.current = true;
-
-    const WEBHOOK_URL="https://script.google.com/macros/s/AKfycbyYvmDRXjeDqJmk4MyWVfv6evhRkE-zA44-lMfOHXXt9veH4Sygmo1UzfNajZNauPiNIQ/exec";
     
+    const WEBHOOK_URL="https://script.google.com/macros/s/AKfycbyYvmDRXjeDqJmk4MyWVfv6evhRkE-zA44-lMfOHXXt9veH4Sygmo1UzfNajZNauPiNIQ/exec";
+
     const QUESTIONS=[
       {
         context: "Vikash built his empire by controlling people and stories. Two men now hold pieces of truth that can unmake him. Rohan Bhatt — India’s leading YouTuber — secretly married his daughter Anya; that secret alone could destroy everything. Dilip Shrivastava — a common man ruined by Vikash — is whispering at the edges.",
@@ -106,7 +106,7 @@ const QuizPage = () => {
     questionEl=document.getElementById('question'),
     choicesEl=document.getElementById('choices'),
     backBtn=document.getElementById('backBtn') as HTMLButtonElement,
-    result=document.getElementById('result'),
+    resultEl=document.getElementById('result'),
     resTitle=document.getElementById('resTitle'),
     resShort=document.getElementById('resShort'),
     resProfile=document.getElementById('resProfile'),
@@ -116,55 +116,74 @@ const QuizPage = () => {
     startBtn = document.getElementById('startBtn') as HTMLButtonElement;
 
     if (consentChk) {
-      consentChk.onchange=(e: any)=> {
-        if(startBtn) startBtn.disabled=!e.target.checked;
+      consentChk.onchange = (e: any) => {
+        if(startBtn) startBtn.disabled = !e.target.checked;
       }
     }
     
     if (startBtn) {
-      startBtn.onclick=()=>{
+      startBtn.onclick = () => {
         if(intro) intro.style.display='none';
         if(quizEl) quizEl.style.display='block';
-        idx=0;answers=[];
+        idx=0;
+        answers=[];
         render();
       };
     }
 
     function render(){
-     if(idx>=QUESTIONS.length){finish();return;}
-     const q=QUESTIONS[idx];
-     if(progress) progress.textContent=`Question ${idx+1} of ${QUESTIONS.length}`;
-     if(contextLine) contextLine.textContent=q.context;
-     if(questionEl) questionEl.textContent=q.q;
-     if(choicesEl) choicesEl.innerHTML='';
-     q.choices.forEach(c=>{
-       const b=document.createElement('button');
-       b.className='choice';
-       b.textContent=c.txt;
-       b.onclick=()=>{
-         answers[idx]={q:q.q,choice:c.txt,moral:c.moral};
-         idx++;render();
-       };
-       if(choicesEl) choicesEl.appendChild(b);
-     });
-     if(backBtn) backBtn.style.display=idx>0?'inline-block':'none';
-     if(backBtn) backBtn.onclick=()=>{if(idx>0){idx--;render();}};
+      if(idx >= QUESTIONS.length){
+        finish();
+        return;
+      }
+      const q = QUESTIONS[idx];
+      if(progress) progress.textContent=`Question ${idx+1} of ${QUESTIONS.length}`;
+      if(contextLine) contextLine.textContent=q.context;
+      if(questionEl) questionEl.textContent=q.q;
+      if(choicesEl) choicesEl.innerHTML='';
+      q.choices.forEach(c=>{
+        const b=document.createElement('button');
+        b.className='choice';
+        b.textContent=c.txt;
+        b.onclick=()=>{
+          answers[idx]={q:q.q,choice:c.txt,moral:(c as any).moral};
+          idx++;
+          render();
+        };
+        if(choicesEl) choicesEl.appendChild(b);
+      });
+      if(backBtn) backBtn.style.display=idx>0?'inline-block':'none';
+      if(backBtn) backBtn.onclick=()=>{if(idx>0){idx--;render();}};
     }
 
     function finish(){
       if(quizEl) quizEl.style.display='none';
-      if(result) result.style.display='block';
+      if(resultEl) resultEl.style.display='block';
       let master=0,slave=0,neutral=0;
-      answers.forEach(a=>{if(a.moral==='master')master++;else if(a.moral==='slave')slave++;else neutral++;});
+      answers.forEach(a=>{
+        if(a.moral==='master') master++;
+        else if(a.moral==='slave') slave++;
+        else neutral++;
+      });
       const total=master+slave+neutral||1;
       const mPct=Math.round(master/total*100),sPct=Math.round(slave/total*100);
       let persona='',short='',profile='',icon='';
-      if(mPct>=60&&mPct>sPct){persona='Master Morality — Power First';short='You favour decisive strength and hierarchy.';icon='🦅';
-      profile='<p><b>The Calculating Noble:</b> You see power as proof of truth; clarity matters more than compassion.</p><p>You read obstacles as problems to be neutralised — a ruler’s logic, efficient but cold.</p>';
-      }else if(sPct>=60&&sPct>mPct){persona='Slave Morality — Weak First';short='You prize truth and protection over dominance.';icon='🌿';
-      profile='<p><b>The Compassionate Judge:</b> You value justice and empathy, exposing power’s cruelty even at personal risk.</p><p>Your moral lens steadies chaos, but you may underestimate ruthless minds.</p>';
-      }else{persona='Hybrid Morality';short='You balance strength with sympathy.';icon='⚖️';
-      profile='<p><b>The Strategic Observer:</b> You shift between dominance and empathy, reading context before acting.</p><p>Your flexibility keeps you human in the game of power.</p>'; }
+      if(mPct>=60 && mPct>sPct){
+        persona='Master Morality — Power First';
+        short='You favour decisive strength and hierarchy.';
+        icon='🦅';
+        profile='<p><b>The Calculating Noble:</b> You see power as proof of truth; clarity matters more than compassion.</p><p>You read obstacles as problems to be neutralised — a ruler’s logic, efficient but cold.</p>';
+      } else if(sPct>=60 && sPct>mPct){
+        persona='Slave Morality — Weak First';
+        short='You prize truth and protection over dominance.';
+        icon='🌿';
+        profile='<p><b>The Compassionate Judge:</b> You value justice and empathy, exposing power’s cruelty even at personal risk.</p><p>Your moral lens steadies chaos, but you may underestimate ruthless minds.</p>';
+      } else {
+        persona='Hybrid Morality';
+        short='You balance strength with sympathy.';
+        icon='⚖️';
+        profile='<p><b>The Strategic Observer:</b> You shift between dominance and empathy, reading context before acting.</p><p>Your flexibility keeps you human in the game of power.</p>';
+      }
       if(resTitle) resTitle.textContent=persona;
       if(resShort) resShort.textContent=short;
       if(resProfile) resProfile.innerHTML=profile;
@@ -172,7 +191,6 @@ const QuizPage = () => {
       if(emblem) emblem.textContent=icon;
       fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({timestamp:new Date().toISOString(),answers,persona})});
     }
-
   }, []);
 
   const quizStyles = `
@@ -218,7 +236,7 @@ const QuizPage = () => {
             <b>Anya</b> — his daughter, hidden after her career was buried; her word can destroy him.<br />
             <b>Rohan Bhatt</b> — India’s leading YouTuber, secretly married to Anya; fame itself is danger.<br />
             <b>Dilip Shrivastava</b> — a common man who knows too much and has nothing to lose.<br /><br />
-            Nine questions map how you think about power, truth and survival.
+            Nine questions map how you think about power, truth and survival.  
             The result reveals your Nietzschean morality — <strong>Master</strong>, <strong>Slave</strong> or <strong>Hybrid</strong>.
           </div>
           <label><input id="consentChk" type="checkbox" /> I agree to send my answers anonymously for research.</label><br /><br />
