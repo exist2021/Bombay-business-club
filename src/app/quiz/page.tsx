@@ -277,7 +277,6 @@ const QuizPage = () => {
       <div className="quiz-body">
         <div className="wrap" role="main">
           <div id="intro" className="intro" aria-labelledby="title">
-            <img src="https://mcusercontent.com/6456e84db9fcf1c45249275b5/images/12242fdf-7c77-8efb-f33f-97e158241fdf.jpeg" alt="Cover" className="cover" />
             <h1 id="title">The Bombay Business Club — Survival Quiz</h1>
             <div className="tagline">A Game Theory experiment in power, control, and desire.</div>
             <div className="lead">Step into a world where every decision has a cost. Choose like a strategist. Lose like a human. In this short experiment, your moves reveal how you think about power.</div>
@@ -315,3 +314,5 @@ const QuizPage = () => {
 };
 
 export default QuizPage;
+
+    
