@@ -13,7 +13,7 @@ export default function RefundPolicyPage() {
           </p>
         </header>
 
-        <article className="text-lg text-foreground/90 font-serif leading-relaxed space-y-6">
+        <article className="text-xl md:text-2xl text-foreground/90 font-serif leading-relaxed space-y-6">
           <p>Thank you for pre-ordering "The Bombay Business Club". We appreciate your support. Please read our policy on refunds and cancellations carefully.</p>
           
           <h2 className="text-3xl font-headline text-primary pt-6">Digital Product</h2>

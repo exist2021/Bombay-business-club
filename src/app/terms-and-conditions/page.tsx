@@ -13,7 +13,7 @@ export default function TermsAndConditionsPage() {
           </p>
         </header>
 
-        <article className="text-lg text-foreground/90 font-serif leading-relaxed space-y-6">
+        <article className="text-xl md:text-2xl text-foreground/90 font-serif leading-relaxed space-y-6">
           <p>Please read these Terms and Conditions ("Terms") carefully before using this website and pre-ordering "The Bombay Business Club" (the "Service") operated by Manoj Nayak ("us", "we", or "our").</p>
           
           <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service.</p>

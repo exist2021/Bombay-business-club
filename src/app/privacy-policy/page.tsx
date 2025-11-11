@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
           </p>
         </header>
 
-        <article className="text-lg text-foreground/90 font-serif leading-relaxed space-y-6">
+        <article className="text-xl md:text-2xl text-foreground/90 font-serif leading-relaxed space-y-6">
           <p>We respect your privacy and are committed to protecting it. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website and pre-order "The Bombay Business Club".</p>
           
           <h2 className="text-3xl font-headline text-primary pt-6">Information We Collect</h2>

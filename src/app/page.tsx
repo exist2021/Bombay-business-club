@@ -86,7 +86,7 @@ export default function Home() {
         {/* Synopsis Section */}
         <section id="synopsis" className="max-w-4xl mx-auto scroll-mt-20">
           <h2 className="text-4xl font-headline text-primary mb-8 text-center">Synopsis</h2>
-          <div className="space-y-4 text-lg md:text-xl text-foreground/90 font-serif leading-relaxed text-left">
+          <div className="space-y-4 text-xl md:text-2xl text-foreground/90 font-serif leading-relaxed text-left">
             <p>The Bombay Business Club is a dark, hypnotic tale about three people bound by love, control, and the invisible machinery of wealth.</p>
             <p>A daughter is born with the power to bend minds.</p>
             <p>A father builds an empire on her obedience.</p>
@@ -140,7 +140,7 @@ export default function Home() {
           />
           <div className='text-center md:text-left'>
             <h2 className="text-4xl font-headline text-primary mb-4">About the Author</h2>
-            <p className="text-lg md:text-xl text-foreground/90 font-serif leading-relaxed">
+            <p className="text-xl md:text-2xl text-foreground/90 font-serif leading-relaxed">
               <a href="https://manojnayak.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">Manoj Nayak</a> is a writer, digital creator, and storyteller exploring the intersections of technology, philosophy, and human connection. His writing portfolio spans long-form essays, newsletters, and short stories that blend reflection with real-world observation. Through his website manojnayak.com and platforms like Substack, he builds what he calls “vibe-coded” narratives—bridging creativity and consciousness. Previously a community builder and entrepreneur, Manoj now focuses on personal knowledge management, experimental apps, and essay-driven media. His recent works, such as “Sadhu Laxmandas,” draw from his nomadic travels across India, combining introspection, humor, and wisdom to illuminate the search for meaning.
             </p>
           </div>
