@@ -1,8 +1,11 @@
 'use client';
 import { useEffect, useRef } from 'react';
+import { initializeFirebase, useFirestore } from '@/firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 const QuizPage = () => {
   const initialized = useRef(false);
+  const firestore = useFirestore();
 
   useEffect(() => {
     if (initialized.current) {
@@ -11,7 +14,6 @@ const QuizPage = () => {
     initialized.current = true;
     
     /* ================================= CONFIG ================================= */
-    const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyYvmDRXjeDqJmk4MyWVfv6evhRkE-zA44-lMfOHXXt9veH4Sygmo1UzfNajZNauPiNIQ/exec";
     const TELEMETRY_QUEUE_KEY = 'bbc_quiz_telemetry_queue_v1';
     const RETRY_INTERVAL_MS = 10000; // automatic retry every 10s
     
@@ -263,7 +265,7 @@ const QuizPage = () => {
     }
 
     /* ===================== TELEMETRY (queue + retry) ===================== */
-    async function sendOrQueueTelemetry(payload){
+    async function sendOrQueueTelemetry(payload: any){
       try {
         const ok = await trySend(payload);
         if(ok) {
@@ -272,42 +274,35 @@ const QuizPage = () => {
           enqueue(payload, 'failed-send');
           return false;
         }
-      } catch(e){
-        enqueue(payload, e && (e as Error).message ? (e as Error).message : 'error');
+      } catch(e: any){
+        enqueue(payload, e.message || 'error');
         return false;
       } finally {
         refreshQueueUI();
       }
     }
 
-    async function trySend(payload) {
-      try {
-        const formData = new FormData();
-        formData.append('data', JSON.stringify(payload));
-    
-        const res = await fetch(WEBHOOK_URL, {
-          method: 'POST',
-          body: formData,
-        });
-    
-        if (res.ok) return true;
-    
-        const txt = await res.text().catch(() => '(no body)');
+    async function trySend(payload: any) {
+      if (!firestore) {
         if (telemetryErr) {
           telemetryErr.style.display = 'block';
-          telemetryErr.textContent = `Server responded: ${res.status} ${res.statusText}\n${txt}`;
+          telemetryErr.textContent = 'Firestore not available.';
         }
         return false;
-      } catch (err) {
+      }
+      try {
+        await addDoc(collection(firestore, 'quiz_submissions'), payload);
+        return true;
+      } catch (err: any) {
         if (telemetryErr) {
           telemetryErr.style.display = 'block';
-          telemetryErr.textContent = `Fetch error: ${err && (err as Error).message ? String(err) : 'Unknown error'}`;
+          telemetryErr.textContent = `Firestore error: ${err.message || 'Unknown error'}`;
         }
         return false;
       }
     }
 
-    function enqueue(payload, reason){
+    function enqueue(payload: any, reason: string){
       const q = readQueue();
       q.push({ id: Date.now() + '-' + Math.random().toString(36).slice(2,8), payload, reason, added: new Date().toISOString() });
       try { localStorage.setItem(TELEMETRY_QUEUE_KEY, JSON.stringify(q)); } catch(e){}
@@ -322,7 +317,7 @@ const QuizPage = () => {
       } catch(e){ return []; }
     }
 
-    function setQueue(q){
+    function setQueue(q: any[]){
       try{ localStorage.setItem(TELEMETRY_QUEUE_KEY, JSON.stringify(q)); }catch(e){}
       refreshQueueUI();
     }
@@ -386,7 +381,7 @@ const QuizPage = () => {
 
     setTimeout(flushLoop, 1200);
 
-    async function sendTelemetry(payload){
+    async function sendTelemetry(payload: any){
       const ok = await sendOrQueueTelemetry(payload);
       refreshQueueUI();
       return ok;
@@ -416,14 +411,14 @@ const QuizPage = () => {
       if(document.visibilityState === 'visible') flushLoop();
     });
 
-    function showDebug(msg){
+    function showDebug(msg: string){
       if(!debugLine) return;
       debugLine.textContent = msg;
     }
 
     refreshQueueUI();
 
-  }, []);
+  }, [firestore]);
 
   const quizStyles = `
     :root{
@@ -555,4 +550,14 @@ const QuizPage = () => {
   );
 };
 
-export default QuizPage;
+// As this page now relies on a client-side hook `useFirestore`, we need a parent component
+// to provide the Firebase context. We can create a simple wrapper for that.
+import { FirebaseClientProvider } from '@/firebase';
+
+export default function QuizPageWrapper() {
+  return (
+    <FirebaseClientProvider>
+      <QuizPage />
+    </FirebaseClientProvider>
+  );
+}

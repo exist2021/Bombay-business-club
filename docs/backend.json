@@ -108,6 +108,30 @@
         "eventData",
         "timestamp"
       ]
+    },
+    "QuizSubmission": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "QuizSubmission",
+      "type": "object",
+      "description": "Represents an anonymous submission of the quiz.",
+      "properties": {
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "persona": {
+          "type": "string"
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "breakdown": {
+          "type": "object"
+        }
+      }
     }
   },
   "auth": {
@@ -165,8 +189,18 @@
             }
           ]
         }
+      },
+      {
+        "path": "/quiz_submissions/{submissionId}",
+        "definition": {
+          "entityName": "QuizSubmission",
+          "schema": {
+            "$ref": "#/backend/entities/QuizSubmission"
+          },
+          "description": "Stores anonymous quiz submissions."
+        }
       }
     ],
-    "reasoning": "This Firestore data structure is designed for the 'Bombay Reader' application, prioritizing security, scalability, and ease of debugging. It leverages denormalization and structural segregation to achieve authorization independence, simplifying security rules and supporting efficient list operations.\n\n*   **Chapters:** Chapters are stored in a flat collection (`/chapters`). This simplifies querying and displaying chapters in order, as well as makes it easy to implement pagination.\n*   **Donations:** Donations are stored in a separate collection (`/donations`).\n*   **Analytics Events:** Anonymous analytics events are stored in `/analytics_events`. This allows for collection of data without requiring any user authorization.\n\n**Authorization Independence (CRITICAL):** No `get()` calls are required in security rules. The structure is flat and authorization data (if any) is contained in the document itself.\n\n**QAPs:**\n\n*   Secure `list` operations are supported through structural segregation. For example, listing chapters requires no authorization.\n\n**Invariants:**\n\n*   Timestamps are included in each document to maintain data integrity."
+    "reasoning": "This Firestore data structure is designed for the 'Bombay Reader' application, prioritizing security, scalability, and ease of debugging. It leverages denormalization and structural segregation to achieve authorization independence, simplifying security rules and supporting efficient list operations.\n\n*   **Chapters:** Chapters are stored in a flat collection (`/chapters`). This simplifies querying and displaying chapters in order, as well as makes it easy to implement pagination.\n*   **Donations:** Donations are stored in a separate collection (`/donations`).\n*   **Analytics Events:** Anonymous analytics events are stored in `/analytics_events`. This allows for collection of data without requiring any user authorization.\n*   **Quiz Submissions:** Anonymous quiz submissions are stored in `/quiz_submissions` to separate them from other analytics.\n\n**Authorization Independence (CRITICAL):** No `get()` calls are required in security rules. The structure is flat and authorization data (if any) is contained in the document itself.\n\n**QAPs:**\n\n*   Secure `list` operations are supported through structural segregation. For example, listing chapters requires no authorization.\n\n**Invariants:**\n\n*   Timestamps are included in each document to maintain data integrity."
   }
 }
