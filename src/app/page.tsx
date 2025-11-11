@@ -59,7 +59,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl font-headline font-bold text-primary tracking-wider">
             The Bombay Business Club
           </h1>
-          <p className="mt-4 max-w-2xl text-xl text-foreground/80 font-serif">
+          <p className="mt-4 max-w-2xl text-xl md:text-2xl text-foreground/80 font-serif">
             Behind Bombay’s glittering elite lies a business built on buried secrets.
           </p>
           
@@ -86,7 +86,7 @@ export default function Home() {
         {/* Synopsis Section */}
         <section id="synopsis" className="max-w-4xl mx-auto scroll-mt-20">
           <h2 className="text-4xl font-headline text-primary mb-8 text-center">Synopsis</h2>
-          <div className="space-y-4 text-lg text-foreground/90 font-serif leading-relaxed text-left">
+          <div className="space-y-4 text-lg md:text-xl text-foreground/90 font-serif leading-relaxed text-left">
             <p>The Bombay Business Club is a dark, hypnotic tale about three people bound by love, control, and the invisible machinery of wealth.</p>
             <p>A daughter is born with the power to bend minds.</p>
             <p>A father builds an empire on her obedience.</p>
@@ -105,7 +105,7 @@ export default function Home() {
         <section id="buy" className="max-w-4xl mx-auto text-center scroll-mt-20">
           <h2 className="text-4xl font-headline text-primary mb-8">Buy the Book</h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-            <div className="md:w-2/3 text-lg text-foreground/90 font-serif leading-relaxed text-center md:text-left mb-8 md:mb-0 space-y-4">
+            <div className="md:w-2/3 text-lg md:text-xl text-foreground/90 font-serif leading-relaxed text-center md:text-left mb-8 md:mb-0 space-y-4">
               <p>Buy your copy of The Bombay Business Club today.</p>
               <p className="text-base text-foreground/70">
                 Your purchase is for the digital ebook, which will be automatically delivered to your Kindle library.
@@ -140,7 +140,7 @@ export default function Home() {
           />
           <div className='text-center md:text-left'>
             <h2 className="text-4xl font-headline text-primary mb-4">About the Author</h2>
-            <p className="text-lg text-foreground/90 font-serif leading-relaxed">
+            <p className="text-lg md:text-xl text-foreground/90 font-serif leading-relaxed">
               <a href="https://manojnayak.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">Manoj Nayak</a> is a writer, digital creator, and storyteller exploring the intersections of technology, philosophy, and human connection. His writing portfolio spans long-form essays, newsletters, and short stories that blend reflection with real-world observation. Through his website manojnayak.com and platforms like Substack, he builds what he calls “vibe-coded” narratives—bridging creativity and consciousness. Previously a community builder and entrepreneur, Manoj now focuses on personal knowledge management, experimental apps, and essay-driven media. His recent works, such as “Sadhu Laxmandas,” draw from his nomadic travels across India, combining introspection, humor, and wisdom to illuminate the search for meaning.
             </p>
           </div>
@@ -151,7 +151,7 @@ export default function Home() {
         {/* Read a Chapter Section */}
         <section id="read-chapter" className="max-w-2xl mx-auto text-center scroll-mt-20">
           <h2 className="text-4xl font-headline text-primary mb-8">Read Free Chapters</h2>
-          <p className="text-lg text-foreground/90 font-serif leading-relaxed mb-8">
+          <p className="text-lg md:text-xl text-foreground/90 font-serif leading-relaxed mb-8">
             Be among the first to delve into the mysteries of The Bombay Business Club. Read the first eight chapters for free.
           </p>
           <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
