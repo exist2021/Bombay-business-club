@@ -12,7 +12,6 @@ const QuizPage = () => {
     initialized.current = true;
     
     const WEBHOOK_URL="https://script.google.com/macros/s/AKfycbyYvmDRXjeDqJmk4MyWVfv6evhRkE-zA44-lMfOHXXt9veH4Sygmo1UzfNajZNauPiNIQ/exec";
-
     const QUESTIONS=[
       {
         context: "Vikash built his empire by controlling people and stories. Two men now hold pieces of truth that can unmake him. Rohan Bhatt — India’s leading YouTuber — secretly married his daughter Anya; that secret alone could destroy everything. Dilip Shrivastava — a common man ruined by Vikash — is whispering at the edges.",
@@ -97,169 +96,169 @@ const QuizPage = () => {
         ]
       }
     ];
-
-    let idx=0,answers:any[]=[];
+    let i=0,answers=[];
     const intro=document.getElementById('intro'),
-    quizEl=document.getElementById('quiz'),
+    quiz=document.getElementById('quiz'),
     progress=document.getElementById('progress'),
-    contextLine=document.getElementById('contextLine'),
-    questionEl=document.getElementById('question'),
-    choicesEl=document.getElementById('choices'),
-    backBtn=document.getElementById('backBtn') as HTMLButtonElement,
-    resultEl=document.getElementById('result'),
-    resTitle=document.getElementById('resTitle'),
-    resShort=document.getElementById('resShort'),
-    resProfile=document.getElementById('resProfile'),
-    resBreakdown=document.getElementById('resBreakdown'),
-    emblem=document.getElementById('emblem'),
-    consentChk = document.getElementById('consentChk') as HTMLInputElement,
-    startBtn = document.getElementById('startBtn') as HTMLButtonElement;
+    context=document.getElementById('contextLine'),
+    qEl=document.getElementById('question'),
+    choices=document.getElementById('choices'),
+    back=document.getElementById('backBtn'),
+    result=document.getElementById('result'),
+    rTitle=document.getElementById('resTitle'),
+    rShort=document.getElementById('resShort'),
+    rProf=document.getElementById('resProfile'),
+    rIcon=document.getElementById('resIcon'),
+    rBreak=document.getElementById('resBreakdown'),
+    telemetryLine=document.getElementById('telemetryLine'),
+    startBtn = document.getElementById('startBtn'),
+    consentChk = document.getElementById('consentChk');
 
     if (consentChk) {
-      consentChk.onchange = (e: any) => {
-        if(startBtn) startBtn.disabled = !e.target.checked;
+      (consentChk as HTMLInputElement).onchange = (e: any) => {
+        if(startBtn) (startBtn as HTMLButtonElement).disabled = !e.target.checked;
       }
     }
-    
     if (startBtn) {
-      startBtn.onclick = () => {
+      startBtn.onclick=()=>{
         if(intro) intro.style.display='none';
-        if(quizEl) quizEl.style.display='block';
-        idx=0;
-        answers=[];
-        render();
+        if(quiz) quiz.style.display='block';
+        i=0;answers=[];render();
       };
     }
 
     function render(){
-      if(idx >= QUESTIONS.length){
-        finish();
-        return;
-      }
-      const q = QUESTIONS[idx];
-      if(progress) progress.textContent=`Question ${idx+1} of ${QUESTIONS.length}`;
-      if(contextLine) contextLine.textContent=q.context;
-      if(questionEl) questionEl.textContent=q.q;
-      if(choicesEl) choicesEl.innerHTML='';
+      if(i>=QUESTIONS.length){finish();return;}
+      const q=QUESTIONS[i];
+      if(progress) progress.textContent=`Question ${i+1} of ${QUESTIONS.length}`;
+      if(context) context.textContent=q.context;
+      if(qEl) qEl.textContent=q.q;
+      if(choices) choices.innerHTML='';
       q.choices.forEach(c=>{
         const b=document.createElement('button');
-        b.className='choice';
-        b.textContent=c.txt;
+        b.className='choice';b.textContent=c.txt;
         b.onclick=()=>{
-          answers[idx]={q:q.q,choice:c.txt,moral:(c as any).moral};
-          idx++;
+          answers[i]={q:q.q,choice:c.txt,moral:(c as any).moral};
+          i++;
           render();
         };
-        if(choicesEl) choicesEl.appendChild(b);
+        if(choices) choices.appendChild(b);
       });
-      if(backBtn) backBtn.style.display=idx>0?'inline-block':'none';
-      if(backBtn) backBtn.onclick=()=>{if(idx>0){idx--;render();}};
+      if(back) back.style.display=i>0?'block':'none';
+      if(back) (back as HTMLButtonElement).onclick=()=>{if(i>0){i--;render();}};
     }
 
     function finish(){
-      if(quizEl) quizEl.style.display='none';
-      if(resultEl) resultEl.style.display='block';
-      let master=0,slave=0,neutral=0;
-      answers.forEach(a=>{
-        if(a.moral==='master') master++;
-        else if(a.moral==='slave') slave++;
-        else neutral++;
+      if(quiz) quiz.style.display='none';
+      if(result) result.style.display='block';
+      let m=0,s=0,n=0;
+      answers.forEach((a: any) => {
+        if(a.moral==='master')m++;
+        else if(a.moral==='slave')s++;
+        else n++;
       });
-      const total=master+slave+neutral||1;
-      const mPct=Math.round(master/total*100),sPct=Math.round(slave/total*100);
-      let persona='',short='',profile='',icon='';
-      if(mPct>=60 && mPct>sPct){
-        persona='Master Morality — Power First';
-        short='You favour decisive strength and hierarchy.';
-        icon='🦅';
-        profile='<p><b>The Calculating Noble:</b> You see power as proof of truth; clarity matters more than compassion.</p><p>You read obstacles as problems to be neutralised — a ruler’s logic, efficient but cold.</p>';
-      } else if(sPct>=60 && sPct>mPct){
-        persona='Slave Morality — Weak First';
-        short='You prize truth and protection over dominance.';
-        icon='🌿';
-        profile='<p><b>The Compassionate Judge:</b> You value justice and empathy, exposing power’s cruelty even at personal risk.</p><p>Your moral lens steadies chaos, but you may underestimate ruthless minds.</p>';
-      } else {
-        persona='Hybrid Morality';
-        short='You balance strength with sympathy.';
-        icon='⚖️';
-        profile='<p><b>The Strategic Observer:</b> You shift between dominance and empathy, reading context before acting.</p><p>Your flexibility keeps you human in the game of power.</p>';
-      }
-      if(resTitle) resTitle.textContent=persona;
-      if(resShort) resShort.textContent=short;
-      if(resProfile) resProfile.innerHTML=profile;
-      if(resBreakdown) resBreakdown.textContent=`Master ${master} (${mPct}%) • Slave ${slave} (${sPct}%) • Neutral ${neutral}`;
-      if(emblem) emblem.textContent=icon;
-      fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({timestamp:new Date().toISOString(),answers,persona})});
+      const total=m+s+n||1,mPct=Math.round(m/total*100),sPct=Math.round(s/total*100);
+      let persona='',short='',prof='',icon='';
+      if(mPct>=60&&mPct>sPct){persona='Master Morality — Power-First';short='You favour decisive strength.';prof='<p>You think like a ruler—clarity and control above pity.</p>';icon='🦅';}
+      else if(sPct>=60&&sPct>mPct){persona='Slave Morality — Weak-First';short='You value protection and truth.';prof='<p>You defend the vulnerable even when it costs you power.</p>';icon='🌿';}
+      else{persona='Hybrid Morality';short='You balance strength and empathy.';prof='<p>You switch between control and compassion as context demands.</p>';icon='⚖️';}
+      if(rTitle) rTitle.textContent=persona;
+      if(rShort) rShort.textContent=short;
+      if(rProf) rProf.innerHTML=prof;
+      if(rIcon) rIcon.textContent=icon;
+      if(rBreak) rBreak.textContent=`Master ${m} (${mPct}%) • Slave ${s} (${sPct}%) • Neutral ${n}`;
+      sendTelemetry({timestamp:new Date().toISOString(),answers,persona});
     }
+
+    function sendTelemetry(payload: any){
+      if(telemetryLine) telemetryLine.textContent='Sending telemetry...';
+      fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(r=>{if(r.ok){
+        if(telemetryLine) {
+          telemetryLine.textContent='Telemetry sent ✓';
+          telemetryLine.style.color = varColor('--teal');
+        }
+      }
+      else{
+        if(telemetryLine) telemetryLine.textContent='Telemetry failed ('+r.status+')';
+      }})
+      .catch(()=>{if(telemetryLine) telemetryLine.textContent='Telemetry failed (offline?)';});
+    }
+    
+    function varColor(v: string){
+      if (typeof window !== 'undefined') {
+        return getComputedStyle(document.documentElement).getPropertyValue(v);
+      }
+      return '';
+    }
+
   }, []);
 
   const quizStyles = `
     :root{
-      --bg1:#0b1220; --bg2:#0f1b2b; --gold:#C9A25A; --teal:#67C9B3; --accent:#a8dadc; --muted:#d6efe6; --card:rgba(255,255,255,0.03);
+      --bg1:#0a0f1c;--bg2:#121a2b;
+      --gold:#ffd98a;--teal:#80e4d8;--text:#f4f4f4;--muted:#cfd6da;
     }
-    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--muted);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;}
-    .wrap{max-width:880px;margin:0 auto;padding:18px;box-sizing:border-box;}
-    .title{font-family:'Playfair Display', Georgia, serif;color:var(--gold);font-size:26px;margin:0;}
-    .tagline{color:var(--accent);font-style:italic;margin-bottom:10px;}
-    .panel{background:var(--card);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.04);margin-bottom:12px;}
-    .context{color:#e8f7f5;line-height:1.5;font-size:15px;}
-    .start-btn{background:linear-gradient(90deg,var(--gold),#EED699);color:#07131e;padding:12px 16px;border-radius:10px;border:none;font-weight:700;cursor:pointer;font-size:15px;}
-    .start-btn[disabled]{opacity:0.6;cursor:not-allowed;}
-    .quiz{display:none;}
-    .progress{text-align:center;margin-bottom:10px;color:var(--accent);font-size:14px;}
-    .card{background:var(--card);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03);}
-    .question{color:var(--gold);font-weight:700;font-size:18px;margin-bottom:12px;line-height:1.35;}
-    .choices{display:flex;flex-direction:column;gap:10px;}
-    .choice{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:12px;border-radius:10px;text-align:left;font-size:15px;cursor:pointer;}
-    .choice:hover{background:rgba(255,255,255,0.02);transform:translateX(3px);transition:transform .12s;}
-    .back-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px 12px;border-radius:8px;cursor:pointer;margin-top:10px;}
-    .result{display:none;text-align:left;padding:20px;margin-top:18px;background:var(--card);border-radius:12px;}
-    .result h2{color:var(--gold);margin-bottom:8px;}
-    .profile{color:#dfeee3;line-height:1.6;margin-top:8px;}
-    .breakdown{margin-top:12px;color:#bfe7d9;}
-    .emblem{display:flex;justify-content:center;margin-top:18px; font-size: 60px;}
-    .footer{text-align:center;margin-top:18px;font-size:13px;color:#9aa6a0;}
-    @media(max-width:640px){.title{font-size:20px;}}
+    html,body{margin:0;height:100%;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,Georgia,serif;line-height:1.6;}
+    .wrap{max-width:800px;margin:0 auto;padding:1.2rem;}
+    h1{font-family:"Playfair Display",Georgia,serif;color:var(--gold);font-size:1.8rem;margin:.2rem 0 .4rem;}
+    .subtitle{color:var(--teal);font-style:italic;margin-bottom:1rem;}
+    .panel{background:rgba(255,255,255,0.05);border-radius:12px;padding:1.2rem;margin-bottom:1rem;}
+    button{font-size:1rem;cursor:pointer;border-radius:8px;border:none;}
+    .start-btn{background:linear-gradient(90deg,var(--gold),#fff1b7);color:#0a0f1c;font-weight:700;padding:.8rem 1.2rem;width:100%;}
+    .choice{display:block;width:100%;text-align:left;margin:.4rem 0;padding:.9rem;
+    background:rgba(255,255,255,0.06);color:var(--text);border:1px solid rgba(255,255,255,0.1);}
+    .choice:hover{background:rgba(255,255,255,0.12);}
+    .back-btn{margin-top:.5rem;background:none;border:1px solid rgba(255,255,255,0.2);color:var(--muted);padding:.6rem 1rem;}
+    .progress{text-align:center;color:var(--teal);font-size:.9rem;margin-bottom:.5rem;}
+    .result{display:none;padding:1rem;background:rgba(255,255,255,0.05);border-radius:12px;}
+    .result h2{color:var(--gold);margin-top:0;}
+    .profile{margin-top:.6rem;}
+    .breakdown{margin-top:.6rem;color:var(--teal);}
+    .telemetry{margin-top:.8rem;font-size:.85rem;color:var(--muted);}
+    @media(max-width:600px){
+      body{font-size:1.05rem;}
+      h1{font-size:1.5rem;}
+    }
   `;
 
   return (
     <div>
       <style dangerouslySetInnerHTML={{ __html: quizStyles }} />
       <div className="wrap">
-        <div className="title">Two Lives. One Will Be Eliminated.</div>
-        <div className="tagline">A game-theory experiment — decide who survives in Vikash Chandra’s world.</div>
+        <h1>Two Lives. One Will Be Eliminated.</h1>
+        <div className="subtitle">A game-theory experiment — decide who survives in Vikash Chandra’s world.</div>
 
         <div id="intro" className="panel">
-          <div className="context">
-            <strong>Context (30 s read):</strong><br />
-            <b>Vikash Chandra</b> — the bad-boy billionaire, ruthless and obsessed with succession.<br />
-            <b>Anya</b> — his daughter, hidden after her career was buried; her word can destroy him.<br />
-            <b>Rohan Bhatt</b> — India’s leading YouTuber, secretly married to Anya; fame itself is danger.<br />
-            <b>Dilip Shrivastava</b> — a common man who knows too much and has nothing to lose.<br /><br />
-            Nine questions map how you think about power, truth and survival.  
-            The result reveals your Nietzschean morality — <strong>Master</strong>, <strong>Slave</strong> or <strong>Hybrid</strong>.
-          </div>
-          <label><input id="consentChk" type="checkbox" /> I agree to send my answers anonymously for research.</label><br /><br />
+          <p><strong>Context:</strong><br/>
+          <b>Vikash Chandra</b> — the bad-boy billionaire obsessed with reputation and succession.<br/>
+          <b>Anya</b> — his daughter, hidden and volatile.<br/>
+          <b>Rohan Bhatt</b> — India’s leading YouTuber, secretly married to Anya.<br/>
+          <b>Dilip Shrivastava</b> — a common man who knows too much.<br/><br/>
+          Your choices reveal how you think about power, truth, and survival. At the end you’ll see a Nietzschean morality profile.</p>
+          <label><input id="consentChk" type="checkbox" /> I agree to send my answers anonymously for research.</label><br/><br/>
           <button id="startBtn" className="start-btn" disabled>▶ Start Quiz</button>
         </div>
 
-        <div id="quiz" className="quiz">
+        <div id="quiz" style={{display: 'none'}}>
           <div id="progress" className="progress"></div>
-          <div className="card">
-            <div id="contextLine" className="context-line"></div>
-            <div id="question" className="question"></div>
-            <div id="choices" className="choices"></div>
-            <button id="backBtn" className="back-btn" style={{display: 'none'}}>⬅ Back</button>
+          <div className="panel">
+            <div id="contextLine"></div>
+            <div id="question" style={{color:'var(--gold)',fontWeight:600,marginTop:'.4rem'}}></div>
+            <div id="choices"></div>
+            <button id="backBtn" className="back-btn" style={{display:'none'}}>⬅ Back</button>
           </div>
         </div>
 
         <div id="result" className="result">
           <h2 id="resTitle"></h2>
-          <div id="resShort" style={{fontWeight:700, color:'#a8dadc'}}></div>
+          <div id="resShort" style={{color:'var(--teal)',fontWeight:600}}></div>
           <div id="resProfile" className="profile"></div>
-          <div className="emblem" id="emblem"></div>
+          <div id="resIcon" style={{fontSize:'2rem',marginTop:'.6rem',textAlign:'center'}}></div>
           <div id="resBreakdown" className="breakdown"></div>
-          <div className="footer">“The strong do what they can and the weak suffer what they must.” — Thucydides</div>
+          <div className="telemetry" id="telemetryLine"></div>
+          <p style={{marginTop:'1rem',fontStyle:'italic',textAlign:'center'}}>“The strong do what they can and the weak suffer what they must.” — Thucydides</p>
         </div>
       </div>
     </div>
