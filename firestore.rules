@@ -1,0 +1,56 @@
+/**
+ * @fileoverview Firestore Security Rules for the Bombay Reader application.
+ *
+ * Core Philosophy:
+ * This ruleset prioritizes simplicity and security by leveraging structural segregation.
+ * Chapters and Analytics Events are readable by anyone, while write access to Chapters is denied.
+ * Donations are writeable by anyone.
+ *
+ * Data Structure:
+ * - /chapters/{chapterId}: Stores chapter data. Publicly readable.
+ * - /donations/{donationId}: Stores donation data. Writable by anyone.
+ * - /analytics_events/{eventId}: Stores analytics event data. Writable by anyone.
+ *
+ * Key Security Decisions:
+ * - Chapters are read-only. This ensures content integrity.
+ * - Analytics Events are openly writeable to support anonymous telemetry.
+ * - Donations are openly writeable.
+ * - No user-specific data or ownership is enforced in this version.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Allows anyone to read chapters, but prohibits creation, updates, and deletions.
+     * @path /chapters/{chapterId}
+     * @allow get, list: if true;
+     * @deny create, update, delete: if false;
+     * @principle Allows public read access, but restricts modifications for content integrity.
+     */
+    match /chapters/{chapterId} {
+      allow get, list: if true;
+      allow create, update, delete: if false;
+    }
+
+    /**
+     * @description Allows anyone to create, read, update, and delete donations.
+     * @path /donations/{donationId}
+     * @allow get, list, create, update, delete: if true;
+     * @principle Allows open access for donations.
+     */
+    match /donations/{donationId} {
+      allow get, list, create, update, delete: if true;
+    }
+
+    /**
+     * @description Allows anyone to create analytics events.
+     * @path /analytics_events/{eventId}
+     * @allow get, list, create, update, delete: if true;
+     * @principle Allows open access for analytics event creation.
+     */
+    match /analytics_events/{eventId} {
+      allow get, list, create, update, delete: if true;
+    }
+  }
+}

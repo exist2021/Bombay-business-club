@@ -1,0 +1,172 @@
+{
+  "entities": {
+    "Chapter": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Chapter",
+      "type": "object",
+      "description": "Represents a chapter of the novel 'The Bombay Business Club'.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the chapter."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the chapter."
+        },
+        "content": {
+          "type": "string",
+          "description": "The text content of the chapter."
+        },
+        "chapterNumber": {
+          "type": "number",
+          "description": "The number of the chapter in the novel."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp indicating when the chapter was created.",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Timestamp indicating when the chapter was last updated.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "content",
+        "chapterNumber",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "Donation": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Donation",
+      "type": "object",
+      "description": "Represents a donation made by a reader to support the novel.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the donation."
+        },
+        "amount": {
+          "type": "number",
+          "description": "The amount of the donation."
+        },
+        "currency": {
+          "type": "string",
+          "description": "The currency of the donation (e.g., USD, INR)."
+        },
+        "paymentMethod": {
+          "type": "string",
+          "description": "The method used for the donation (e.g., UPI, PayPal)."
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "Timestamp indicating when the donation was made.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "amount",
+        "currency",
+        "paymentMethod",
+        "timestamp"
+      ]
+    },
+    "AnalyticsEvent": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "AnalyticsEvent",
+      "type": "object",
+      "description": "Represents an analytics event captured for user behavior.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the analytics event."
+        },
+        "eventType": {
+          "type": "string",
+          "description": "The type of analytics event (e.g., chapterView, donationAttempt)."
+        },
+        "eventData": {
+          "type": "string",
+          "description": "JSON string containing additional data related to the event."
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "Timestamp indicating when the event occurred.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "eventType",
+        "eventData",
+        "timestamp"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/chapters/{chapterId}",
+        "definition": {
+          "entityName": "Chapter",
+          "schema": {
+            "$ref": "#/backend/entities/Chapter"
+          },
+          "description": "Stores chapters of the novel. Includes timestamps for creation and updates.",
+          "params": [
+            {
+              "name": "chapterId",
+              "description": "Unique identifier for the chapter."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/donations/{donationId}",
+        "definition": {
+          "entityName": "Donation",
+          "schema": {
+            "$ref": "#/backend/entities/Donation"
+          },
+          "description": "Stores donation information.",
+          "params": [
+            {
+              "name": "donationId",
+              "description": "Unique identifier for the donation."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/analytics_events/{eventId}",
+        "definition": {
+          "entityName": "AnalyticsEvent",
+          "schema": {
+            "$ref": "#/backend/entities/AnalyticsEvent"
+          },
+          "description": "Stores anonymous analytics events for the application.",
+          "params": [
+            {
+              "name": "eventId",
+              "description": "Unique identifier for the event."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "This Firestore data structure is designed for the 'Bombay Reader' application, prioritizing security, scalability, and ease of debugging. It leverages denormalization and structural segregation to achieve authorization independence, simplifying security rules and supporting efficient list operations.\n\n*   **Chapters:** Chapters are stored in a flat collection (`/chapters`). This simplifies querying and displaying chapters in order, as well as makes it easy to implement pagination.\n*   **Donations:** Donations are stored in a separate collection (`/donations`).\n*   **Analytics Events:** Anonymous analytics events are stored in `/analytics_events`. This allows for collection of data without requiring any user authorization.\n\n**Authorization Independence (CRITICAL):** No `get()` calls are required in security rules. The structure is flat and authorization data (if any) is contained in the document itself.\n\n**QAPs:**\n\n*   Secure `list` operations are supported through structural segregation. For example, listing chapters requires no authorization.\n\n**Invariants:**\n\n*   Timestamps are included in each document to maintain data integrity."
+  }
+}
