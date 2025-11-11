@@ -15,7 +15,7 @@ const QuizPage = () => {
 
     const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwSeKmUeyUg05IplbHCCCbsbAxIrsIid9UZodDvlbd-OM1jWFElNsbtL1RCDodKqfhr/exec";
     const QUESTIONS = [
-      { q: "Vikash Chandra has two problems. Rohan, a YouTuber with a dangerous reach, and Dilip, a quiet man who knows dark secrets. Who should he deal with first?",
+      { q: "Vikash Chandra has two problems. Rohan, a YouTuber with a dangerous reach, and Dilip, a common man who knows dark secrets. Who should he deal with first?",
         choices: [
           {tag:"strategist", txt:"Rohan — loud voices spread too quickly."},
           {tag:"idealist", txt:"Dilip — secrets can destroy quietly."},
