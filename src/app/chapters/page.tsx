@@ -21,14 +21,14 @@ export default function ChaptersPage() {
       <div className="container mx-auto px-4 py-8 md:py-16">
         <header className="text-center mb-12">
           <h1 className="text-5xl md:text-7xl font-headline font-bold text-primary tracking-wider">
-            Free Chapters
+            Read For Free
           </h1>
           <div className="mt-4 max-w-3xl mx-auto text-xl text-foreground/80 font-serif space-y-4">
             <p>
-              The first 12 chapters of The Bombay Business Club are available here to read for free. The book is currently being written. 
+              The Bombay Business Club is a complete 12-chapter novel, available here to read for free.
             </p>
             <p>
-              For access to upcoming chapters as they are released, you can pre-order the book.
+              For a better reading experience, you can also read it on Wattpad or download the PDF.
             </p>
           </div>
 
