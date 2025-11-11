@@ -56,38 +56,38 @@ export default function Home() {
 
   return (
     <AnimatedDiv>
-      <div className="container mx-auto px-4 py-8 md:py-16">
-        
-        {/* Hero Section */}
-        <header className="flex flex-col items-center text-center py-12 md:py-20 relative">
+      {/* Hero Section */}
+      <header className="flex flex-col items-center text-center py-12 md:py-20 relative">
+        <div className="container mx-auto px-4">
           <div 
-            className="absolute inset-0 bg-radial-gradient--t opacity-30" 
+            className="absolute inset-x-0 top-0 h-1/2 bg-radial-gradient--t opacity-30" 
             style={{
-              background: 'radial-gradient(ellipse at top, hsl(var(--primary) / 0.15), transparent 60%)'
+              background: 'radial-gradient(ellipse at top, hsl(var(--primary) / 0.15), transparent 70%)'
             }}
           />
           <h1 className="text-5xl md:text-7xl font-headline font-bold text-primary tracking-wider">
             The Bombay Business Club
           </h1>
-          <p className="mt-4 max-w-2xl text-xl md:text-2xl text-foreground/90 font-serif leading-relaxed">
+          <p className="mt-4 max-w-2xl mx-auto text-xl md:text-2xl text-foreground/90 font-serif leading-relaxed">
             Behind Bombay’s glittering elite lies a business built on buried secrets.
           </p>
-          
-          <div className="mt-12 w-full max-w-2xl aspect-video relative bg-card/50 border-2 border-primary/50 rounded-lg shadow-[0_0_20px_hsl(var(--primary)/0.3)] overflow-hidden">
-            <iframe
-              src="https://player.vimeo.com/video/1135209706"
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              className='absolute top-0 left-0 w-full h-full'
-              title="The Bombay Business Club - Book Trailer"
-            ></iframe>
-          </div>
-          
-        </header>
-
+        </div>
+        
+        <div className="mt-12 w-full aspect-video relative overflow-hidden">
+          <iframe
+            src="https://player.vimeo.com/video/1135209706"
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            className='absolute top-0 left-0 w-full h-full'
+            title="The Bombay Business Club - Book Trailer"
+          ></iframe>
+        </div>
+      </header>
+      
+      <div className="container mx-auto px-4 py-8 md:py-16">
         <Separator className="my-12 md:my-20 bg-primary/20" />
 
         {/* Synopsis Section */}
