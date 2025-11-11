@@ -61,6 +61,7 @@ export function Header() {
     { href: '/', text: 'Home' },
     { href: '/#author', text: 'Author' },
     { href: '/chapters', text: 'Read Free Chapters' },
+    { href: '/quiz', text: 'Survival Quiz' },
   ];
 
   return (
