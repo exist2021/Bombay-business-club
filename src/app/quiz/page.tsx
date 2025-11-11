@@ -57,24 +57,30 @@ const QuizPage = () => {
           {tag:"empath", txt:"Protect him secretly — mercy matters."},
           {tag:"idealist", txt:"Remove him — a silenced witness is final."}
         ]},
-      { q: "If only one man can be spared to serve the empire, who lives?",
-        choices: [
-          {tag:"strategist", txt:"Dilip — controllable and useful."},
-          {tag:"empath", txt:"Rohan — he can be softened."},
-          {tag:"idealist", txt:"Neither — sparing legitimizes tyranny."}
-        ]},
-      { q: "Newsrooms sniff a story. Does Vikash bribe, threaten, or ignore?",
-        choices: [
-          {tag:"strategist", txt:"Bribe — incentives smooth outcomes."},
-          {tag:"empath", txt:"Ignore — attention dies without fuel."},
-          {tag:"idealist", txt:"Threaten — fear is fast and clear."}
-        ]},
-      { q: "At the end, what matters most — legacy, truth, or peace?",
-        choices: [
-          {tag:"strategist", txt:"Legacy — secure the line at all costs."},
-          {tag:"idealist", txt:"Truth — exposure is the final cure."},
-          {tag:"empath", txt:"Peace — the quiet life is the goal."}
-        ]}
+        {
+            q: "For ten years Anya Chandra has lived like a ghost — no interviews, no friends, no career. Rohan once married her in secret, then vanished. If that marriage ever becomes public, Dilip’s accusations will suddenly look real. Vikash’s power now depends on one woman’s silence. What does he do next?",
+            choices: [
+                { tag: "strategist", txt: "Keep Anya hidden — as long as she stays invisible, the truth stays uncertain." },
+                { tag: "idealist", txt: "Eliminate Dilip — end the risk before he can link Anya’s story to his evidence." },
+                { tag: "empath", txt: "Bring Anya out carefully — let her appear in public, calm and smiling, to make the world believe everything is normal." }
+            ]
+        },
+        {
+            q: "Every choice you’ve made shapes the story. You’ve weighed love against power, control against fear. Now step back. The story was never just about them — it was about what you believe. Whose mind do you understand best?",
+            choices: [
+                { tag: "strategist", txt: "Vikash Chandra — power must be protected, no matter the cost." },
+                { tag: "empath", txt: "Anya Chandra — love can be both a weapon and a wound." },
+                { tag: "idealist", txt: "Dilip Shrivastava — truth is worth dying for, even if no one listens." },
+            ]
+        },
+        {
+            q: "The story is balanced on a knife’s edge. Vikash still holds the empire. Rohan still has the reach. Dilip still has the truth. And Anya will marry whoever ends up holding power. There are no heroes left — only survivors. Who truly wins?",
+            choices: [
+                { tag: "strategist", txt: "Vikash Chandra — control never dies; it only changes shape." },
+                { tag: "empath", txt: "Rohan Bhatt — visibility is power; the screen always wins." },
+                { tag: "idealist", txt: "Dilip Shrivastava — the truth hurts, but it outlives everyone." }
+            ]
+        }
     ];
 
     let idx = 0;
@@ -314,5 +320,3 @@ const QuizPage = () => {
 };
 
 export default QuizPage;
-
-    
