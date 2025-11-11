@@ -10,7 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { ExternalLink, Headphones, Download } from 'lucide-react';
+import { ExternalLink, Headphones, Download, BookOpen } from 'lucide-react';
 
 
 export default function ChaptersPage() {
@@ -38,7 +38,7 @@ export default function ChaptersPage() {
           </h1>
           <div className="mt-4 max-w-3xl mx-auto text-xl text-foreground/80 font-serif space-y-4">
             <p>
-              The first 8 chapters of The Bombay Business Club are available here to read for free. The book is currently being written. 
+              The first 12 chapters of The Bombay Business Club are available here to read for free. The book is currently being written. 
             </p>
             <p>
               For access to upcoming chapters as they are released, you can pre-order the book.
@@ -47,13 +47,16 @@ export default function ChaptersPage() {
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-              <Link href="https://2532618660820.gumroad.com/l/zsgti" target="_blank">
+              <Link href="https://manojnayak.gumroad.com/l/thebombaybusinessclub" target="_blank">
                 <Download className="mr-2 h-5 w-5" />
-                Download for Free
+                Download PDF
               </Link>
             </Button>
             <Button size="lg" className="bg-transparent border border-primary text-primary hover:bg-primary/10 rounded-md" asChild>
-              <Link href="https://www.amazon.in/dp/B0FXRW8RPY" target="_blank">Pre-order on Amazon</Link>
+              <Link href="https://www.wattpad.com/story/403195569?utm_source=ios&utm_medium=link&utm_content=story_info&wp_page=story_details&wp_uname=exis2025" target="_blank">
+                <BookOpen className="mr-2 h-5 w-5" />
+                Read on Wattpad
+              </Link>
             </Button>
           </div>
 
