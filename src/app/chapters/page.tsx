@@ -14,20 +14,7 @@ import { ExternalLink, Headphones, Download, BookOpen } from 'lucide-react';
 
 
 export default function ChaptersPage() {
-  const externalLinks: { [key: number]: string } = {
-    1: 'https://manojnayak.stck.me/chapter/1313573/The-Malabar-Hill-Birthday-Party',
-    2: 'https://manojnayak.stck.me/chapter/1316352/The-High-Profile-Breakup-We-Cannot-Have-an-Actress-as-a-Bahu',
-    3: 'https://manojnayak.stck.me/chapter/1318345/Anyas-disastrous-love-life',
-    4: 'https://manojnayak.stck.me/chapter/1321684/Dilip-meets-Anya-at-The-Fashion-Book-Launch',
-    5: 'https://manojnayak.stck.me/chapter/1324793/Chapter-5-The-Three-Meetings',
-    6: 'https://manojnayak.stck.me/chapter/1328025/The-New-York-Exile',
-    7: 'https://manojnayak.stck.me/chapter/1332184/The-Betrayal-and-the-Accident',
-    8: 'https://manojnayak.stck.me/chapter/1336960/The-YouTubers-Rise-and-Fall',
-    9: 'https://manojnayak.stck.me/post/156428/The-Decade-of-Silence',
-    10: 'https://manojnayak.stck.me/post/156434/The-Vashikaran',
-    11: 'https://manojnayak.stck.me/post/156441/The-Alibaug-Secret',
-    12: 'https://manojnayak.stck.me/post/156442/The-Breaking-Point',
-  };
+  const storyLink = 'https://manojnayak.stck.me/story/1313571/The-Bombay-Business-Club';
 
   return (
     <AnimatedDiv>
@@ -76,40 +63,17 @@ export default function ChaptersPage() {
 
         <div className="max-w-4xl mx-auto">
           <div className="w-full">
-            {chapters.map((chapter) => {
-              if (externalLinks[chapter.id]) {
-                return (
-                  <div key={chapter.id} className="border-b">
-                    <Link href={externalLinks[chapter.id]} target="_blank" rel="noopener noreferrer" className="flex flex-1 items-center justify-between py-4 font-medium text-primary hover:text-accent-foreground text-left transition-all hover:underline">
-                      <div>
-                        <h3 className="text-2xl font-headline">{chapter.title}</h3>
-                        <p className="text-sm text-foreground/80 font-serif font-normal">{chapter.description}</p>
-                      </div>
-                      <ExternalLink className="h-5 w-5 shrink-0 ml-4" />
-                    </Link>
+            {chapters.map((chapter) => (
+              <div key={chapter.id} className="border-b">
+                <Link href={storyLink} target="_blank" rel="noopener noreferrer" className="flex flex-1 items-center justify-between py-4 font-medium text-primary hover:text-accent-foreground text-left transition-all hover:underline">
+                  <div>
+                    <h3 className="text-2xl font-headline">{chapter.title}</h3>
+                    <p className="text-sm text-foreground/80 font-serif font-normal">{chapter.description}</p>
                   </div>
-                )
-              }
-              return (
-                <Accordion type="single" collapsible className="w-full" key={chapter.id}>
-                  <AccordionItem value={`item-${chapter.id}`}>
-                    <AccordionTrigger className="text-primary hover:text-accent-foreground text-left">
-                      <div>
-                        <h3 className="text-2xl font-headline">{chapter.title}</h3>
-                        <p className="text-sm text-foreground/80 font-serif font-normal">{chapter.description}</p>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent>
-                       <article className="max-w-4xl mx-auto text-lg text-foreground/90 font-serif leading-relaxed space-y-6 py-4">
-                        {chapter.paragraphs.map((p, index) => (
-                          <p key={index} className="text-foreground">{p}</p>
-                        ))}
-                      </article>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              )
-            })}
+                  <ExternalLink className="h-5 w-5 shrink-0 ml-4" />
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </div>
