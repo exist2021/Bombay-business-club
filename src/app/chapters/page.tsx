@@ -47,16 +47,6 @@ export default function ChaptersPage() {
               </Link>
             </Button>
           </div>
-
-          <div className="mt-10 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-headline text-primary mb-4 flex items-center justify-center gap-3">
-              <Headphones className="w-6 h-6"/>
-              Audio Overview
-            </h2>
-            <div className="bg-card/50 border-primary/30 rounded-lg shadow-[0_0_15px_hsl(var(--primary)/0.2)]">
-              <div className="elfsight-app-e06c07fb-6acd-4753-bd3a-fed6a6614c23" data-elfsight-app-lazy></div>
-            </div>
-          </div>
           
         </header>
 
