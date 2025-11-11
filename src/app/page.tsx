@@ -21,6 +21,29 @@ import {
 import { ChevronDown } from 'lucide-react';
 
 export default function Home() {
+  const amazonLinks = {
+    in: "https://www.amazon.in/dp/B0FXRW8RPY",
+    us: "https://www.amazon.com/Bombay-Business-Club-Daughters-Devotion/dp/B0G1N5K34Q/ref=tmm_pap_swatch_0"
+  };
+
+  const AmazonBuyButton = () => (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]">
+          Buy on Amazon <ChevronDown className="h-4 w-4" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <DropdownMenuItem asChild>
+          <Link href={amazonLinks.in} target="_blank">Amazon India</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href={amazonLinks.us} target="_blank">Amazon.com (US)</Link>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  )
+
   return (
     <AnimatedDiv>
       <div className="container mx-auto px-4 py-8 md:py-16">
@@ -53,9 +76,9 @@ export default function Home() {
             ></iframe>
           </div>
           
-          <Button size="lg" className="mt-12 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-            <Link href="https://www.amazon.in/dp/B0FXRW8RPY" target="_blank">Buy on Amazon</Link>
-          </Button>
+          <div className="mt-12">
+            <AmazonBuyButton />
+          </div>
         </header>
 
         <Separator className="my-12 md:my-20 bg-primary/20" />
@@ -87,11 +110,7 @@ export default function Home() {
               <p className="text-base text-foreground/70">
                 Your purchase is for the digital ebook, which will be automatically delivered to your Kindle library.
               </p>
-              <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-                <Link href="https://www.amazon.in/dp/B0FXRW8RPY" target="_blank">
-                  Buy on Amazon
-                </Link>
-              </Button>
+              <AmazonBuyButton />
             </div>
             <div className="md:w-1/3 flex-shrink-0">
               <div className="w-64 h-96 mx-auto md:mx-0 relative bg-card/50 border-2 border-primary/50 rounded-lg shadow-[0_0_20px_hsl(var(--primary)/0.3)] flex items-center justify-center overflow-hidden">

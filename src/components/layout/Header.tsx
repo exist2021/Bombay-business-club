@@ -64,6 +64,11 @@ export function Header() {
     { href: '/quiz', text: 'Survival Quiz' },
   ];
 
+  const amazonLinks = {
+    in: "https://www.amazon.in/dp/B0FXRW8RPY",
+    us: "https://www.amazon.com/Bombay-Business-Club-Daughters-Devotion/dp/B0G1N5K34Q/ref=tmm_pap_swatch_0"
+  };
+
   return (
     <header className="py-4 px-4 md:px-8 sticky top-0 z-50 bg-background">
       <div className="container mx-auto flex items-center justify-between">
@@ -96,9 +101,21 @@ export function Header() {
           </DropdownMenu>
         </nav>
         <div className="hidden md:flex">
-          <Button className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
-            <Link href="https://www.amazon.in/dp/B0FXRW8RPY" target="_blank">Buy on Amazon</Link>
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]">
+                Buy on Amazon <ChevronDown className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem asChild>
+                <Link href={amazonLinks.in} target="_blank">Amazon India</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href={amazonLinks.us} target="_blank">Amazon.com (US)</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         {/* Mobile Menu Button */}
@@ -128,20 +145,22 @@ export function Header() {
                <Link href={mailtoHref} className="text-2xl text-primary/80 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Email</Link>
                <Link href={whatsAppHref} target="_blank" rel="noopener noreferrer" className="text-2xl text-primary/80 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>WhatsApp</Link>
                <Link href={instagramHref} target="_blank" rel="noopener noreferrer" className="text-2xl text-primary/80 hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Instagram</Link>
-
-              <Button
-                size="lg"
-                className="mt-6 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md"
-                asChild
-              >
-                <Link
-                  href="https://www.amazon.in/dp/B0FXRW8RPY"
-                  target="_blank"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Buy on Amazon
-                </Link>
-              </Button>
+              
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button size="lg" className="mt-6 bg-primary/90 text-primary-foreground hover:bg-primary rounded-md">
+                    Buy on Amazon <ChevronDown className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem asChild>
+                    <Link href={amazonLinks.in} target="_blank">Amazon India</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href={amazonLinks.us} target="_blank">Amazon.com (US)</Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </nav>
           </div>
         </div>
