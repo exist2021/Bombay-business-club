@@ -6,12 +6,42 @@ import { bookCover } from '@/lib/chapters';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Download } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export default function Home() {
   const downloadLink = "https://drive.google.com/drive/folders/1gnFl1h4scumw3b_CzOdWVWY-IypM8IgG";
+  const amazonINLink = "https://www.amazon.in/dp/B0D44P723G";
+  const amazonCOMLink = "https://www.amazon.com/Bombay-Business-Club-Daughters-Devotion/dp/B0G1N5K34Q/ref=tmm_pap_swatch_0";
+  const koboLink = "https://www.kobo.com/in/en/ebook/the-bombay-business-club?sId=542882e6-25df-4be5-8d6b-3969f246e08b&ssId=0ZBFMY-hj5_XrG0gAedWY&cPos=1";
+
+  const BuyTheBookDropdown = () => (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]">
+          Buy the Book
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <DropdownMenuItem asChild>
+          <Link href={amazonINLink} target="_blank" rel="noopener noreferrer">Amazon.in</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href={amazonCOMLink} target="_blank" rel="noopener noreferrer">Amazon.com</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href={koboLink} target="_blank" rel="noopener noreferrer">Kobo</Link>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
 
   const DownloadButton = () => (
-      <Button asChild size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]">
+      <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 rounded-md">
         <Link href={downloadLink} target="_blank">
           <Download className="mr-2 h-5 w-5" />
           Download PDF/EPUB
@@ -51,7 +81,8 @@ export default function Home() {
             ></iframe>
           </div>
           
-          <div className="mt-12">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <BuyTheBookDropdown />
             <DownloadButton />
           </div>
         </header>
@@ -78,14 +109,14 @@ export default function Home() {
 
         {/* Buy Section */}
         <section id="buy" className="max-w-4xl mx-auto text-center scroll-mt-20">
-          <h2 className="text-4xl font-headline text-primary mb-8">Download the Book</h2>
+          <h2 className="text-4xl font-headline text-primary mb-8">Buy or Download the Book</h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-            <div className="md:w-2/3 text-lg md:text-xl text-foreground/90 font-serif leading-relaxed text-center md:text-left mb-8 md:mb-0 space-y-4">
-              <p>Download your free copy of The Bombay Business Club today.</p>
-              <p className="text-base text-foreground/70">
-                The book is available as a PDF, EPUB, and MOBI file.
-              </p>
-              <DownloadButton />
+            <div className="md:w-2/3 text-lg md:text-xl text-foreground/90 font-serif leading-relaxed text-center md:text-left mb-8 md:mb-0 space-y-6">
+              <p>The book is available for purchase on major platforms, or you can download a free copy today.</p>
+              <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                <BuyTheBookDropdown />
+                <DownloadButton />
+              </div>
             </div>
             <div className="md:w-1/3 flex-shrink-0">
               <div className="w-64 h-96 mx-auto md:mx-0 relative bg-card/50 border-2 border-primary/50 rounded-lg shadow-[0_0_20px_hsl(var(--primary)/0.3)] flex items-center justify-center overflow-hidden">
