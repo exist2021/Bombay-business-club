@@ -24,27 +24,31 @@ export default function RootLayout({
         <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
         <Script id="firebase-analytics" strategy="afterInteractive">
           {`
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
-            import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-analytics.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-
             // Your web app's Firebase configuration
             // For Firebase JS SDK v7.20.0 and later, measurementId is optional
             const firebaseConfig = {
               apiKey: "AIzaSyBEumt4pBAUM52NB8eff5lObx2ABJF_IOA",
               authDomain: "studio-6153032827-bcb85.firebaseapp.com",
               projectId: "studio-6153032827-bcb85",
-              storageBucket: "studio-6153032827-bcb85.firebasestorage.app",
+              storageBucket: "studio-6153032827-bcb85.appspot.com",
               messagingSenderId: "690261451295",
               appId: "1:690261451295:web:f11bc06145ff5e65146b2a",
               measurementId: "G-KLXGV1RN65"
             };
 
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
+            // Dynamically import and initialize Firebase Analytics
+            (async () => {
+              try {
+                const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js");
+                const { getAnalytics } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js");
+                
+                // Initialize Firebase
+                const app = initializeApp(firebaseConfig);
+                getAnalytics(app);
+              } catch (e) {
+                console.error("Firebase Analytics initialization failed:", e);
+              }
+            })();
           `}
         </Script>
       </head>
