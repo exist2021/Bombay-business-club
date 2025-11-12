@@ -6,7 +6,7 @@ import { Separator } from '@/components/ui/separator';
 import { bookCover } from '@/lib/chapters';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Download, Headphones } from 'lucide-react';
+import { Download, Headphones, MessageSquare } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,6 +20,7 @@ export default function Home() {
   const amazonCOMLink = "https://www.amazon.com/Bombay-Business-Club-Daughters-Devotion/dp/B0G1N5K34Q/ref=tmm_pap_swatch_0";
   const koboLink = "https://www.kobo.com/in/en/ebook/the-bombay-business-club?sId=542882e6-25df-4be5-8d6b-3969f246e08b&ssId=0ZBFMY-hj5_XrG0gAedWY&cPos=1";
   const gumroadLink = "https://2532618660820.gumroad.com/l/zsgti?_gl=1*j7704z*_ga*MTA4MzAwMzI5MC4xNzYyNDMxMTEz*_ga_6LJN6D94N6*czE3NjI4ODYyMTEkbzYkZzAkdDE3NjI4ODYyMTEkajYwJGwwJGgw";
+  const chatLink = "https://notebooklm.google.com/notebook/55908176-8d65-40d2-9fcb-755aebe38dd5?authuser=1";
 
   const BuyTheBookDropdown = () => (
     <DropdownMenu>
@@ -167,9 +168,15 @@ export default function Home() {
           <div className="max-w-2xl mx-auto bg-card/50 border-primary/30 rounded-lg shadow-[0_0_15px_hsl(var(--primary)/0.2)]">
             <div className="elfsight-app-e06c07fb-6acd-4753-bd3a-fed6a6614c23" data-elfsight-app-lazy></div>
           </div>
-          <div className="mt-12">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="bg-primary/90 text-primary-foreground hover:bg-primary rounded-md shadow-[0_0_15px_hsl(var(--primary)/0.5)] transition-all hover:shadow-[0_0_25px_hsl(var(--primary)/0.7)]" asChild>
               <Link href="/chapters">Read Now</Link>
+            </Button>
+            <Button size="lg" asChild variant="outline" className="border-primary text-primary hover:bg-primary/10 rounded-md">
+              <Link href={chatLink} target="_blank" rel="noopener noreferrer">
+                <MessageSquare className="mr-2 h-5 w-5" />
+                Chat with the Book
+              </Link>
             </Button>
           </div>
         </section>
